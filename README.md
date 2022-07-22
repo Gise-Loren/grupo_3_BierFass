@@ -28,7 +28,7 @@ Cuatro amigos con un sueño haciéndose realidad, amantes de la cerveza y con la
 Son años de aprendizaje, donde nos convertimos en personas conocedoras del rubro, y entendemos que este es el momento adecuado para mostrar lo que hacemos. 
 Los integrantes de “Bier Fass” nos presentamos asi:
 
-* Lucas Alvarez:.................
+* Lucas Alvarez: Rafaelino, 28 años, amante de las cervezas artesanales y compartir buenos momentos junto a ella. Mi posición en el equipo es la publicidad y difusión de esta gran cerveza por cada rincón de nuestro país. A través de estrategias creativas e innovadoras y el uso de nuevas tecnologías, nos enfocamos en crear relaciones fuertes y duraderas con nuestros clientes que comparten la misma pasión.
 
 * Francisco Cagnino: Rafaelino, amante de la cerveza y del arte de su elaboración. 22 años, encontró su pasión “birrera” después de buscar ampliamente una vocación, un oficio que lo movilice. 
 Encargado de la producción, recibió los conocimientos de su abuelo, quien le transmitió los conocimientos necesarios para aplicar en la actualidad, en la cerveza (nombre). Francisco recomienda la variedad “American Stout”.
