@@ -33,7 +33,7 @@ Los integrantes de “Bier Fass” nos presentamos asi:
 * Francisco Cagnino: Rafaelino, amante de la cerveza y del arte de su elaboración. 22 años, encontró su pasión “birrera” después de buscar ampliamente una vocación, un oficio que lo movilice. 
 Encargado de la producción, recibió los conocimientos de su abuelo, quien le transmitió los conocimientos necesarios para aplicar en la actualidad, en la cerveza (nombre). Francisco recomienda la variedad “American Stout”.
 
-* Giancarlo Guitre:Ceresino, una persona que le gusta compartir con sus amigos y familia un grato momento con una cerveza bien fria de por medio.
+* Giancarlo Guitre: Ceresino, una persona que le gusta compartir con sus amigos y familia un grato momento con una cerveza bien fria de por medio.
 Soy el que se encarga de la comercializacion de la misma y como objetivo principal llevarla a todos los rincones de nuestro pais, para que cualquiera tenga la oportunidad de disfrutar las diferentes variedades de cervezas que tenemos en nuestro stock. 
 
 * Gisel Lorenzatti: Rafaelina, fanatica de la bebida social mas rica que podemos compartir con familia y amigos en bares, pubs y festivales especiales. 
@@ -44,8 +44,12 @@ Páginas visitadas para tomar ideas acerca de la temática elegida:
 -----------------------------------------------------------------
 
 https://www.sevebrau.com/   
-https://www.quilmes.com.ar/agegate   
+https://www.quilmes.com.ar/agegate
+Un gran punto, es analizar marcas líderes en el rubro de las cervezas, tal como Quilmes. A pesar de no ser la página una e-Commerce, utiliza aspectos gráficos y estéticos que logran ser una gran referencia para nuestra página. Como por ejemplo el "home" de la misma, la presentación de las variedades, la colocación del menú, etcétera.
 https://umamalta.com.ar/productos.html   
-https://www.casadelacerveza.cl/    
-https://flamingrafaela.com/    
-https://www.enfoquegaussiano.com/disenos-de-cerveza-que-inspiran/   
+Uma Malta, es una marca de malta, una de las principales materias primas de la cerveza. Su página nos sirve de referencia a la hora de encontrar aspectos relacionados a la distribución de los productos en la página, como así también las animaciones que presentan los mismos a la hora de acercar el cursor a cada uno de ellos, presentando las caracterpisticas de cada uno.
+https://flamingrafaela.com/
+Flaming Rafaela es una web referente en nuestra ciudad en el ámbito del delivery de bebidas. Pero en este último tiempo, también ofrecen en su página productos de otros rubros. La web logra cumplir la función, a través de la utilización de pocos recursos, a comparación del resto de las mencionadas. Algo de lo que podríamos captar y utilizar.
+https://www.enfoquegaussiano.com/disenos-de-cerveza-que-inspiran/
+Lo que capturamos de esta página, es el listado de referencias relacionadas a diversos packagings de cervezas.
+(falta una)
