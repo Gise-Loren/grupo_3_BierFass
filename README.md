@@ -1,5 +1,6 @@
 
 Integrantes del proyecto:
+-------------------------
 
 * Lucas Alvarez
 * Francisco Cagnino
@@ -7,6 +8,7 @@ Integrantes del proyecto:
 * Gisel Lorenzatti
 
 TEMATICA:
+---------
 
 Llegó “Bier Fass”, un espacio virtual pensado para que vos, amante de la cerveza, “birrero”, ingreses y te lleves la que mas te guste.Queremos que tu “bier” favorita llegue a la puerta de tu casa y la compartas con quien quieras.
 
@@ -38,6 +40,7 @@ Soy economista, y como una de las últimas innovaciones del siglo XXI son las mi
 
 
 Páginas visitadas para tomar ideas acerca de la temática elegida:
+-----------------------------------------------------------------
 
 https://www.sevebrau.com/   
 https://www.quilmes.com.ar/agegate   
