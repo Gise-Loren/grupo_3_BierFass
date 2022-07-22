@@ -33,9 +33,10 @@ Los integrantes de “Bier Fass” nos presentamos asi:
 * Francisco Cagnino: Rafaelino, amante de la cerveza y del arte de su elaboración. 22 años, encontró su pasión “birrera” después de buscar ampliamente una vocación, un oficio que lo movilice. 
 Encargado de la producción, recibió los conocimientos de su abuelo, quien le transmitió los conocimientos necesarios para aplicar en la actualidad, en la cerveza (nombre). Francisco recomienda la variedad “American Stout”.
 
-* Giancarlo Guitre:..............
+* Giancarlo Guitre:Ceresino, una persona que le gusta compartir con sus amigos y familia un grato momento con una cerveza bien fria de por medio.
+Soy el que se encarga de la comercializacion de la misma y se encarga de llevarla a todos los rincones de nuestro pais, para que cualquiera tenga la oportunidad de disfrutar las diferentes variedades de cervezas que tenemos en nuestro stock. 
 
-* Gisel Lorenzatti: Rafaelina, fanatica de la bibida social mas rica que podemos compartir con familia y amigos en bares, pubs y festivales especiales. 
+* Gisel Lorenzatti: Rafaelina, fanatica de la bebida social mas rica que podemos compartir con familia y amigos en bares, pubs y festivales especiales. 
 Soy economista, y como una de las últimas innovaciones del siglo XXI son las microcervecerías, realice una Diplomatura en este tema, lo que hoy facilita llevar la administracion de nuestro negocio.
 
 
