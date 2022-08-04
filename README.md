@@ -57,4 +57,6 @@ https://www.mercadolibre.com.ar/
 Por último, a la hora de realizar un e-Commerce, debemos ver lo que hace la reina de las e-Commerce en la región, Mercado Libre. La distribución de los productos, el banner con los principales anuncios, la presentación de las formas de pago, etcétera.  
 
 
-> Link tablero de tareas Trello: https://trello.com/b/wmP59eN2/bier-fass
+Link tablero de tareas Trello:
+-----------------------------------
+https://trello.com/b/wmP59eN2/bier-fass
