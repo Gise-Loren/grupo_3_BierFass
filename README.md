@@ -58,5 +58,5 @@ Por último, a la hora de realizar un e-Commerce, debemos ver lo que hace la rei
 
 
 Link tablero de tareas Trello:
------------------------------------
+------------------------------
 https://trello.com/b/wmP59eN2/bier-fass
