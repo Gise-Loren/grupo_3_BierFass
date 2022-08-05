@@ -1,17 +1,14 @@
 Como nos fue en el primer sprint?
-Lo las complicado fue organizarnos para trabajar, y desarrollar el wireframe. No contamos con conociminetos de herramientas digitales para desarrollar el bosquejo del proyecto y, la falta de practica genero mayor dedicacion a la tarea.
+El mayor inconveniente fue organizarnos para trabajar y desarrollar el wireframe de la página. Si bien podiamos presentar un bosquejo a mano alzada, preferimos utilizar alguna herramienta digital como Marvel para exponer con mayor proligidad y detalle la estructura del sitio pensado. 
 
 Que problemas tuvimos?
-Nos vimos complicados con la carga de los archivos al repositorio de Github, no tenemos la
-practica suficiente para manejar la aplicacion. Esto puede generar complicaciones con el contenido de los archivos.
+Hemos tenido complicaciones con la carga de los archivos al repositorio de Github. Al no contar con el conocimiento suficiente sobre esta herramienta, nos encontramos en varias oportunidades, eliminando archivos y volviendolos a subir. 
 
 Que hicimos bien?
-Por contar con poco tiempo de conocernos, creemos que nos pusimos de acuerdo en seguida sobre el tema a desarrolllar y como queriamos plantear el sitio.
-Todos colaboramos, lo que genero que la actividad de pueda terminar con tiempo y forma.
+Por contar con poco tiempo de conocernos, creemos que tuvimos un acuerdo rapido sobre el tema a desarrollar y como queriamos plantearlo. La colaboracion de todos, genero que la actividad se termine en tiempo y forma.
 
 Que queremos mejorar?
-Optimizar aun mas los tiempos, tenemos que dar prioridad a las tareas que realmente lo requieran. No pensar en la cantidad de productos o en el detalle, sino en contar con una simple y agil. 
+Optimizar aun mas los tiempos dando prioridad a las tareas que realmente lo requieran, para desarrollar un sitio simple y agil. No debemos dedicar tanto tiempo a pensar y reeplantearnos detalles que no suman en esta etapa del proyecto.
 
 Que vamos a hacer para conseguirlo?
-Poner todo el conocimiento y utilizar las herramientas con las que contamos para que la pagina se vea linda, que llame a visitarla. Tiempo, comunicacion, empeño y compañerismo es o que permiten que el proyecto pensado sea el que queremos mostrar.
-
+Aplicar las herramientas aprendidas de CSS Y HTML para que los usuarios cuenten con facil acceso a los productos y la pagina sea agradable visualmente. Mejorar nuestra conunicacion y realizar reuniones mas seguidas, permitiran que el proyecto pensado sea el que queremos mostrar.
