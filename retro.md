@@ -1,5 +1,5 @@
-Retrospectiva de nustro trabajo en grupo:
---------------------------------------------------------------
+Retrospectiva de la primera etapa del trabajo grupal:
+-----------------------------------------------------
 
 Como nos fue en el primer sprint?
 -----------------------------------
