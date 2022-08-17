@@ -25,6 +25,7 @@ app.get("/catalogo/quilmes",(req,res) => res.sendFile(path.join(__dirname,"views
 
 
 app.get("/catalogo/imperial",(req,res) => res.sendFile(path.join(__dirname,"views/imperial.html")))
+app.get("/carrito",(req,res) => res.sendFile(path.join(__dirname,"views/carrito.html")))
 
 
 app.listen(4000,()=> console.log("Servidor corriendo en el puerto 4000"))
