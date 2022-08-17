@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bier Fass</title>
+    <link rel="stylesheet" href="css/styles-lucas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c689bf8ba.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+
+            background-image: linear-gradient(rgba(2, 16, 53, 0.2), rgba(2, 16, 53, 0.65)), url("../img/primer-plano-cervezas-artesanales.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+
+        header {
+
+            margin-top: 30px;
+        }
+
+        footer {
+            width: 100x;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header>
+
+
+    </header>
+
+
+
+    <main>
+        <div class="logo-ageDate">
+            <img src="img/logo-bier-fass.png" alt="logo">
+        </div>
+        <div class="sos-mayor">
+            <h1>¿SOS MAYOR DE 18 AÑOS?</h1>
+        </div>
+        <div class="date-age">
+            <H3>INGRESA TU FECHA DE NACIMIENTO</H3>
+        </div>
+        <form action="/home">
+        <article class="date-age-input">
+            <div class="input-div"><input type="number" minlength="1" maxlength="2" name="dd" placeholder="DD" value="" required></div>
+            <div class="input-div"><input type="number" minlength="1" maxlength="2" name="mm" placeholder="MM" value="" required></div>
+            <div class="input-div"><input type="number" minlength="4" maxlength="4" name="aaaa" placeholder="AAAA" value="" required></div>
+        </article>
+        <div class="ageDate-button-ing">
+            <button class="ageDate-button">INGRESAR</button>
+        </div>
+    </form>
+        <div class="true-age">
+            <p>Si sos menor de edad tenés que saber que el consumo
+                de alcohol no es bueno para tu salud sobre todo para tu cerebro que se encuentra
+                en proceso de desarrollo. Se honesto/a en tu respuesta.</p>
+        </div>
+    </main>
+
+
+    <footer>
+        <article class="img-iconos">
+            <div class="logo-pie">
+                <img src="img/logo-bier-fass.png" alt="logo">
+            </div>
+            <div class="iconos">
+                <a href="http://www.facebook.com" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="http://www.instagram.com" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
+                <a href="http://www.twitter.com" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
+            </div>
+        </article>
+        <article class="pie-pagina">
+            <div class="pie">
+                <a href="#" class="privacidad">POLÍTICA DE PRIVACIDAD |</a>
+            </div>
+
+            <div class="pie">
+                <a href="#" class="terminos">TERMINOS DE USO |</a>
+            </div>
+
+            <div class="pie">
+                <a href="#" class="cerveceria">CERVECERÍA Y MALTERÍA BIER FASS </a>
+            </div>
+
+        </article>
+    </footer>
+</body>
+
+</html>

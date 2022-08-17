@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bier Fass</title>
+    <link rel="stylesheet" href="css/styles-lucas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c689bf8ba.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    body {
+        background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-catalogo.jpeg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="img/logo-bier-fass.png" alt="logo"></a>
+        </div>
+
+        <article class="barra">
+            <div class="busqueda">
+                <input type="text" placeholder="  Buscar" required>
+            </div>
+
+            <div class="btn">
+                <a href="#" class="lupa fa fa-search icon"></a>
+            </div>
+            <div class="carrito">
+                <a href="#" class="carroto material-symbols-outlined">shopping_cart</a>
+            </div>
+            <div class="perfil">
+                <a href="#" class="perfil material-symbols-outlined">account_circle</a>
+            </div>
+            <div class="menu">
+                <a href="#" class="menu material-symbols-outlined">menu</a>
+            </div>
+        </article>
+
+    </header>
+    <main>
+        <div class="localizacion">
+            <a href="/home">Página de inicio</a>
+            <a href="#">‣ Variedades</a>
+        </div>
+        <p class="title">CERVEZAS:</p>
+
+        <p class="cervezas">Cerveza artesanal</p>
+        <article class="variedades">
+            <div class="_variedades">
+                <div class="producto">
+                    <div class="img-cerveza-bier">
+                        <img src="img/envase-bier.jpg" alt="andes-rubia">
+                    </div>
+                    <p class="nombre-producto">Bier World Rubia</p>
+
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="producto" id="T1">
+                    <div class="img-cerveza-bier">
+                        <img src="img/envase-bier.jpg" alt="andes-rubia">
+                    </div>
+                    <p class="nombre-producto">Bier World Roja</p>
+
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T2">
+                    <div class="img-cerveza-bier">
+                        <img src="img/envase-bier.jpg" alt="andes-rubia">
+                    </div>
+                    <p class="nombre-producto">Bier World Negra</p>
+
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T2">
+                    <div class="img-cerveza-bier">
+                        <img src="img/envase-bier.jpg" alt="andes-rubia">
+                    </div>
+                    <p class="nombre-producto">Bier World ipa</p>
+
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="total-productos">
+                    <div class="ver-todos"><a href="catalogo/artesanal"
+                            style="text-decoration: none;  color:white"><span
+                                class="material-symbols-outlined">arrow_forward_ios</span>
+                            <p>Ver todos</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+        <p class="cervezas ">Cervezas industrial</p>
+
+        <p class="marca-cerveza">Andes Origen</p>
+
+        <article class="variedades">
+            <div class="_variedades">
+                <div class="producto">
+                    <div class="img-cerveza">
+                        <img src="img/andes-rubia.jpg" alt="andes-rubia">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Andes Origen Rubia</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T1">
+                    <div class="img-cerveza">
+                        <img src="img/andes-negra.jpg" alt="andes negra">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Andes Origen Negra</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T2">
+                    <div class="img-cerveza">
+                        <img src="img/andes-rojita.jpg" alt="andes rojita">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Andes Origen Rojita</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="producto" id="T2">
+                    <div class="img-cerveza">
+                        <img src="img/andes-ipa.jpg" alt="andes ipa">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Andes Origen Ipa</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="total-productos">
+                    <div class="ver-todos"><a href="catalogo/andes-origen"
+                            style="text-decoration: none ; color:white"><span
+                                class="material-symbols-outlined">arrow_forward_ios</span>
+                            <p>Ver todos</p>
+                        </a>
+                    </div>
+                </div>
+        </article>
+
+        <p class="marca-cerveza">Patagonia</p>
+
+        <article class="variedades">
+            <div class="_variedades">
+                <div class="producto">
+                    <div class="img-cerveza">
+                        <img src="img/patagonia-weisse.jpg" alt="imagen patagonia weisse">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Patagonia Weisse</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T1">
+                    <div class="img-cerveza">
+                        <img src="img/patagonia-vera-ipa.jpg" alt="imagen patagonia vera ipa">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Patagonia Vera Ipa</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T2">
+                    <div class="img-cerveza">
+                        <img src="img/patagonia-amber-lager.jpg" alt="imagen patagonia amber lager">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Patagonia Amber Lager</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="producto" id="T2">
+                    <div class="img-cerveza">
+                        <img src="img/patagonia-24-7.jpg" alt="imagen patagonia 24.7 ">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Patagonia 24.7</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="total-productos" href="#">
+                    <div class="ver-todos"><a href="catalogo/patagonia"
+                            style="text-decoration: none ; color:white"><span
+                                class="material-symbols-outlined">arrow_forward_ios</span>
+                            <p>Ver todos</p>
+                        </a>
+                    </div>
+                </div>
+        </article>
+
+        <p class="marca-cerveza">Quilmes</p>
+        <article class="variedades">
+            <div class="_variedades">
+                <div class="producto">
+                    <div class="img-cerveza">
+                        <img src="img/quilmes-clasica.jpg" alt="imagen patagonia weisse">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Quilmes Clásica</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T1">
+                    <div class="img-cerveza">
+                        <img src="img/quilmes-bock.jpg" alt="imagen patagonia vera ipa">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Quilmes Bock</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T2">
+                    <div class="img-cerveza">
+                        <img src="img/quilmes-doble-malta.jpg" alt="imagen patagonia amber lager">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Quilmes Doble Malta</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="producto" id="T2">
+                    <div class="img-cerveza">
+                        <img src="img/quilmes-red-lager.jpg" alt="imagen patagonia 24.7 ">
+                    </div>
+                    <div class="nombre-producto" >
+                        <p>Quilmes Red Lager</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="total-productos" href="#">
+                    <div class="ver-todos"><a href="catalogo/quilmes" style="text-decoration: none ; color:white"><span
+                                class="material-symbols-outlined">arrow_forward_ios</span>
+                            <p>Ver todos</p>
+                        </a>
+                    </div>
+                </div>
+        </article>
+
+        <p class="marca-cerveza">Imperial</p>
+        <article class="variedades">
+            <div class="_variedades">
+                <div class="producto">
+                    <div class="img-cerveza">
+                        <img src="img/imperial-lager.jpg" alt="imagen Imperial Lager">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Imperial Lager</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T1">
+                    <div class="img-cerveza">
+                        <img src="img/imperial-apa.jpg" alt="imagen Imperial apa">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Imperial Apa</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto" id="T2">
+                    <div class="img-cerveza">
+                        <img src="img/imperial-golden.jpg" alt="imagenImperial Golden">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Imperial Golden</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="producto" id="T2">
+                    <div class="img-cerveza">
+                        <img src="img/imperial-ipa.jpg" alt="imagen Imperial ipa ">
+                    </div>
+                    <div class="nombre-producto" >
+                        <p>Imperial Ipa </p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="total-productos" href="#">
+                    <div class="ver-todos"><a href="catalogo/imperial" style="text-decoration: none ; color:white"><span
+                        class="material-symbols-outlined">arrow_forward_ios</span>
+                    <p>Ver todos</p>
+                </a>
+            </div>
+                </div>
+        </article>
+    </main>
+
+
+    <footer>
+        <article class="img-iconos">
+            <div class="logo-pie">
+                <img src="img/logo-bier-fass.png" alt="logo">
+            </div>
+            <div class="iconos">
+                <a href="http://www.facebook.com" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="http://www.instagram.com" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
+                <a href="http://www.twitter.com" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
+            </div>
+        </article>
+        <article class="pie-pagina">
+            <div class="pie">
+                <a href="#" class="privacidad">POLÍTICA DE PRIVACIDAD |</a>
+            </div>
+            <div class="pie">
+                <a href="#" class="bases-condiciones">BASES Y CONDICIONES |</a>
+            </div>
+            <div class="pie">
+                <a href="#" class="terminos">TERMINOS Y CONDICIONES |</a>
+            </div>
+            <div class="pie">
+                <a href="#" class="ofertas-laborales">OPORTUNIDADES LABORALES |</a>
+            </div>
+            <div class="pie">
+                PROHIBIDA SU VENTA A MENORES DE 18 AÑOS. NO COMPARTA EL CONTENIDO CON MENORES. Bier Fass®
+            </div>
+        </article>
+    </footer>
+
+
+
+</body>
+
+</html>

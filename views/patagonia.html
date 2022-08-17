@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/styles-lucas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c689bf8ba.js" crossorigin="anonymous"></script>
+    <title>Bier fass</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+             
+            background-image:linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-catalogo.jpeg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        footer {
+            width: 100x;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        .logo img {
+            width: 100px;
+
+
+        }
+
+        .barra div a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border-radius: 50%;
+            border-color: rgb(255, 255, 255);
+            background-color: rgba(2, 16, 53, 0.75);
+            font-size: 14px;
+            padding: 3px;
+            margin: 2px;
+        }
+
+        .busqueda input {
+            background-color: rgba(2, 16, 53, 0.75);
+            padding-top: 1.5px;
+            padding-bottom: 1.5px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-right: -24px;
+            color: white
+        }
+
+        .btn a {
+            background-color: #ffffff00 !important;
+        }
+
+        .comprar {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .boton-comprar {
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: .7rem;
+            width: 6rem;
+            height: 22px;
+            background-color: rgb(218, 165, 32);
+            border-color: rgb(218, 165, 32);
+            border-radius: 25px;
+            color: black;
+            border-style: none;
+            margin: auto;
+        }
+
+        .barra {
+            display: flex;
+            align-items: center;
+            height: 100hv;
+            margin-right: 3px
+        }
+
+        .barra-izq {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .busqueda {
+            padding: 10px;
+            margin-right: -10px;
+        }
+
+        .busqueda input {
+            width: 100px;
+        }
+
+        .logo-pie {
+            display: flex;
+            justify-content: flex-start;
+            width: 50%;
+        }
+
+        .logo-pie img {
+            width: 40px;
+            height: 40px;
+            opacity: 0.75;
+        }
+
+        .pie-pagina {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-end;
+            margin: 10px;
+        }
+
+        .pie a {
+            font-size: 12px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            margin-right: 5px;
+
+        }
+
+        .pie {
+            font-size: 12px;
+            color: rgb(255, 255, 255);
+            display: flex;
+            text-align: center;
+        }
+
+        .iconos a {
+            padding-left: 5px;
+        }
+
+        .iconos a img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .img-iconos {
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        .iconos {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+        }
+
+        .img-cerveza img {
+            width: 130px;
+        }
+
+        .img-cerveza-bier img {
+            height: 70%;
+            max-width: 70%;
+        }
+
+        ._variedades {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+            border: 15px;
+            width: 100%;
+            justify-content: space-around;
+
+        }
+
+        .producto {
+            text-align: center;
+            height: 170px;
+            padding-bottom: 15px;
+            box-shadow: 0px 0px 10px rgb(100, 100, 100);
+            margin: 25px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.361);
+        }
+
+        .title {
+
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 30px;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+
+
+        .cervezas {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 25px;
+            color: #ffffff;
+            margin: 15px;
+            border-top: 2px solid #f4eded
+        }
+
+        .nombre-producto {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: #ffffff;
+            text-align: center;
+            border-top: 1px solid #f4eded;
+            padding-bottom: 5px;
+
+        }
+
+        .marca-cerveza {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        /* agregar hover para que localizacion a */
+        .localizacion {
+            padding-top: 15px;
+            padding-left: 10px;
+        }
+
+        .localizacion a {
+            padding-top: 15px;
+            text-decoration: none;
+            color: #6f6c7a;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        ._variedades {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+
+        .variedades {
+            display: flex
+        }
+
+        .total-productos {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            width: 20%;
+        }
+
+        .ver-todos {
+
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-bottom: 2px solid rgb(100, 100, 100);
+            padding: 5px;
+            padding-top: 5px;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .material-symbols-outlined {
+            border-radius: 50%;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            color: #ffffff
+        }
+
+        .agregar {
+            width: 100%;
+        }
+
+        @media (min-width: 480px) {
+            .producto {
+                width: 30%;
+                box-sizing: border-box;
+            }
+
+            ._variedades {
+                display: flex;
+                width: 100%;
+            }
+
+            @media (min-width: 769px) {
+                .producto {
+                    width: 20%;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href=".."><img src="../img/logo-bier-fass.png" alt="logo"></a>
+        </div>
+
+        <article class="barra">
+            <div class="busqueda">
+                <input type="text" placeholder="  Buscar" required>
+            </div>
+
+            <div class="btn">
+                <a href="#" class="lupa fa fa-search icon"></a>
+            </div>
+            <div class="carrito">
+                <a href="#" class="carroto material-symbols-outlined">shopping_cart</a>
+            </div>
+            <div class="perfil">
+                <a href="#" class="perfil material-symbols-outlined">account_circle</a>
+            </div>
+            <div class="menu">
+                <a href="#" class="menu material-symbols-outlined">menu</a>
+            </div>
+        </article>
+
+    </header>
+    <main>
+        <div class="localizacion">
+            <a href="/home">Página de inicio</a>
+            <a href="/catalogo">‣ Variedades</a>
+            <a href="#">‣ Cerveza Patagonia</a>
+        </div>
+        <p class="title">CERVEZAS:</p>
+        <p class="cervezas ">Cervezas industrial</p>
+        <p class="marca-cerveza">Patagonia</p>
+
+        <article class="variedades">
+            <div class="_variedades">
+                <div class="producto">
+                    <div class="img-cerveza">
+                        <img src="../img/patagonia-weisse.jpg" alt="imagen patagonia weisse">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Patagonia Weisse</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="img-cerveza">
+                        <img src="../img/patagonia-vera-ipa.jpg" alt="imagen patagonia vera ipa">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Patagonia Vera Ipa</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="img-cerveza">
+                        <img src="../img/patagonia-amber-lager.jpg" alt="imagen patagonia amber lager">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Patagonia Amber Lager</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="img-cerveza">
+                        <img src="../img/patagonia-24-7.jpg" alt="imagen patagonia 24.7 ">
+                    </div>
+                    <div class="nombre-producto">
+                        <p>Patagonia 24.7</p>
+                    </div>
+                    <div class="agregar">
+                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                    </div>
+                </div>
+        </article>
+    </main>
+    <footer>
+        <article class="img-iconos">
+            <div class="logo-pie">
+                <img src="../img/logo-bier-fass.png" alt="logo">
+            </div>
+            <div class="iconos">
+                <a href="http://www.facebook.com" target="_blank"><img src="../img/facebook.png" alt="facebook"></a>
+                <a href="http://www.instagram.com" target="_blank"><img src="../img/instagram.png" alt="instagram"></a>
+                <a href="http://www.twitter.com" target="_blank"><img src="../img/twitter.png" alt="twitter"></a>
+            </div>
+        </article>
+        <article class="pie-pagina">
+            <div class="pie">
+                <a href="#" class="privacidad">POLÍTICA DE PRIVACIDAD |</a>
+            </div>
+            <div class="pie">
+                <a href="#" class="bases-condiciones">BASES Y CONDICIONES |</a>
+            </div>
+            <div class="pie">
+                <a href="#" class="terminos">TERMINOS Y CONDICIONES |</a>
+            </div>
+            <div class="pie">
+                <a href="#" class="ofertas-laborales">OPORTUNIDADES LABORALES |</a>
+            </div>
+            <div class="pie">
+                PROHIBIDA SU VENTA A MENORES DE 18 AÑOS. NO COMPARTA EL CONTENIDO CON MENORES. Bier Fass®
+            </div>
+        </article>
+    </footer>
+
+
+</body>
+
+</html>
