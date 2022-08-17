@@ -28,7 +28,6 @@ app.get("/catalogo/imperial",(req,res) => res.sendFile(path.join(__dirname,"view
 app.get("/carrito",(req,res) => res.sendFile(path.join(__dirname,"views/carrito.html")))
 app.get("/login",(req,res) => res.sendFile(path.join(__dirname,"views/login.html")))
 app.get("/register",(req,res) => res.sendFile(path.join(__dirname,"views/register.html")))
-
-
+app.get("/clasica",(req,res) => res.sendFile(path.join(__dirname,"views/descripcion.html")));
 app.listen(4000,()=> console.log("Servidor corriendo en el puerto 4000"))
 
