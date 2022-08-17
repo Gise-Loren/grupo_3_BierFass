@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.btn a {
+    background-color: #FFFFFF00 !important;
+}
+
+.barra {
+    display: flex;
+
+}
+
+.barra div a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(2, 16, 53, 0.75);
+    font-size: 14px;
+    padding: 3px;
+    margin: 2px;
+}
+
+.busqueda input {
+    background-color: rgba(2, 16, 53, 0.75);
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-right: -24px;
+}
+
+main {
+    width: 90%;
+    margin: 5%;
+    border: 15px;
+
+}
+
+.carrito-compra {
+    width: 100%;
+}
+
+.titulo-carrito {
+    display: flex;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto {
+    display: flex;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.p-c-t {
+    display: flex;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.descripcion-producto {
+    display: flex;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+}
+
+.articulo {
+    
+   
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: #D8D8D8;
+    width: 100%;
+    height: 100px;
+    border-radius: 15px;
+    padding: 40px;
+    display: block;
+    align-items: center;
+
+}
+
+.articulo input {
+    width: 15%;
+}
+
+.articulo-producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:5px;
+}
+
+.compra {
+    align-items: flex-end;
+    text-align: end;
+}
+
+.compra input {
+    width: 15%;
+}
+
+.fin-compra {
+    border-radius: 20px;
+}
+
+body {
+    background-color: rgba(208, 208, 252, 0.886);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 4px;
+}
+.header{
+    margin-left: -40%;
+}
+.titular {
+    width: 70%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.34);
+    border: 1px solid rgba(113, 112, 112, 0.31);
+    margin-left: 3px;
+    margin-right: 3px;
+    border-style: groove;
+    justify-content: normal;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.imagenes img {
+    max-width: 50vw;
+    border-radius: 3px;
+    display: inline-flex;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.423);
+    border: 1px solid rgba(113, 112, 112, 0.112);
+    justify-content: flex-start;
+}
+
+.texto-form-boton {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.total-caja {
+    display: flex;
+    justify-content: space-around;
+}
+
+.texto {
+    width: 100%;
+    margin-top: 3px;
+    padding:3px;
+    font-size: 11px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.423);
+    font-weight: bolder;
+    text-align: center;
+    background-color: rgba(243, 242, 242, 0.837);
+    box-sizing: border-box;
+}
+
+.p {
+    font-size: 11px;
+}
+
+.form {
+    margin: 0;
+    padding-top: 3px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 22%;
+    height: 40px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 5px;
+    margin-left: -5px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(249, 249, 130, 0.728);
+}
+
+.opciones-compra {
+    width: 100%;
+    padding-right: 200px;
+    margin-top: 2px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.campo input {
+
+    margin-left: 4px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(113, 113, 113);
+    margin-top: -4px;
+    padding-left: 2px;
+}
+
+.campo {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 27px;
+}
+
+.campo-precio {
+    margin-left: -37px;
+    margin-top: 20px;
+}
+
+.campo-cantidad {
+    margin-left: -15px;
+    margin-top: -5px;
+}
+
+select {
+    max-width: 35%;
+    margin-left: 148px;
+    margin-top: 10px;
+}
+
+.caja-contenedora {
+    font-size: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.dato {
+    max-width: 65%;
+    height: 30%;
+    display: flex;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    box-shadow: 2px 2px 5px rgb(16, 16, 16);
+    align-items: center;
+}
+
+.caja p {
+    font-size: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.caja {
+    align-content: block;
+    margin-top: 10px;
+    margin-left: 147px;
+    flex-direction: column;
+    vertical-align: middle;
+    position: fixed;
+}
+
+body {
+
+    background-image: linear-gradient(#efbe2d74, #efbe2d74), url("../img/choperacervezasartesanales.jpg");
+    font-family: 'montserrat', sans-serif;
+    width: 100%;
+    border: 15px;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+footer {
+    width: 100x;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo-pie {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.logo-pie img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.75;
+}
+
+.pie-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 10px;
+}
+
+.pie a {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-right: 5px;
+
+}
+
+.pie {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    text-align: center;
+}
+
+
+.logo-mayoria img {
+    width: 50px;
+    height: 50px;
+
+}
+
+.logo-mayoria {
+    display: flex;
+    text-align: center;
+    margin-top: 30%;
+    position: absolute;
+}
+
+.iconos a {
+    padding-left: 5px;
+}
+
+.iconos a img {
+    width: 15px;
+    height: 15px;
+}
+
+.img-iconos {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.iconos {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+/* Querie----------------------------//////////////////////////////7 */
+@media(min-width:480px) {
+    .body-main {
+        justify-content: space-around;
+        display:flex;
+
+    }
+
+    .total-caja {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagenes img {
+        max-width: 45vw;
+        display: inline-flex;
+        justify-content: flex-start;
+    }
+
+    .texto-form-boton {
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .texto p{
+        width: 100%;
+        /* margin-left: 113px; */
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+     .form {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+    } 
+
+    .opciones-compra {
+        width: 10rem;
+        padding-right: 0px;
+        margin-top: 2px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 10rem;
+        margin-left: -5px;
+        border-radius: 5px;
+    }
+
+    select {
+        max-width: 100%;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .campo {
+        margin-top: 5px;
+    }
+
+    .input .precio {
+        width: 10px;
+    }
+
+    .campo-precio {
+        width: -50rem;
+        margin-top: 30px;
+        margin-left: -20px;
+    }
+
+    .campo-cantidad {
+        margin-left: -20px;
+        margin-top: 3px;
+    }
+
+    .caja {
+        margin-top: 10px;
+        margin-left: 147px;
+        flex-direction: column;
+        vertical-align: middle;
+        position: fixed;
+    }
+
+    .dato {
+        max-width: 70%;
+        display: flex;
+
+    }
+}
+
+/*  Querie-----------------------///////////////////// */
+ @media(min-width:768px) {
+    .body-main {
+        display: flex;
+        justify-content: space-between;
+    }
+} 
