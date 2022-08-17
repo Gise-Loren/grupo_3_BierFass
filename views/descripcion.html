@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- <link rel="stylesheet" href="../css/stylesGise.css"> -->
+    <link rel="stylesheet" href="../css/styles-lucas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -23,7 +23,7 @@
         }
 
         body {
-            background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/vasoimagenarriba.jpg");
+            background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-descripcion.jpg");
             background-repeat: no-repeat;
             background-position: center center;
             background-attachment: fixed;
@@ -186,6 +186,7 @@
 
             text-align: center;
 
+
         }
 
         h1 {
@@ -195,7 +196,7 @@
         .nom-variedad {
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
-            font-size: 14px;
+            font-size: 20px;
             color: aliceblue;
             width: 75%;
             text-align: center;
@@ -317,33 +318,28 @@
 
         }
 
+
+
         @media(min-width:480px) {
 
-            .box-principal {
-                display: flex;
-                flex-direction: row;
-            }
-
-            .nom-variedad {
-                width: 45%;
-                padding: 0;
-                margin: 0%;
-
-            }
-
-            .box-centrado {
-                width: 45%;
-                padding: 0;
-                margin: 0;
-            }
-
-            .box-form {
-                margin-left: 55%;
-            }
-
-            .descripcion {
-                font-size: 12px;
-            }
+.box-principal {
+    display: flex;
+    flex-direction: row;
+}
+.nom-variedad {
+    width: 45%;
+    padding:0;
+    margin:0%;
+    
+}
+.box-centrado {
+width: 45%;
+padding: 0;
+margin: 0;
+}
+.box-form {
+   margin-left: 55%;
+}
 
         }
     </style>
@@ -354,8 +350,9 @@
     <header>
 
         <div class="logo">
-            <img src="../img/Logo Bier Fass CON LETRA-01.png" alt="logo">
+            <img src="../img/logo-bier-fass.png" alt="logo">
         </div>
+
         <article class="barra">
             <div class="busqueda">
                 <input type="text" placeholder="  Buscar" required>
@@ -365,10 +362,10 @@
                 <a href="#" class="lupa fa fa-search icon"></a>
             </div>
             <div class="carrito">
-                <a href="#" class="carroto material-symbols-outlined">shopping_cart</a>
+                <a href="/carrito" class="carroto material-symbols-outlined">shopping_cart</a>
             </div>
             <div class="perfil">
-                <a href="#" class="perfil material-symbols-outlined">account_circle</a>
+                <a href="/login" class="perfil material-symbols-outlined">account_circle</a>
             </div>
             <div class="menu">
                 <a href="#" class="menu material-symbols-outlined">menu</a>
@@ -378,17 +375,16 @@
     </header>
 
     <main>
+        
+            <div class="box-principal">
+                <div class="nom-variedad">
+                    <h1>Quilmes Clásica</h1>
 
-        <div class="box-principal">
-            <div class="nom-variedad">
-                <h1>Quilmes Clásica</h1>
-
-                <br>
-
+                    <br>
                     <div class="box">
 
                         <div class="img">
-                            <img src="../img/quilmes-clasica.jpg" alt="cerveza">
+                            <img src="../img/clasica-q.png" alt="cerveza">
                         </div>
                     </div>
                 </div>
@@ -396,63 +392,68 @@
                     <div class="box-descripcion">
                         <div class="descripcion">
                             <p>Es una típica cerveza lager perfectamente equilibrada, transparente dorada, buen nivel de
-                                espuma y sabor.
+                                espuma
+                                y sabor.
                                 Para hacerla se utilizan sólo ingredientes naturales que crecen en los campos de
                                 Argentina.
                             </p>
                         </div>
                     </div>
-
-                <div class="caja">
-                    <div class="dato">
-                        <div class="graduacion">
-                            <p class="p1">5,2% </p>
-                            <p class="p2">Graduacion Alcoholica</p>
-                        </div>
-                        <div class="amargor">
-                            <p class="p1">10</p>
-                            <p class="p2"> Amargor</p>
-                        </div>
-                        <div class="temperatura">
-                            <p class="p1">3° </p>
-                            <p class="p2">temperatura ideal</p>
+                    <div class="caja">
+                        <div class="dato">
+                            <div class="graduacion">
+                                <p class="p1">5,2% </p>
+                                <p class="p2">Graduacion Alcoholica</p>
+                            </div>
+                            <div class="amargor">
+                                <p class="p1">10</p>
+                                <p class="p2"> Amargor</p>
+                            </div>
+                            <div class="temperatura">
+                                <p class="p1">3° </p>
+                                <p class="p2">temperatura ideal</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="box-centrado">
-                    <div class="box-form">
-                        <form id="menu" class="form">
-                            <div class="opciones-compra">
-                                <label for="compra">Elija los productos:</label>
-                            </div>
-                            <select name="lista">
-                                <option value="">Pack de 6 unidades</option>
-                                <option value="">Pack de 12 unidades</option>
-                                <option value="">Pack de 24 unidades</option>
-                                <option value="">Unidad</option>
-                            </select>
-
-
-                            <div class="enviar">
-                                <div class="send">
-                                    <button type="submit" style="text-decoration: none; background-color:none;">Enviar
-                                        al
-                                        carrito</button>
+                    <div class="box-centrado">
+                        <div class="box-form">
+                            <form id="menu" class="form">
+                                <div class="opciones-compra">
+                                    <label for="compra">Elija los productos:</label>
                                 </div>
-                            </div>
-                            <br>
-                        </form>
+                                <select name="lista">
+                                    <option value="">Pack de 6 unidades</option>
+                                    <option value="">Pack de 12 unidades</option>
+                                    <option value="">Pack de 24 unidades</option>
+                                    <option value="">Unidad</option>
+                                </select>
+
+
+                                <div class="enviar">
+                                    <div class="send">
+                                        <button type="submit"
+                                            style="text-decoration: none; background-color:none;">Enviar
+                                            al
+                                            carrito</button>
+                                    </div>
+                                </div>
+                                <br>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+
+
+
+            
         </div>
     </main>
 
     <footer>
         <article class="img-iconos">
             <div class="logo-pie">
-                <img src="../img/Logo Bier Fass CON LETRA-01.png" alt="logo">
+                <img src="../img/logo-bier-fass.png" alt="logo">
             </div>
             <div class="iconos">
                 <a href="http://www.facebook.com" target="_blank"><img src="../img/facebook.png" alt="facebook"></a>
