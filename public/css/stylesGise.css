@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/choperacervezasartesanales.jpg");
+    background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-descripcion.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -27,6 +27,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    padding-top: 3%;
 }
 
 .logo img {
@@ -164,8 +165,11 @@ footer {
 }
 
 .img img {
-    width: 100%;
+    width: 25%;
+
     text-align: center;
+
+
 }
 
 h1 {
@@ -175,7 +179,7 @@ h1 {
 .nom-variedad {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 20px;
     color: aliceblue;
     width: 75%;
     text-align: center;
@@ -222,7 +226,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 75%;
 }
 
 .p1 {
@@ -263,7 +267,6 @@ h1 {
     border-top: 1px solid #f4eded;
     border-bottom: 1px solid #f4eded;
     margin-top: 5%;
-
 }
 
 .send button {
@@ -297,32 +300,27 @@ h1 {
 
 }
 
+
+
 @media(min-width:480px) {
 
-    .box-principal {
-        display: flex;
-        flex-direction: row;
-    }
+.box-principal {
+display: flex;
+flex-direction: row;
+}
+.nom-variedad {
+width: 45%;
+padding:0;
+margin:0%;
 
-    .nom-variedad {
-        width: 45%;
-        padding: 0;
-        margin: 0%;
-
-    }
-
-    .box-centrado {
-        width: 45%;
-        padding: 0;
-        margin: 0;
-    }
-
-    .box-form {
-        margin-left: 55%;
-    }
-
-    .descripcion {
-        font-size: 12px;
-    }
+}
+.box-centrado {
+width: 45%;
+padding: 0;
+margin: 0;
+}
+.box-form {
+margin-left: 55%;
+}
 
 }

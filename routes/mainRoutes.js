@@ -18,4 +18,8 @@ router.get('/login', mainController.login);
 
 router.get('/register', mainController.register);
 
+router.get('/description', mainController.description);
+
+
+
 module.exports = router;
