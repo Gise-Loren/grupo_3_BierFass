@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+#body-prodcuts {
+        background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-catalogo.jpeg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+}
+
+#header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+}
 
 .logo img {
     width: 100px;

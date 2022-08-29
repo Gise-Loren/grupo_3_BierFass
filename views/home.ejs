@@ -2,18 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bier Fass</title>
-    <link rel="stylesheet" href="css/styles-lucas.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5c689bf8ba.js" crossorigin="anonymous"></script>
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="../css/styles-lucas.css">
    
    <style>
         body {
@@ -54,14 +44,18 @@
 
 
 <body>
-
+    <header id="header">
         <%- include('partials/header')%>
+    </header>
 
     
 
     <main>
+        <br>
+        <br>
+        <br>
         <div id="eslogan">
-            <p class="frase">BIENVENIDOS A BIER FASS, LA CERVEZA ARTESANAL POR EXCELENCIA. <a href="catalogo" ><button class="boton-comprar" style="text-decoration: none"> COMPRAR </button></a></p>
+            <p class="frase">BIENVENIDOS A BIER FASS, LA CERVEZA ARTESANAL POR EXCELENCIA. <a href="products" ><button class="boton-comprar" style="text-decoration: none"> COMPRAR </button></a></p>
             <div class="comprar">   
             </div>
     </main>
