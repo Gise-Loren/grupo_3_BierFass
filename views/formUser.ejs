@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/styles-Form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c689bf8ba.js" crossorigin="anonymous"></script>
+    <title>Formulario productos</title>
+
+</head>
+
+<body>
+ 
+<main>
+    <form action="/views/formUser" method="Post" onsubmit="return formulario()" id="formulario" >
+            <div class="producto">
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
+            </div>
+            <br>
+            <div class="producto-img">
+                <input type="file" name="imagenProducto" accept=".png, jpg" required>
+            </div>
+            <br>
+            <div class="precio">
+                <input type="text" name="precio" id="precio" placeholder="precio" required>
+            </div>
+        <br>
+            <label for="categoriasProductos">Categorias de Productos:</label>
+            <br>
+            <div class="categorias">
+                <input type="checkbox" name="categoria" id="Industrial">
+                <label for="categorias" name="categoria"> Industrial </label>
+                <br>
+                <input type="checkbox" name="categoria" id="Artesanal">
+                <label for="categorias" name="categoria"> Artesanal </label>
+                <br>
+            </div>
+<br>
+            <label for="contenido">Contenido Neto del Producto:</label>
+            <div class="contenido">
+                <input type="checkbox" name="contenido" id="contenido">
+                <label for="Categorias" name="categoria"> 1L. </label>
+                <br>
+                <input type="checkbox" name="contenido" id="contenido">
+                <label for="Categorias" name="categoria"> 473Ml. </label>
+                <br>
+                <input type="checkbox" name="contenido" id="contenido">
+                <label for="Categorias" name="categoria"> 730Ml. </label>
+                <br>
+            </div>
+            <div class="opciones-compra">
+                <label for="compra">Elija los productos:</label>
+            </div>
+            <select name="listado">
+                <option value="">Pack de 6 unidades</option>
+                <option value="">Pack de 12 unidades</option>
+                <option value="">Pack de 24 unidades</option>
+                <option value="">Unidad</option>
+            </select>
+            
+            <div class="agregar">
+                <button type="submit">Agregar</button>
+            </div>
+
+            <div class="modificar">
+                <button type="reset">Modificar</button>
+            </div>
+            <br>
+            </article>
+            <script>
+                const formulario = document.getElementById('formulario');
+                formulario.addEventListener('submit', (e) => {
+                    if (formulario.nombreUsuario.value.length > 2) {
+                        alert('No se ha ingresado un nombre valido');
+                        e.preventDefault();
+                    } else {
+                        alert('El producto se agrego correctamente');
+                    }
+                });
+            </script>
+
+        </form>
+
+      
+    </main>
+</body>
+
+</html>

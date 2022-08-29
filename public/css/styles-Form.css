@@ -1,0 +1,87 @@
+/* propiedades aplicadas de maner general */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    margin:5px;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-descripcion.jpg");
+   background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed;
+    background-size: cover; 
+}
+#formulario {
+    width:70%;
+    border-radius: 5px;
+    text-align: center;
+    border-style: groove;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgba(243, 242, 242, 0.837);
+    /* background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-descripcion.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+   box-sizing: border-box;
+
+    
+}
+input .precio {
+    margin-left: 20px;
+
+}
+.categorias {
+    width: 50%;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(113, 113, 113)0;
+
+}
+
+label {
+    width: 45%;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 5px;
+
+}
+
+
+.agregar {
+    padding: 3px 3px;
+    border-radius: 4px;
+    width: 30%;
+    height: 30px;
+
+}
+
+.modificar {
+    margin-top: 5px;
+    padding: 3px 3px;
+    border-radius: 4px;
+    width: 30%;
+    height: 30px;
+
+}
+
+/* -----------------query------------------- */
+@media(min-width:480px) {
+    .main-header-footer {
+        justify-content: space-around;
+        display: block;
+        display: none;
+    }
+    .formulario {
+        width: 70%;
+        display: block;
+        flex-direction: column;
+
+    }
+}

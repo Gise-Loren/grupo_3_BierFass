@@ -20,6 +20,8 @@ router.get('/register', mainController.register);
 
 router.get('/description', mainController.description);
 
+router.get('/formUser', mainController.formUser);
+router.post('/formUser', mainController.formUser)
 
 
 module.exports = router;
