@@ -17,12 +17,12 @@ body {
     background-size: cover; 
 }
 #formulario {
-    width:70%;
+    width:100%;
     border-radius: 5px;
     text-align: center;
-    border-style: groove;
-    box-shadow: 5px 5px 5px black;
-    background-color: rgba(243, 242, 242, 0.837);
+    
+    height: 95vh;
+    background-color: rgba(243, 242, 242, 0.95);
     /* background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-descripcion.jpg"); */
     background-repeat: no-repeat;
     background-position: center center;
