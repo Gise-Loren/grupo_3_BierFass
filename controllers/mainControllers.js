@@ -1,5 +1,5 @@
 const controller = {
-    index: (req,res) => res.render('prueba'),
+    index: (req,res) => res.render('redirect'),
     ageDate: (req,res) => res.render ('ageDate'),
     home: (req,res) => res.render('home'),
     products: (req,res) => res.render('productos'),
