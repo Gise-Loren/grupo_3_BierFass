@@ -22,59 +22,58 @@
  
 <main>
     <form action="/views/formUser" method="Post" onsubmit="return formulario()" id="formulario" >
-            <div class="producto">
+            <div class="id">
+                <label for="_id">Id del producto:</label>
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
+            </div>
+            <br>
+            <div class="name">
+                <label for="_name">Nombre del producto:</label>
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
+            </div>
+            <br>
+            <div class="type">
+                <label for="_type">Tipo de cerveza::</label>
                 <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
             <br>
             <div class="producto-img">
-                <input type="file" name="imagenProducto" accept=".png, jpg" required>
+                <label for="img">Imgen del producto:</label>
+                <input type="file" name="imagenProducto" accept=".png, jpg, jpng" required>
             </div>
             <br>
-            <div class="precio">
-                <input type="text" name="precio" id="precio" placeholder="precio" required>
+            <div class="stock">
+                <label for="_stock">Stock:</label>
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
-        <br>
-            <label for="categoriasProductos">Categorias de Productos:</label>
             <br>
-            <div class="categorias">
-                <input type="checkbox" name="categoria" id="Industrial">
-                <label for="categorias" name="categoria"> Industrial </label>
-                <br>
-                <input type="checkbox" name="categoria" id="Artesanal">
-                <label for="categorias" name="categoria"> Artesanal </label>
-                <br>
+            <div class="price">
+                <label for="_price">Precio:</label>
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
-<br>
-            <label for="contenido">Contenido Neto del Producto:</label>
-            <div class="contenido">
-                <input type="checkbox" name="contenido" id="contenido">
-                <label for="Categorias" name="categoria"> 1L. </label>
-                <br>
-                <input type="checkbox" name="contenido" id="contenido">
-                <label for="Categorias" name="categoria"> 473Ml. </label>
-                <br>
-                <input type="checkbox" name="contenido" id="contenido">
-                <label for="Categorias" name="categoria"> 730Ml. </label>
-                <br>
+            <br>
+            <div class="description">
+                <label for="_description">Descripcion:</label>
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
-            <div class="opciones-compra">
-                <label for="compra">Elija los productos:</label>
+            <br>
+            <div class="alcohol">
+                <label for="_alcohol">Graduacion alcoholica:</label>
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
-            <select name="listado">
-                <option value="">Pack de 6 unidades</option>
-                <option value="">Pack de 12 unidades</option>
-                <option value="">Pack de 24 unidades</option>
-                <option value="">Unidad</option>
-            </select>
+            <br>
+            <div class="bitterness">
+                <label for="_bitterness">Amargor:</label>
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
+            </div>
+            <br>
+            <div class="idealTemperature">
+                <label for="_idealTemperature">Temperatura ideal:</label>
+                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
+            </div>
+            <br>
             
-            <div class="agregar">
-                <button type="submit">Agregar</button>
-            </div>
-
-            <div class="modificar">
-                <button type="reset">Modificar</button>
-            </div>
-            <br>
+            
             </article>
             <script>
                 const formulario = document.getElementById('formulario');
