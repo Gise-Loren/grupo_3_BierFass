@@ -19,61 +19,88 @@
 </head>
 
 <body>
- 
-<main>
-    <form action="/views/formUser" method="Post" onsubmit="return formulario()" id="formulario" >
+    <header id="header">
+        <%- include('partials/header')%>
+    </header>
+
+    <main>
+        <h1>Carga de Producto</h1>
+        <form action="/views/formUser" method="Post" onsubmit="return formulario()" id="formulario">
             <div class="id">
                 <label for="_id">Id del producto:</label>
-                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
+            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="" required>
             <br>
             <div class="name">
                 <label for="_name">Nombre del producto:</label>
-                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
+            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="" required>
             <br>
             <div class="type">
                 <label for="_type">Tipo de cerveza::</label>
-                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
+            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="" required>
             <br>
             <div class="producto-img">
                 <label for="img">Imgen del producto:</label>
-                <input type="file" name="imagenProducto" accept=".png, jpg, jpng" required>
             </div>
+            <input type="file" name="imagenProducto" accept=".png, jpg, jpng" required>
             <br>
             <div class="stock">
                 <label for="_stock">Stock:</label>
-                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
+            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="" required>
             <br>
             <div class="price">
                 <label for="_price">Precio:</label>
-                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
+            </div>
+            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="alcohol">
+                <label for="_alcohol">Graduacion alcoholica:</label>
+            </div>
+            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="bitterness">
+                <label for="_bitterness">Amargor:</label>
+            </div>
+            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="idealTemperature">
+                <label for="_idealTemperature">Temperatura ideal:</label>
+            </div>
+            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="" required>
+            <div class="categories">
+                <label for="categoria">Categorias</label>
+                <br>
+                <div class="box-categoria">
+                    <div class="categoria">
+                        <input type="checkbox" name="Categorias" id="categoria">
+                        <label for="Industriales">Industriales</label>
+                    </div>
+                    <div class="categoria">
+                        <input type="checkbox" name="Categorias" id="categoria">
+                        <label for="Artesanales">Artesanales</label>
+                    </div>
+                </div>
             </div>
             <br>
             <div class="description">
                 <label for="_description">Descripcion:</label>
-                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
             </div>
+            <textarea name="comentarios" rows="10" cols="40">Escribe la descripcion...</textarea>
             <br>
-            <div class="alcohol">
-                <label for="_alcohol">Graduacion alcoholica:</label>
-                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
+            <div class="button">
+                <div class="boton-publicar">
+                    <button type="submit">Publicar</button>
+                </div>
+                <br>
+                <div class="boton-guardar">
+                    <button type="submit">Guardar</button>
+                </div>
             </div>
-            <br>
-            <div class="bitterness">
-                <label for="_bitterness">Amargor:</label>
-                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
-            </div>
-            <br>
-            <div class="idealTemperature">
-                <label for="_idealTemperature">Temperatura ideal:</label>
-                <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre del producto" required>
-            </div>
-            <br>
-            
-            
+
+
             </article>
             <script>
                 const formulario = document.getElementById('formulario');
@@ -89,7 +116,7 @@
 
         </form>
 
-      
+
     </main>
 </body>
 

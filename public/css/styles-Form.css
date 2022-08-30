@@ -3,39 +3,103 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+}
+.logo img {
+    width: 100px;
+
+
 }
 
-body {
+.barra div a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(2, 16, 53, 0.75);
+    font-size: 14px;
+    padding: 3px;
+    margin: 2px;
+}
 
-    margin:5px;
-    justify-content: center;
+.busqueda input {
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-right: -24px;
+    color: white
+}
+
+.btn a {
+    background-color: #ffffff00 !important;
+}
+.barra {
+    display: flex;
     align-items: center;
-    background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-descripcion.jpg");
-   background-repeat: no-repeat; 
-    background-position: center center; 
-    background-attachment: fixed;
-    background-size: cover; 
+    height: 100hv;
+    margin-right: 3px
 }
-#formulario {
-    width:100%;
-    border-radius: 5px;
-    text-align: center;
+.busqueda {
+    padding: 10px;
+    margin-right: -10px;
+}
+
+.busqueda input {
+    width: 100px;
+}
+
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     
-    height: 95vh;
+}
+
+.logo img {
+    width: 100px;
+
+
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
     background-color: rgba(243, 242, 242, 0.95);
-    /* background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-descripcion.jpg"); */
+}
+input{
+    width: 50vw;
+    height: 20px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+#categoria{
+    width: 2vw;
+    
+}
+
+#formulario {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(243, 242, 242, 0.95);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-   box-sizing: border-box;
-
-    
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
 }
+
 input .precio {
     margin-left: 20px;
 
 }
+
 .categorias {
     width: 50%;
     height: 30px;
@@ -71,6 +135,41 @@ label {
 
 }
 
+.boton-publicar button {
+    background-color: white;
+    border-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    height: 30px;
+    transition: 500ms;
+    
+    
+
+}
+.boton-guardar button {
+    background-color: white;
+    border-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    height: 30px;
+    transition: 500ms;
+    
+    
+
+}
+.categoria {
+    width: 30%;
+
+}
+.box-categoria{
+    display: flex;
+}
+
+
 /* -----------------query------------------- */
 @media(min-width:480px) {
     .main-header-footer {
@@ -78,6 +177,7 @@ label {
         display: block;
         display: none;
     }
+
     .formulario {
         width: 70%;
         display: block;
