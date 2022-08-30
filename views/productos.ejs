@@ -17,314 +17,63 @@
 
 </head>
 <style>
-    
+
 
 </style>
 
-<body id="body-prodcuts">
-    <header id="header">
-    <%- include('partials/header')%>
+<body id="body-products">
+    <header id="header-products">
+        <%- include('partials/header')%>
     </header>
     <main>
         <div class="localizacion">
-            <a href="/home">Página de inicio</a>
-            <a href="#">‣ Variedades</a>
+            <a href="/home"> Página de inicio</a>
+            <a href="#">> Variedades</a>
         </div>
-        <p class="title">CERVEZAS:</p>
+        <p class="title">CERVEZAS</p>
 
-        <p class="cervezas">Cerveza artesanal</p>
+        <p class="cervezas">CERVEZA ARTESANAL</p>
+
         <article class="variedades">
             <div class="_variedades">
-                <div class="producto">
-                    <div class="img-cerveza-bier">
-                        <img src="img/envase-bier.jpg" alt="andes-rubia">
-                    </div>
-                    <p class="nombre-producto">Bier World Rubia</p>
+                <% artesanales.forEach(producto=> { %>
+                    <div class="producto">
+                        <div class="img-cerveza-bier">
+                            <img src="<%= producto.img %>" alt="andes-rubia">
+                        </div>
+                        <p class="nombre-producto">
+                            <%= producto.name %>
+                        </p>
 
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                        <div class="agregar">
+                            <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                        </div>
                     </div>
-                </div>
-                <div class="producto" id="T1">
-                    <div class="img-cerveza-bier">
-                        <img src="img/envase-bier.jpg" alt="andes-rubia">
-                    </div>
-                    <p class="nombre-producto">Bier World Roja</p>
+                    <% }) %>
 
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-
-                <div class="producto" id="T2">
-                    <div class="img-cerveza-bier">
-                        <img src="img/envase-bier.jpg" alt="andes-rubia">
-                    </div>
-                    <p class="nombre-producto">Bier World Negra</p>
-
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-
-                <div class="producto" id="T2">
-                    <div class="img-cerveza-bier">
-                        <img src="img/envase-bier.jpg" alt="andes-rubia">
-                    </div>
-                    <p class="nombre-producto">Bier World ipa</p>
-
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-                <div class="total-productos">
-                    <div class="ver-todos"><a href="catalogo/artesanal"
-                            style="text-decoration: none;  color:white"><span
-                                class="material-symbols-outlined">arrow_forward_ios</span>
-                            <p>Ver todos</p>
-                        </a>
-                    </div>
-                </div>
             </div>
 
         </article>
 
-        <p class="cervezas ">Cervezas industrial</p>
-
-        <p class="marca-cerveza">Andes Origen</p>
+        <p class="cervezas ">CERVEZAS INDUSTRIALES</p>
 
         <article class="variedades">
             <div class="_variedades">
-                <div class="producto">
-                    <div class="img-cerveza">
-                        <img src="img/andes-rubia.jpg" alt="andes-rubia">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Andes Origen Rubia</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
+                <% industriales.forEach(producto=> { %>
+                    <div class="producto">
+                        <div class="img-cerveza-bier">
+                            <img src="<%= producto.img %>" alt="andes-rubia">
+                        </div>
+                        <p class="nombre-producto">
+                            <%= producto.name %>
+                        </p>
 
-                <div class="producto" id="T1">
-                    <div class="img-cerveza">
-                        <img src="img/andes-negra.jpg" alt="andes negra">
+                        <div class="agregar">
+                            <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
+                        </div>
                     </div>
-                    <div class="nombre-producto">
-                        <p>Andes Origen Negra</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-
-                <div class="producto" id="T2">
-                    <div class="img-cerveza">
-                        <img src="img/andes-rojita.jpg" alt="andes rojita">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Andes Origen Rojita</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-                <div class="producto" id="T2">
-                    <div class="img-cerveza">
-                        <img src="img/andes-ipa.jpg" alt="andes ipa">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Andes Origen Ipa</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-                <div class="total-productos">
-                    <div class="ver-todos"><a href="catalogo/andes-origen"
-                            style="text-decoration: none ; color:white"><span
-                                class="material-symbols-outlined">arrow_forward_ios</span>
-                            <p>Ver todos</p>
-                        </a>
-                    </div>
-                </div>
-        </article>
-
-        <p class="marca-cerveza">Patagonia</p>
-
-        <article class="variedades">
-            <div class="_variedades">
-                <div class="producto">
-                    <div class="img-cerveza">
-                        <img src="img/patagonia-weisse.jpg" alt="imagen patagonia weisse">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Patagonia Weisse</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-
-                <div class="producto" id="T1">
-                    <div class="img-cerveza">
-                        <img src="img/patagonia-vera-ipa.jpg" alt="imagen patagonia vera ipa">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Patagonia Vera Ipa</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-
-                <div class="producto" id="T2">
-                    <div class="img-cerveza">
-                        <img src="img/patagonia-amber-lager.jpg" alt="imagen patagonia amber lager">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Patagonia Amber Lager</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-                <div class="producto" id="T2">
-                    <div class="img-cerveza">
-                        <img src="img/patagonia-24-7.jpg" alt="imagen patagonia 24.7 ">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Patagonia 24.7</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-                <div class="total-productos" href="#">
-                    <div class="ver-todos"><a href="catalogo/patagonia"
-                            style="text-decoration: none ; color:white"><span
-                                class="material-symbols-outlined">arrow_forward_ios</span>
-                            <p>Ver todos</p>
-                        </a>
-                    </div>
-                </div>
-        </article>
-
-        <p class="marca-cerveza">Quilmes</p>
-        <article class="variedades">
-            <div class="_variedades">
-                <div class="producto">
-                    <div class="img-cerveza">
-                        <img src="img/quilmes-clasica.jpg" alt="imagen patagonia weisse">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Quilmes Clásica</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-
-                <div class="producto" id="T1">
-                    <div class="img-cerveza">
-                        <img src="img/quilmes-bock.jpg" alt="imagen patagonia vera ipa">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Quilmes Bock</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-
-                <div class="producto" id="T2">
-                    <div class="img-cerveza">
-                        <img src="img/quilmes-doble-malta.jpg" alt="imagen patagonia amber lager">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Quilmes Doble Malta</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-                <div class="producto" id="T2">
-                    <div class="img-cerveza">
-                        <img src="img/quilmes-red-lager.jpg" alt="imagen patagonia 24.7 ">
-                    </div>
-                    <div class="nombre-producto" >
-                        <p>Quilmes Red Lager</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-                <div class="total-productos" href="#">
-                    <div class="ver-todos"><a href="catalogo/quilmes" style="text-decoration: none ; color:white"><span
-                                class="material-symbols-outlined">arrow_forward_ios</span>
-                            <p>Ver todos</p>
-                        </a>
-                    </div>
-                </div>
-        </article>
-
-        <p class="marca-cerveza">Imperial</p>
-        <article class="variedades">
-            <div class="_variedades">
-                <div class="producto">
-                    <div class="img-cerveza">
-                        <img src="img/imperial-lager.jpg" alt="imagen Imperial Lager">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Imperial Lager</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-
-                <div class="producto" id="T1">
-                    <div class="img-cerveza">
-                        <img src="img/imperial-apa.jpg" alt="imagen Imperial apa">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Imperial Apa</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-
-                <div class="producto" id="T2">
-                    <div class="img-cerveza">
-                        <img src="img/imperial-golden.jpg" alt="imagenImperial Golden">
-                    </div>
-                    <div class="nombre-producto">
-                        <p>Imperial Golden</p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-                <div class="producto" id="T2">
-                    <div class="img-cerveza">
-                        <img src="img/imperial-ipa.jpg" alt="imagen Imperial ipa ">
-                    </div>
-                    <div class="nombre-producto" >
-                        <p>Imperial Ipa </p>
-                    </div>
-                    <div class="agregar">
-                        <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button>
-                    </div>
-                </div>
-                <div class="total-productos" href="#">
-                    <div class="ver-todos"><a href="catalogo/imperial" style="text-decoration: none ; color:white"><span
-                        class="material-symbols-outlined">arrow_forward_ios</span>
-                    <p>Ver todos</p>
-                </a>
+                    <% }) %>
             </div>
-                </div>
         </article>
     </main>
 
