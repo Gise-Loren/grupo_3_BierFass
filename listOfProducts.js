@@ -7,9 +7,10 @@ const products = [
         stock: 50,
         price: 120,
         description: "",
-        alcohol: '',
-        bitterness: '',
-        idealTemperature: '',
+        description: "De aspecto cristalino con una abundante y densa espumas. Su carácter viene marcado por sus maltas que le otorgan un sabor dulce y afrutado, dejando el amargor y el aroma de los lúpulos en un segundo plano. Elaborada con malta suave.",
+        alcohol: '5%',
+        bitterness: '15',
+        idealTemperature: '6°-8°',
         categoria: 'artesanal'
     },
     {
@@ -19,10 +20,10 @@ const products = [
         img: '../img/envase-bier.jpg',
         stock: 50,
         price: 120,
-        description: "",
-        alcohol: '',
-        bitterness: '',
-        idealTemperature: '',
+        description: "De color cobre profundo, medianamente turbia, con espuma densa y cremosa. Se aprecian aromas a caramelo con suaves notas a lúpulo. En boca se denota un leve dulzor y sabor a granos tostados. ¿Qué le da el color rojo a la cerveza? El ingrediente encargado de darle color es la malta, en específico, el grado de tostado que tiene.",
+        alcohol: '5%',
+        bitterness: '18',
+        idealTemperature: '8°-12°',
         categoria: 'artesanal'
     },
     {
@@ -32,10 +33,10 @@ const products = [
         img: '../img/envase-bier.jpg',
         stock: 50,
         price: 120,
-        description: "",
-        alcohol: '',
-        bitterness: '',
-        idealTemperature: '',
+        description: "Su color oscuro es debido al uso de maltas especialmente oscuras durante su elaboración. La malta obtiene a su vez el color durante el procedimiento de tueste, ya que el grado de quemado es el que origina el color de la cerveza. Su sabor es fuerte y recuerda al chocolate o al café",
+        alcohol: '4%',
+        bitterness: '24,5',
+        idealTemperature: '8°-12°',
         categoria: 'artesanal'
     },
     {
@@ -45,10 +46,10 @@ const products = [
         img: '../img/envase-bier.jpg',
         stock: 50,
         price: 120,
-        description: "",
-        alcohol: '',
-        bitterness: '',
-        idealTemperature: '',
+        description: "Se caracteriza por su fermentación a baja temperatura y su sabor con mucha personalidad. Cabe destacar que elaboramos esta gran cerveza mediante la mezcla de procesos tradicionales y los métodos más vanguardistas. Su color dorado intenso y brillante atrae a primera vista, luego sorprende con su ligereza y un amargor que no invade la boca. Al final, revela un sabor sutilmente maltoso con recuerdos de lúpulo",
+        alcohol: '5,2%',
+        bitterness: '4',
+        idealTemperature: '9,5%',
         categoria: 'artesanal'
     },
     {
