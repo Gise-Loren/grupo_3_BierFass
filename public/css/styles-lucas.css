@@ -4,19 +4,12 @@
     box-sizing: border-box;
 }
 
-#body-prodcuts {
-        background-image: linear-gradient(rgba(8, 8, 7, 0.309), rgba(0, 0, 0, 0.63)), url("../img/fondo-catalogo.jpeg");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        background-size: cover;
-}
 
 #header {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .logo img {
@@ -226,7 +219,7 @@
     margin-bottom: 6rem;
     margin-left: 15%;
     margin-right: 15%;
-    font-weight: 600 ;
+    font-weight: 600;
 
 
 }
@@ -281,6 +274,22 @@
 }
 
 /* styles productos */
+#body-products {
+    background-color: #626066;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+#header-products {
+    background-color: rgb(1, 11, 39);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 .img-cerveza img {
     width: 130px;
@@ -292,10 +301,12 @@
 
 ._variedades {
     display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 30px rgba(100, 100, 100, 0);
     margin: 10px;
     border: 15px;
     width: 100%;
- 
+    background-color: #36343c4a;
 }
 
 .producto {
@@ -306,14 +317,14 @@
     margin: 25px;
     width: 75%;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.361);
+    background-color: rgb(255, 255, 255);
 }
 
 .title {
 
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 45px;
     color: #ffffff;
     padding: 20px;
 }
@@ -324,16 +335,18 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 25px;
-    color: #ffffff;
+    color: #000000;
     margin: 15px;
-    border-top: 2px solid #f4eded
+    border-radius: 30px;
+    text-align: center;
+    background-color: rgb(218, 165, 32);
 }
 
 .nombre-producto {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 15px;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     border-top: 1px solid #f4eded;
     padding-bottom: 5px;
@@ -343,7 +356,7 @@
 .marca-cerveza {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     color: #ffffff;
     padding: 15px;
 }
@@ -356,11 +369,19 @@
 
 .localizacion a {
     padding-top: 15px;
+    font-weight: 600;
     text-decoration: none;
-    color: #36343c;
+    color: #ffffff;
     font-family: 'Montserrat', sans-serif;
 }
-
+.localizacion a:hover {
+    
+    border-radius: 30px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
 .total-productos {
     text-align: center;
     display: flex;
@@ -378,14 +399,18 @@
     box-sizing: border-box;
     color: white;
 }
+
 .material-symbols-outlined {
     border-radius: 50%;
     border-bottom: 2px solid rgb(255, 255, 255);
-    color:#ffffff
+    color: #ffffff
 }
-#T1, #T2 {
-    display:none
+
+#T1,
+#T2 {
+    display: none
 }
+
 @media (min-width: 480px) {
 
     body {
@@ -394,12 +419,15 @@
         background-size: cover;
 
     }
- #T1 {
-    display:block
- }
- .producto {
-    width: 40%;
- }
+
+    #T1 {
+        display: block
+    }
+
+    .producto {
+        width: 40%;
+    }
+
     /* styles age date */
     .true-age {
         margin-left: 25%;
@@ -424,13 +452,16 @@
     .total-productos {
         display: none;
     }
+
     ._variedades {
         display: flex;
         justify-content: space-around;
     }
+
     #T2 {
-        display:block
+        display: block
     }
+
     .producto {
         width: 20%;
     }
