@@ -6,7 +6,6 @@ const products = [
         img: '../img/envase-bier.jpg',
         stock: 50,
         price: 120,
-        description: "",
         description: "De aspecto cristalino con una abundante y densa espumas. Su carácter viene marcado por sus maltas que le otorgan un sabor dulce y afrutado, dejando el amargor y el aroma de los lúpulos en un segundo plano. Elaborada con malta suave.",
         alcohol: '5%',
         bitterness: '15',

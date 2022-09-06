@@ -1,13 +1,10 @@
 const express = require ('express');
-
 const mainController = require ('../controllers/mainControllers');
-
 const router = express.Router();
-
 const multer = require('multer');
-
 const path = require('path');
 const { formUser } = require('../controllers/mainControllers');
+
 
 router.get('/', mainController.index);
 
@@ -16,6 +13,14 @@ router.get('/ageDate', mainController.ageDate);
 router.get('/home', mainController.home);
 
 router.get('/products', mainController.products);
+router.post('/products', mainController.products);
+
+router.get('/products/create', mainController.products);
+router.get('/products/:id', mainController.products);
+router.put('/products/:id', mainController.products);
+router.delete('/products/:id', mainController.products);
+
+router.get('/products/id/edit', mainController.products);
 
 router.get('/cart', mainController.cart);
 
