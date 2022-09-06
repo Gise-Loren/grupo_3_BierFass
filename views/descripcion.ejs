@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/styles-Gise.css">
+    <%- include('partials/head') %>
+</html>
+
+<body>
+    <header id="header">
+        <%- include('partials/header')%>
+    </header>
+
+    <main>
+        <% artesanales.forEach(producto=> { %>
+            <div class="box-principal">
+               
+                <div class="nom-variedad">
+                   
+                    <h1><%= producto.name %></h1>
+
+                    <br>
+                    <div class="box">
+
+                        <div class="img">
+                            <img src="<%= producto.img %>" alt="cerveza">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="box-centrado">
+                    <div class="box-descripcion">
+                        <div class="descripcion">
+                            <p><%= producto.description %>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <div class="dato">
+                            <div class="graduacion">
+                                <p class="p1"><%= producto.alcohol %> </p>
+                                <p class="p2">Graduacion Alcoholica</p>
+                            </div>
+                            <div class="amargor">
+                                <p class="p1"><%= producto.bitterness %></p>
+                                <p class="p2"> Amargor</p>
+                            </div>
+                            <div class="temperatura">
+                                <p class="p1"><%= producto.idealTemperature%> </p>
+                                <p class="p2">temperatura ideal</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="box-centrado">
+                        <div class="box-form">
+                            <form id="menu" class="form">
+                                <div class="opciones-compra">
+                                    <label for="compra">Elija los productos:</label>
+                                </div>
+                                <select name="lista">
+                                    <option value="">Pack de 6 unidades</option>
+                                    <option value="">Pack de 12 unidades</option>
+                                    <option value="">Pack de 24 unidades</option>
+                                    <option value="">Unidad</option>
+                                </select>
+
+
+                                <div class="enviar">
+                                    <div class="send">
+                                        <button type="submit"
+                                            style="text-decoration: none; background-color:none;">Enviar
+                                            al
+                                            carrito</button>
+                                    </div>
+                                </div>
+                                <br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+
+
+
+            
+        </div>
+    </main>
+
+    <%- include('partials/footer')%>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+body {
+    font-family: Montserrat;
+    color: white;
+    overflow-x:hidden;
+    overflow-y: scroll;
+    background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/img/jarra-cerbezasdefondo.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y; 
+    margin: 0;
+    height: 100%; 
+}

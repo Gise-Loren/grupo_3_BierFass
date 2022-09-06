@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="css/style-gian.css" rel="stylesheet">
+      <%- include('partials/head') %>
+    </head>
+
+<body>
+    <header id="header">
+        <%- include('partials/header')%>
+    </header>
+    <main>
+
+        <div class="carrito-compra">
+
+            <div class="titulo-carrito">
+                <h2>Mi carrito de compras</h2><i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <article class="articulo-producto">
+                <div class="producto">
+                    <h4>Productos</h4>
+                </div>
+                <div class="cantidad">
+                    <p><b>Cantidad</b></p>
+                </div>
+
+                <div class="precio">
+                    <p><b>Precio</b></p>
+                </div>
+
+            </article>
+            <div class="articulo">
+                <div class="descripcion-producto">
+                    <p>Quilmes Roja 473cm3</p>
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <i class="fa-solid fa-square-2"></i>
+                    <i class="fa-solid fa-circle-minus"></i>
+                    <input type="text" name="precio" placeholder="$500">
+                </div>
+            </div>
+            <br>
+            <div class="articulo">
+                <div class="descripcion-producto">
+                    <p>Bier Fass Schwarz 1l.</p>
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <i class="fa-solid fa-square-2"></i>
+                    <i class="fa-solid fa-circle-minus"></i>
+                    <input type="text" name="precio" placeholder="$300">
+                </div>
+            </div>
+            <br>
+            <div class="articulo">
+                <div class="descripcion-producto">
+                    <p>Andes Rubia 473cm3 </p>
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <i class="fa-solid fa-square-2"></i>
+                    <i class="fa-solid fa-circle-minus"></i>
+                    <input type="text" name="precio" placeholder="$700">
+                </div>
+            </div>
+            <br>
+            <article class="compra">
+                <div class="subtotal">
+                    <p><b>Subtotal</b></p>
+                    <input type="text" name="Subtotal" placeholder="$1500">
+                </div>
+                <br>
+                <div class="descuentos">
+                    <p><b>Descuentos</b></p>
+                    <input type="text" name="Descuentos" placeholder="$200">
+                </div>
+                <br>
+                <div class="total">
+                    <p><b>Total</b></p>
+                    <input type="text" name="Total" placeholder="$1300">
+                </div>
+                <br>
+                <br>
+                <div class="fin-compra">
+                    <button type="text">FINALIZAR COMPRA</button>
+                </div>
+            </article>
+        </div>
+
+    </main>
+    <%- include('partials/footer')%>
+</body>
+
+</html>

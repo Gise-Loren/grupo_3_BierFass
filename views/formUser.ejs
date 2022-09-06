@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/styles-Form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c689bf8ba.js" crossorigin="anonymous"></script>
+    <title>Formulario productos</title>
+
+</head>
+
+<body>
+    <header id="header">
+        <%- include('partials/header')%>
+    </header>
+
+    <main>
+        <h1>Carga de Producto</h1>
+        <form action="/views/formUser" method="POST" enctype="multipart/form-data" onsubmit="return formulario()" id="formulario">
+            <div class="id">
+                <label for="_id">Id del producto:</label>
+            </div>
+            <input type="text" name="id" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="name">
+                <label for="_name">Nombre del producto:</label>
+            </div>
+            <input type="text" name="name" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="type">
+                <label for="_type">Tipo de cerveza:</label>
+            </div>
+            <input type="text" name="type" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="producto-img">
+                <label for="img">Imgen del producto:</label>
+            </div>
+            <input type="file" name="img" required>
+            <br>
+            <div class="stock">
+                <label for="_stock">Stock:</label>
+            </div>
+            <input type="text" name="stock" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="price">
+                <label for="_price">Precio:</label>
+            </div>
+            <input type="text" name="price" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="alcohol">
+                <label for="_alcohol">Graduacion alcoholica:</label>
+            </div>
+            <input type="text" name="alcohol" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="bitterness">
+                <label for="_bitterness">Amargor:</label>
+            </div>
+            <input type="text" name="bitterness" id="nombreProducto" placeholder="" required>
+            <br>
+            <div class="idealTemperature">
+                <label for="_idealTemperature">Temperatura ideal:</label>
+            </div>
+            <input type="text" name="idealTemperature" id="nombreProducto" placeholder="" required>
+            <div class="categories">
+                <label for="categoria">Categorias:</label>
+                <br>
+                <div class="box-categoria">
+                    <div class="categoria">
+                        <input type="checkbox" name="Categorias" id="categoria">
+                        <label for="Industriales">Industriales</label>
+                    </div>
+                    <div class="categoria">
+                        <input type="checkbox" name="Categorias" id="categoria">
+                        <label for="Artesanales">Artesanales</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="description">
+                <label for="_description">Descripcion:</label>
+            </div>
+            <br>
+            <textarea name="comentarios" rows="10" cols="40">Escribe la descripcion...</textarea>
+            <br>
+            <div class="button">
+                <div class="boton-publicar">
+                    <button type="submit">Publicar</button>
+                </div>
+                <br>
+                <div class="boton-guardar">
+                    <button type="submit">Guardar</button>
+                </div>
+            </div>
+
+
+            </article>
+            <script>
+                const formulario = document.getElementById('formulario');
+                formulario.addEventListener('submit', (e) => {
+                    if (formulario.nombreUsuario.value.length > 2) {
+                        alert('No se ha ingresado un nombre valido');
+                        e.preventDefault();
+                    } else {
+                        alert('El producto se agrego correctamente');
+                    }
+                });
+            </script>
+
+        </form>
+
+
+    </main>
+</body>
+
+</html>
