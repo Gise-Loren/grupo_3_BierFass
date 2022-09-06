@@ -1,0 +1,18 @@
+[
+    {
+        "id": 10101,
+        "name": "Bier World Rubia",
+        "type": "Rubia",
+        "img": "../img/envase-bier.jpg",
+        "stock": 50,
+        "price": 120,
+        "description": "De aspecto cristalino con una abundante y densa espumas. Su carácter viene marcado por sus maltas que le otorgan un sabor dulce y afrutado, dejando el amargor y el aroma de los lúpulos en un segundo plano. Elaborada con malta suave.",
+        "alcohol": "5%",
+        "bitterness": "15",
+        "idealTemperature": "6°-8°",
+        "categoria": "artesanal"
+    }
+
+
+
+]
