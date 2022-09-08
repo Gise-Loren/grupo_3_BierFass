@@ -42,9 +42,9 @@
                             <img src="<%= producto.img %>" alt="andes-rubia">
                         </div>
                         <p class="nombre-producto">
-                            <%= producto.name %>
+                            <%= producto.name %> $<%= producto.price %>
                         </p>
-
+                       
                         <div class="agregar">
                             <a href="/products/<%= producto.id %>" style="text-decoration: none"> <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button></a>
                         </div>
@@ -65,7 +65,7 @@
                             <img src="<%= producto.img %>" alt="andes-rubia">
                         </div>
                         <p class="nombre-producto">
-                            <%= producto.name %>
+                            <%= producto.name %> $<%= producto.price %>
                         </p>
 
                         <div class="agregar">
@@ -74,6 +74,7 @@
                     </div>
                     <% }) %>
             </div>
+            
         </article>
     </main>
 

@@ -1,24 +1,95 @@
-const express = require ("express");
-const router = express.Router();
-const productsControllers = require ("../controllers/productsControllers");
+const fs = require ("fs")
 
+const path = require('path');
 
-//Requiere todos los productos.
-router.get("/", productsControllers.index);
+const productsJson = path.join(__dirname, '../data/products.json');
 
-//Crear productos
-router.get('/create', productsControllers.createProducts);
-router.post("/", productsControllers.newProducts);
+const listOfProducts = JSON.parse(fs.readFileSync(productsJson, 'utf8'));
 
-//Eliminar prodcutos.
-router.delete("/:id", productsControllers.deleteProducts);
+const productsControllers = {
+    index: (req, res) => {
+        const industriales = [];
+        const artesanales = [];
+        listOfProducts.forEach(productoActual => {
+            if (productoActual.categoria === "artesanal") {
+                artesanales.push(productoActual);
+            }
+            else {
+                industriales.push(productoActual);
+            }
+        })
+        res.render('productos', { industriales, artesanales })
+    },
+    createProducts: (req, res) => {
+        res.render('formUser');
+    },
+    productsId: (req, res) => {
+        let id = req.params.id;
+        let producto = listOfProducts.find(producto => producto.id == id);
+        res.render('descripcion', {producto});
+    },
+    prodcutsProcess: (req,res) => {
+        let newProduct = {
+            id: req.body.id,
+            name: req.body.name,
+            type: req.body.type,           
+            stock: req.body.stock,
+            price: req.body.price,
+            description: req.body.description,
+            alcohol: req.body.alcohol,
+            bitterness: req.body.bitterness,
+            idealTemperature: req.body.idealTemperature,
+            categoria: req.body.categoria,
+        
+        } 
+        if (req.files) {
+            newProduct.img = req.files.map(file=> file.filename)
+        }
+        listOfProducts.push(newProduct);
+        fs.writeFileSync(productsJson, JSON.stringify(listOfProducts, null, ' '));
+        res.redirect('/products');
 
-//requerir producto por id
-router.get('/:id', productsControllers.productsId);
+    },
+    editProduct: (req,res) =>{
+       let id = req.params.id;
+       let producto = listOfProducts.find(producto => producto.id == id);
+       console.log(producto)
+        res.render("editProducts", {producto});
+       
+    },
+    updateProducts: (req,res) => {
+        let id = req.params.id;
+        let newProduct = req.body;
+        let image = req.file.filename;
 
-//modificar productos
-router.get("/:id/edit", productsControllers.modifyProducts);
-router.put("/:id",productsControllers.updateProducts);
+        newProduct.id = id;
+        
+        for (let index = 0; index < listOfProducts.length; index++) {
+            const element = listOfProducts[index];
+            if (element.id == id) {
+                listOfProducts[index] = newProduct;
+                newProduct.image = image;
+            }
+        }
 
+        fs.writeFileSync(productsJson, JSON.stringify(listOfProducts, null, ' '));
 
-module.exports = router;
+        res.redirect('/products');
+    },
+    deleteProducts: (req, res) => {
+        let id = req.params.id;
+        for (let index = 0; index < listOfProducts.length; index++) {
+            const element = listOfProducts[index];
+            if (element.id == id) {
+                listOfProducts.splice(index, 1);
+            }
+        }
+
+        fs.writeFileSync(productsJson, JSON.stringify(listOfProducts, null, ' '));
+
+        res.redirect('/products/uploadedProducts');
+    }
+
+}
+
+module.exports = productsControllers

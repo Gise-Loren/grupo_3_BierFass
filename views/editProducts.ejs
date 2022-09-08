@@ -2,19 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <%- include('partials/head') %>
     <link rel="stylesheet" href="../css/styles-Form.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5c689bf8ba.js" crossorigin="anonymous"></script>
-    <title>Formulario productos</title>
 
 </head>
 
@@ -33,17 +22,17 @@
             <div class="id">
                 <label for="_id">ID del producto:</label>
             </div>
-            <input type="text" name="id" id="nombreProducto" placeholder="" required>
+            <input type="text" name="id" id="nombreProducto" value="<%= producto.id %>" required>
             <br>
             <div class="name">
                 <label for="_name">Nombre del producto:</label>
             </div>
-            <input type="text" name="name" id="nombreProducto" placeholder="" required>
+            <input type="text" name="name" id="nombreProducto" value="<%= producto.name %>" required>
             <br>
             <div class="type">
                 <label for="_type">Tipo de cerveza:</label>
             </div>
-            <input type="text" name="type" id="nombreProducto" placeholder="" required>
+            <input type="text" name="type" id="nombreProducto" value="<%= producto.type %>" required>
             <br>
             <div class="producto-img">
                 <label for="img">Imagen del producto:</label>
@@ -53,38 +42,38 @@
             <div class="stock">
                 <label for="_stock">Stock:</label>
             </div>
-            <input type="text" name="stock" id="nombreProducto" placeholder="" required>
+            <input type="text" name="stock" id="nombreProducto" value="<%= producto.stock %>" required>
             <br>
             <div class="price">
                 <label for="_price">Precio:</label>
             </div>
-            <input type="text" name="price" id="nombreProducto" placeholder="" required>
+            <input type="text" name="price" id="nombreProducto"value="<%= producto.price %>" required>
             <br>
             <div class="alcohol">
                 <label for="_alcohol">Graduación alcohólica:</label>
             </div>
-            <input type="text" name="alcohol" id="nombreProducto" placeholder="" required>
+            <input type="text" name="alcohol" id="nombreProducto" value="<%= producto.alcohol %>" required>
             <br>
             <div class="bitterness">
                 <label for="_bitterness">Amargor:</label>
             </div>
-            <input type="text" name="bitterness" id="nombreProducto" placeholder="" required>
+            <input type="text" name="bitterness" id="nombreProducto" value="<%= producto.bitterness %>" required>
             <br>
             <div class="idealTemperature">
                 <label for="_idealTemperature">Temperatura ideal:</label>
             </div>
-            <input type="text" name="idealTemperature" id="nombreProducto" placeholder="" required>
+            <input type="text" name="idealTemperature" id="nombreProducto" value="<%= producto.idealTemperature %>" required>
             <div class="categories">
                 <label for="categoria">Categorías:</label>
                 <br>
-                <input type="text" name="categoria" id="nombreProducto" placeholder="" required>
+                <input type="text" name="categoria" id="nombreProducto" value="<%= producto.categoria %>" required>
             </div>
             <br>
             <div class="description">
                 <label for="_description">Descripción:</label>
             </div>
             <br>
-            <textarea name="comentarios" rows="10" cols="40">Escribe la descripción...</textarea>
+            <textarea name="comentarios" rows="10" cols="40" value="<%= producto.description %>">Escribe la descripción...</textarea>
             <br>
             
                 <br>

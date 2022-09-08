@@ -247,7 +247,7 @@
   "categoria": "industrial"
  },
  {
-  "id": 5020,
+  "id": 50204,
   "name": "Imperial Ipa",
   "type": "Ipa",
   "img": "../img/imperial-ipa.jpg",
@@ -259,32 +259,5 @@
   "idealTemperature": "3°-6°",
   "categoria": "industrial"
  },
- {
-  "id": "104539",
-  "name": "Brahma",
-  "type": "IPa",
-  "stock": "2",
-  "price": "1600",
-  "alcohol": "9",
-  "bitterness": "9",
-  "idealTemperature": "9",
-  "categoria": "9",
-  "img": [
-   "../img/imgBier1662590653303.jpg"
-  ]
- },
- {
-  "id": "asoijd",
-  "name": "asofij",
-  "type": "asfoij",
-  "stock": "as",
-  "price": "as",
-  "alcohol": "as",
-  "bitterness": "as",
-  "idealTemperature": "as",
-  "categoria": "af",
-  "img": [
-   "../img/imgBier1662592100174.jpg"
-  ]
- }
+ {}
 ]

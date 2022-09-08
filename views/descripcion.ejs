@@ -8,11 +8,13 @@
 
 <body>
     <header id="header">
+        <div class="logo">
+            <a href="/home"> <img src="../img/logo-bier-fass.png" alt="logo"></a>
+         </div>
         <%- include('partials/header')%>
     </header>
 
     <main>
-        <% artesanales.forEach(producto=> { %>
             <div class="box-principal">
                
                 <div class="nom-variedad">
@@ -59,10 +61,11 @@
                                     <label for="compra">Elija los productos:</label>
                                 </div>
                                 <select name="lista">
-                                    <option value="">Pack de 6 unidades</option>
-                                    <option value="">Pack de 12 unidades</option>
-                                    <option value="">Pack de 24 unidades</option>
-                                    <option value="">Unidad</option>
+                                    <option value="1">Unidad     $<%= producto.price %></option>
+                                    <option value="6">Pack de 6 unidades  $<%= producto.price * 6 * 0.95  %> | 5% OFF! |</option>
+                                    <option value="12">Pack de 12 unidades $<%= producto.price * 12 * 0.90  %> | 10% OFF! |</option>
+                                    <option value="24">Pack de 24 unidades $<%= producto.price * 24 * 0.85  %> | 15%  0FF! |</option>
+                                 
                                 </select>
 
 
@@ -71,7 +74,7 @@
                                         <button type="submit"
                                             style="text-decoration: none; background-color:none;">Enviar
                                             al
-                                            carrito</button>
+                                            carrito <a  class="carroto material-symbols-outlined" style="font-size: 1.3vw">shopping_cart</a></button>
                                     </div>
                                 </div>
                                 <br>
@@ -79,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <% }) %>
+              
 
 
 
