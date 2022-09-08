@@ -25,9 +25,13 @@
 
     <main>
         <h1>Carga de Producto</h1>
-        <form action="/views/formUser" method="POST" enctype="multipart/form-data" onsubmit="return formulario()" id="formulario">
+        <form 
+        action="/formUser" 
+        method="POST" 
+        enctype="multipart/form-data" 
+        id="formulario">
             <div class="id">
-                <label for="_id">Id del producto:</label>
+                <label for="_id">ID del producto:</label>
             </div>
             <input type="text" name="id" id="nombreProducto" placeholder="" required>
             <br>
@@ -42,7 +46,7 @@
             <input type="text" name="type" id="nombreProducto" placeholder="" required>
             <br>
             <div class="producto-img">
-                <label for="img">Imgen del producto:</label>
+                <label for="img">Imagen del producto:</label>
             </div>
             <input type="file" name="img" required>
             <br>
@@ -57,7 +61,7 @@
             <input type="text" name="price" id="nombreProducto" placeholder="" required>
             <br>
             <div class="alcohol">
-                <label for="_alcohol">Graduacion alcoholica:</label>
+                <label for="_alcohol">Graduación alcohólica:</label>
             </div>
             <input type="text" name="alcohol" id="nombreProducto" placeholder="" required>
             <br>
@@ -71,33 +75,21 @@
             </div>
             <input type="text" name="idealTemperature" id="nombreProducto" placeholder="" required>
             <div class="categories">
-                <label for="categoria">Categorias:</label>
+                <label for="categoria">Categorías:</label>
                 <br>
-                <div class="box-categoria">
-                    <div class="categoria">
-                        <input type="checkbox" name="Categorias" id="categoria">
-                        <label for="Industriales">Industriales</label>
-                    </div>
-                    <div class="categoria">
-                        <input type="checkbox" name="Categorias" id="categoria">
-                        <label for="Artesanales">Artesanales</label>
-                    </div>
-                </div>
+                <input type="text" name="categoria" id="nombreProducto" placeholder="" required>
             </div>
             <br>
             <div class="description">
-                <label for="_description">Descripcion:</label>
+                <label for="_description">Descripción:</label>
             </div>
             <br>
-            <textarea name="comentarios" rows="10" cols="40">Escribe la descripcion...</textarea>
+            <textarea name="comentarios" rows="10" cols="40">Escribe la descripción...</textarea>
             <br>
-            <div class="button">
-                <div class="boton-publicar">
-                    <button type="submit">Publicar</button>
-                </div>
+            
                 <br>
                 <div class="boton-guardar">
-                    <button type="submit">Guardar</button>
+                    <input type="submit" value="Enviar">
                 </div>
             </div>
 

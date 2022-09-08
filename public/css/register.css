@@ -116,7 +116,22 @@ input[type=submit]:hover {
     color:#EFBF2D;
     text-decoration: none;
 }
+.img-register {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 42px;
 
+}
+.img-register label {
+ font-size: 14px;
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     body {

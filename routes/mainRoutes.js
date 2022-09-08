@@ -7,7 +7,29 @@ const router = express.Router();
 const multer = require('multer');
 
 const path = require('path');
-const { formUser } = require('../controllers/mainControllers');
+
+const storage = multer.diskStorage({
+    destination: (req, file, callback) => {
+        callback(null, './public/img');
+    },
+    filename: (req, file, callback) => {
+
+        callback(null, "../img/imgBier" + Date.now() + path.extname(file.originalname));
+    }
+})
+const upload = multer({storage});
+
+const storageUser = multer.diskStorage({
+    destination: (req, file, callback) => {
+        callback(null, './public/img/users');
+    },
+    filename: (req, file, callback) => {
+
+        callback(null, "../img/users/imgBier" + Date.now() + path.extname(file.originalname));
+    }
+})
+const uploadUsers = multer({storageUser});
+
 
 router.get('/', mainController.index);
 
@@ -23,23 +45,14 @@ router.get('/login', mainController.login);
 
 router.get('/register', mainController.register);
 
+router.post('/register', uploadUsers.any(), mainController.registerProcess);
+
 router.get('/description', mainController.description);
 
 router.get('/formUser', mainController.formUser);
 
-router.post('/formUser', mainController.formUser)
+router.post('/formUser', upload.any(), mainController.prodcutsProcess)
 
 
-// PARA PODER PROCESAR LAS IMAGENES QUE SE AGREGAN CUANDO AGREGAMOS NUEVOS PRODCUTOS.
-/* const storage = multer.diskStorage ( {
-    destination: function (req, file, callBack) {
-        callBack(null,path.join(__dirname,"../public/img"));
-    },
-    filname: function (req, file, callBack)   {
-         const imageName = "bier-img-" + Date.now() + path.extname(file.originalName);
-        callBack(null, imageName);filname 
-    }
-})
-//router.post('/', upload.single("formUser")) */
-/* const upload = multer({storage}) */
+
 module.exports = router;
