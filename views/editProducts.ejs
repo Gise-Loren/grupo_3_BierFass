@@ -245,11 +245,12 @@ textarea {
     </header>
 
     <main>
+
         <h1>Carga de Producto</h1>
         <form 
-        action="/products" 
-        method="POST" 
-        enctype="multipart/form-data" 
+        action="/products/<%= producto.id ?? ''%>?_method=PUT" 
+        method="post"
+        enctype="multipart/form-data"
         id="formulario">
             <div class="id">
                 <label for="_id">ID del producto:</label>

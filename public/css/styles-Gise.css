@@ -47,7 +47,9 @@ footer {
     padding: 3px;
     margin: 2px;
 }
-
+.box-centrado {
+    padding-top: 0px!important;
+}
 .busqueda input {
     background-color: rgba(2, 16, 53, 0.75);
     padding-top: 1.5px;
@@ -82,6 +84,24 @@ footer {
     color: black;
     border-style: none;
     margin: auto;
+}
+.button-edit {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .7rem;
+    width: 2rem;
+    height: 30px;
+    border-radius: 25px;
+    color: black;
+    border-style: none;
+    margin: auto;
+    position: absolute;
+}
+.button-edit a {
+    text-decoration: none; 
+    color:black
 }
 
 .barra {
@@ -177,8 +197,8 @@ footer {
 
 h1 {
     border-bottom: 2px solid #f4ededa9;
-    color: rgba(7, 7, 220, 0.857);
-
+    color: rgb(0, 0, 0);
+    background-color: rgb(218, 165, 32);
 }
 
 .nom-variedad {
@@ -192,7 +212,7 @@ h1 {
     padding-bottom: 15px;
     box-shadow: 0px 0px 10px rgba(104, 103, 103, 0.744);
     box-sizing: border-box;
-    background-color: rgba(97, 95, 95, 0.77);
+    background-color: rgba(132, 131, 131, 0.8);
     border-bottom: 2px solid #f4ededa9;
 
 }
@@ -211,7 +231,7 @@ h1 {
     /*  margin-top: 5%; */
     margin-left: 12.5%;
     box-sizing: border-box;
-    background-color: rgba(97, 95, 95, 0.77);
+    background-color: rgba(132, 131, 131, 0.8);
 
 
 }
@@ -228,6 +248,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+  
 }
 
 .caja {
@@ -242,16 +263,17 @@ h1 {
 
 .p1 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 800;
+    font-size: 20px;
     color: white;
     text-align: center;
+    margin-top: 5px;
 }
 
 .p2 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+    font-weight: 1000;
+    font-size: 15px;
     color: white;
     text-align: center;
 }
@@ -278,11 +300,12 @@ h1 {
     border-top: 1px solid #f4eded;
     border-bottom: 1px solid #f4eded;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 div .dato {
     width: 75%;
-    height: 55px;
+    height: 10vh;
 }
 
 .send button {
@@ -333,7 +356,7 @@ div .dato {
         padding: 0;
         margin: 0%;
     }
-
+ 
     .box-centrado {
         width: 50%;
         align-items: center;
