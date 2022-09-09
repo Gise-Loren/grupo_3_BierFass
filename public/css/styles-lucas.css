@@ -297,6 +297,7 @@
 
 .img-cerveza-bier img {
     width: 115px;
+    margin-bottom: 15px;
 }
 
 ._variedades {
@@ -361,7 +362,6 @@
     padding: 15px;
 }
 
-/* agregar hover para que localizacion a */
 .localizacion {
     padding-top: 15px;
     padding-left: 10px;
@@ -400,10 +400,8 @@
     color: white;
 }
 
-.material-symbols-outlined {
-    border-radius: 50%;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    color: #ffffff
+.button-delete {
+    position: absolute;
 }
 
 #T1,

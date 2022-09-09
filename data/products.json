@@ -74,7 +74,7 @@
   "description": "Andes Origen es una cerveza mendocina. Se recomienda servir en copa. Está hecha con agua de deshielo de la cordillera y pura malta tostada a fuego lento, que ofrece colores y texturas bien distintivas. Hay una rubia, una roja y una negra.Aroma y sabor a tostado, leve dulzor, cuerpo intenso y robusto en boca, amargo medio.",
   "alcohol": "5,3%",
   "bitterness": "20",
-  "idealTemperature": "3°-5° -",
+  "idealTemperature": "3°-5°",
   "categoria": "industrial"
  },
  {
@@ -122,7 +122,7 @@
   "type": "Vera ipa",
   "img": "../img/patagonia-vera-ipa.jpg",
   "stock": 50,
-  "price": 120,
+  "price": 140,
   "description": "Cerveza estilo New England Ipa. Se caracteriza por su intenso aroma de lúpulos del nuevo mundo (Estados Unidos y Australia, en este caso) y de un bajo amargor. Lleva trigo malteado para dar su característica opalescencia. Altamente refrescante, frutal y  de fácil tomabilidad.",
   "alcohol": "5,8%",
   "bitterness": "20",
@@ -258,6 +258,5 @@
   "bitterness": "42",
   "idealTemperature": "3°-6°",
   "categoria": "industrial"
- },
- {}
+ }
 ]

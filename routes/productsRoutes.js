@@ -21,7 +21,7 @@ router.get("/", productsControllers.index);
 
 //Crear productos
 router.get('/create', productsControllers.createProducts);
-router.post("/", productsControllers.prodcutsProcess);
+router.post('/formUser', upload.any(), productsControllers.prodcutsProcess) 
 
 //Eliminar prodcutos.
 router.delete("/:id", productsControllers.deleteProducts);
@@ -30,8 +30,8 @@ router.delete("/:id", productsControllers.deleteProducts);
 router.get('/:id', productsControllers.productsId);
 
 //modificar productos
-router.get("/edit/:id", productsControllers.editProduct);
-router.put("/:id",productsControllers.updateProducts);
+router.get("/:id/edit", productsControllers.editProduct);
+router.put("/:id", upload.any() ,productsControllers.updateProducts);
 
 
 

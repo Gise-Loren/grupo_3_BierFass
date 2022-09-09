@@ -23,11 +23,6 @@ const productsControllers = {
     createProducts: (req, res) => {
         res.render('formUser');
     },
-    productsId: (req, res) => {
-        let id = req.params.id;
-        let producto = listOfProducts.find(producto => producto.id == id);
-        res.render('descripcion', {producto});
-    },
     prodcutsProcess: (req,res) => {
         let newProduct = {
             id: req.body.id,
@@ -53,28 +48,31 @@ const productsControllers = {
     editProduct: (req,res) =>{
        let id = req.params.id;
        let producto = listOfProducts.find(producto => producto.id == id);
-       console.log(producto)
+
         res.render("editProducts", {producto});
        
     },
     updateProducts: (req,res) => {
-        let id = req.params.id;
-        let newProduct = req.body;
-        let image = req.file.filename;
-
-        newProduct.id = id;
+        let newProduct = {
+            id: req.body.id,
+            name: req.body.name,
+            type: req.body.type,           
+            stock: req.body.stock,
+            price: req.body.price,
+            description: req.body.description,
+            alcohol: req.body.alcohol,
+            bitterness: req.body.bitterness,
+            idealTemperature: req.body.idealTemperature,
+            categoria: req.body.categoria,
         
-        for (let index = 0; index < listOfProducts.length; index++) {
-            const element = listOfProducts[index];
-            if (element.id == id) {
-                listOfProducts[index] = newProduct;
-                newProduct.image = image;
-            }
+        } 
+        if (req.files) {
+            newProduct.img = req.files.map(file=> file.filename)
         }
-
+        listOfProducts.push(newProduct);
         fs.writeFileSync(productsJson, JSON.stringify(listOfProducts, null, ' '));
-
         res.redirect('/products');
+
     },
     deleteProducts: (req, res) => {
         let id = req.params.id;
@@ -88,8 +86,12 @@ const productsControllers = {
         fs.writeFileSync(productsJson, JSON.stringify(listOfProducts, null, ' '));
 
         res.redirect('/products/uploadedProducts');
-    }
-
+    },
+    productsId: (req, res) => {
+        let id = req.params.id;
+        let producto = listOfProducts.find(producto => producto.id == id);
+        res.render('descripcion', {producto});
+    },
 }
 
 module.exports = productsControllers

@@ -38,6 +38,11 @@
             <div class="_variedades">
                 <% artesanales.forEach(producto=> { %>
                     <div class="producto">
+                        <div class="button-delete">
+                           <button style="text-decoration: none!important; background-color: rgb(0, 0, 0); color: white"> <span class="material-symbols-outlined" style=>
+                                delete
+                            </span></button>
+                        </div>
                         <div class="img-cerveza-bier">
                             <img src="<%= producto.img %>" alt="andes-rubia">
                         </div>
@@ -45,9 +50,12 @@
                             <%= producto.name %> $<%= producto.price %>
                         </p>
                        
+                        
                         <div class="agregar">
-                            <a href="/products/<%= producto.id %>" style="text-decoration: none"> <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button></a>
+                            <a href="/products/<%= producto.id %>" style="text-decoration: none"> <button
+                                    class="boton-comprar" style="text-decoration: none"> AGREGAR </button></a>
                         </div>
+
                     </div>
                     <% }) %>
 
@@ -69,12 +77,13 @@
                         </p>
 
                         <div class="agregar">
-                            <a href="/products/<%= producto.id %>" style="text-decoration: none" > <button class="boton-comprar" style="text-decoration: none"> AGREGAR </button></a>
+                            <a href="/products/<%= producto.id %>" style="text-decoration: none"> <button
+                                    class="boton-comprar" style="text-decoration: none"> AGREGAR </button></a>
                         </div>
                     </div>
                     <% }) %>
             </div>
-            
+
         </article>
     </main>
 
