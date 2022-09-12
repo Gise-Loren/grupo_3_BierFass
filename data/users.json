@@ -1,52 +1,69 @@
 [
-    {
-        "id": 1,
-        "name": "Lucas",
-        "lastname": "Lucaas21",
-        "email": "lucaas@gmail.com",
-        "password": "1123456Lucas",
-        "category": "admin",
-        "img" : "../public/img/users/ao24sdij.jpg"
-
-    },
-    {
-        "id": 2,
-        "name": "Giancarlos",
-        "lastname": "giancarlos",
-        "email": "gian@gmail.com",
-        "password": "123gian",
-        "category": "admin",
-        "img" : "../public/img/users/a2osdij.jpg"
-
-    },
-    {
-        "id": 3,
-        "name": "Gisel",
-        "lastname": "Gisel31",
-        "email": "gise-2@gmail.com",
-        "password": "1145gise",
-        "category": "admin",
-        "img" : "../public/img/users/aosd44ij.jpg"
-
-    },
-    {
-        "id": 4,
-        "name": "Francisco",
-        "lastname": "francisc0",
-        "email": "fran2@gmail.com",
-        "password": "115fram",
-        "category": "admin",
-        "img" : "../public/img/users/aosdij.jpg"
-
-    },
-    {
-        "id": 5,
-        "name": "Javier",
-        "lastname": "Javi123",
-        "email": "Jav-ier@gmail.com",
-        "password": "1654Javi",
-        "category": "user",
-        "img" : "../public/img/users/aoasfsdij.jpg"
-
-    }
+ {
+  "id": 1,
+  "name": "Lucas",
+  "lastname": "Lucaas21",
+  "email": "lucaas@gmail.com",
+  "password": "1123456Lucas",
+  "category": "admin",
+  "img": "../public/img/users/ao24sdij.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Giancarlos",
+  "lastname": "giancarlos",
+  "email": "gian@gmail.com",
+  "password": "123gian",
+  "category": "admin",
+  "img": "../public/img/users/a2osdij.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Gisel",
+  "lastname": "Gisel31",
+  "email": "gise-2@gmail.com",
+  "password": "1145gise",
+  "category": "admin",
+  "img": "../public/img/users/aosd44ij.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Francisco",
+  "lastname": "francisc0",
+  "email": "fran2@gmail.com",
+  "password": "115fram",
+  "category": "admin",
+  "img": "../public/img/users/aosdij.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Javier",
+  "lastname": "Javi123",
+  "email": "Jav-ier@gmail.com",
+  "password": "1654Javi",
+  "category": "user",
+  "img": "../public/img/users/aoasfsdij.jpg"
+ },
+ {
+  "id": 6,
+  "name": "sdasd",
+  "lastName": "asdasda",
+  "email": "aaaaaaa",
+  "password": "aaaaaaa",
+  "category": "user",
+  "img": [
+   "../users/img-users-1662851371295.png"
+  ]
+ },
+ {
+  "id": 7,
+  "name": "lucas",
+  "lastName": "qw",
+  "email": "qwe",
+  "password": "qwee",
+  "category": "user",
+  "img": [
+   "public/img/users/img-users-1662851724215.png"
+  ]
+ }
 ]
