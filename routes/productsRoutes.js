@@ -1,7 +1,11 @@
 const express = require ("express");
+
 const router = express.Router();
+
 const productsControllers = require ("../controllers/productsControllers");
+
 const multer = require('multer');
+
 const path = require('path');
 
 const storage = multer.diskStorage({
@@ -13,27 +17,21 @@ const storage = multer.diskStorage({
         callback(null, "../img/imgBier" + Date.now() + path.extname(file.originalname));
     }
 })
+
 const upload = multer({ storage });
 
+router.get("/", productsControllers.index); // <------ LISTADO DE PRODUCTOS.
 
-//Requiere todos los productos.
-router.get("/", productsControllers.index);
+router.get('/create', productsControllers.createProducts); // <------ FORMULARIO DE CREACION DE PRODUCTOS.
 
-//Crear productos
-router.get('/create', productsControllers.createProducts);
-router.post('/formUser', upload.any(), productsControllers.prodcutsProcess) 
+router.get('/:id', productsControllers.productsId); // <------ DETALLE DE UN PRODUCTO EN PARTICULAR.
 
-//Eliminar prodcutos.
-router.delete("/:id", productsControllers.deleteProducts);
+router.post('/', upload.any(), productsControllers.prodcutsProcess); // <------ ACCION DE CREACION DE PRODUCTOS.
 
-//requerir producto por id
-router.get('/:id', productsControllers.productsId);
+router.get("/:id/edit", productsControllers.editProduct); // <------ FORMULARIO DE EDICION DE PRODUCTOS.
 
-//modificar productos
-router.get("/:id/edit", productsControllers.editProduct);
-router.put("/:id", upload.any() ,productsControllers.updateProducts);
-
-
-
+router.put("/:id", upload.any() ,productsControllers.updateProducts); // <------ ACCION DE EDICION.
+ 
+router.delete("/:id", productsControllers.deleteProducts); // <------ ACCION DE BORRADO.
 
 module.exports = router;

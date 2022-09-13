@@ -53,24 +53,23 @@ const productsControllers = {
        
     },
     updateProducts: (req,res) => {
-        let newProduct = {
-            id: req.body.id,
-            name: req.body.name,
-            type: req.body.type,           
-            stock: req.body.stock,
-            price: req.body.price,
-            description: req.body.description,
-            alcohol: req.body.alcohol,
-            bitterness: req.body.bitterness,
-            idealTemperature: req.body.idealTemperature,
-            categoria: req.body.categoria,
-        
-        } 
+        let id = req.params.id;
+        let newProduct = req.body;
         if (req.files) {
             newProduct.img = req.files.map(file=> file.filename)
         }
-        listOfProducts.push(newProduct);
-        fs.writeFileSync(productsJson, JSON.stringify(listOfProducts, null, ' '));
+        newProduct.id = id;
+
+        for (let index = 0; index < listOfProducts.length; index++) {
+            const element = listOfProducts[index];
+            if (element.id == id) {
+                listOfProducts[index] = newProduct;
+    
+            }
+        }
+
+        fs.writeFileSync(productsJson, JSON.stringify(listOfProducts, null, 2));
+
         res.redirect('/products');
 
     },
@@ -85,7 +84,7 @@ const productsControllers = {
 
         fs.writeFileSync(productsJson, JSON.stringify(listOfProducts, null, ' '));
 
-        res.redirect('/products/uploadedProducts');
+        res.redirect('/products');
     },
     productsId: (req, res) => {
         let id = req.params.id;
