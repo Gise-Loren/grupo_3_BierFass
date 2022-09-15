@@ -303,9 +303,9 @@ h1 {
     margin-bottom: 5%;
 }
 
-div .dato {
+div.dato {
     width: 75%;
-    height: 10vh;
+    height: 13vh;
 }
 
 .send button {
@@ -343,6 +343,10 @@ div .dato {
 /* ---------------query--------------- */
 
 @media(min-width:480px) {
+    .html lang {
+        flex-direction: row;
+        justify-content: center;
+    }
 
     .box-principal {
         display: flex;
@@ -401,6 +405,7 @@ div .dato {
         font-size: 12px;
     }
 }
+
 
 /* ---------------query--------------- */
 
