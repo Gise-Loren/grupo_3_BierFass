@@ -75,7 +75,6 @@ const productsControllers = {
             const element = listOfProducts[index];
             if (element.id == id) {
                 listOfProducts[index] = newProduct;
-    
             }
         }
 
