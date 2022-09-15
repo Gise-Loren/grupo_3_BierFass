@@ -19,10 +19,11 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
-app.use("/products", productsRoutes)
+app.use("/products", productsRoutes);
 
-app.use("/users",usersRoutes) 
+app.use(usersRoutes); 
+
+app.use(mainRoutes);
 
 app.listen( process.env.PORT,()=> console.log("Servidor corriendo en el puerto " + process.env.PORT))
 
-app.use(mainRoutes)
