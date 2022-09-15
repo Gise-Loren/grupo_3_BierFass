@@ -28,13 +28,13 @@ const usersControllers = {
         res.redirect('/products');
     },
     login: (req, res) => {
-        const userData = req.body;
+      /*   const userData = req.body;
         const selectedUser = listOFUsers.find(user=> user.email == userData.email)
         if(selectedUser){
             bcrypt.compareSync(user)
         }else {
 
-        }
+        } */
         res.render('login')
 }
 }
