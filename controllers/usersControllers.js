@@ -28,18 +28,26 @@ const usersControllers = {
         res.redirect('/products');
     },
     login: (req, res) => {
-      /*   const userData = req.body;
-        const selectedUser = listOFUsers.find(user=> user.email == userData.email)
-        if(selectedUser){
-            bcrypt.compareSync(user)
-        }else {
+        
+        res.render('login');
+    },
+    processLogin: (req, res) => {
+        const userData = req.body;
+        const selectedUser = listOFUsers.find(user => user.email == userData.email)
+        if (selectedUser) {
+            const isCorrect = (bcrypt.compareSync(userData.password, selectedUser.password))
+            if (isCorrect) {
+                res.redirect ('/profile'); // crear view profile
+            } else {
+                res.send('La contraseña es incorrecta!');
+            }
 
-        } */
-        res.render('login')
-}
+        } else {
+            res.send('El usuario no existe!');
+        }
+    }
 }
 
 
 module.exports = usersControllers;
 
- 
