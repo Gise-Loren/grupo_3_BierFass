@@ -54,7 +54,18 @@ const productsControllers = {
     },
     updateProducts: (req,res) => {
         let id = req.params.id;
-        let newProduct = req.body;
+        let newProduct = {
+            id: req.body.id,
+            name: req.body.name,
+            type: req.body.type,           
+            stock: req.body.stock,
+            price: req.body.price,
+            description: req.body.description,
+            alcohol: req.body.alcohol,
+            bitterness: req.body.bitterness,
+            idealTemperature: req.body.idealTemperature,
+            categoria: req.body.categoria,
+        }
         if (req.files) {
             newProduct.img = req.files.map(file=> file.filename)
         }

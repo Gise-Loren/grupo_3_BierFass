@@ -161,13 +161,12 @@
     "type": "1212",
     "stock": "2",
     "price": "2",
+    "description": "asdasdiajsdoiahsdoasdihoia",
     "alcohol": "2",
     "bitterness": "2",
     "idealTemperature": "2",
     "categoria": "2",
-    "img": [
-      "../img/imgBier1663027032870.jpg"
-    ]
+    "img": []
   },
   {
     "id": "10",
