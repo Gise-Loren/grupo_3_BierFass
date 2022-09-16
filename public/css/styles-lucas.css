@@ -260,7 +260,7 @@ body {
     margin-bottom: 10px;
 }
 
-.ageDate-button-ing button {
+.ageDate-button-ing input {
     margin: 5px;
     display: flex;
     justify-content: center;
