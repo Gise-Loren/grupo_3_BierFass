@@ -14,8 +14,6 @@ body {
 
 .logo img {
     width: 100px;
-
-
 }
 
 .barra div a {
@@ -149,22 +147,7 @@ label {
 
 .boton-publicar button {
     margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: .7rem;
-    width: 6rem;
-    height: 22px;
-    background-color: rgb(218, 165, 32);
-    border-color: rgb(218, 165, 32);
-    border-radius: 25px;
-    color: black;
-    border-style: none;
-    margin: auto;
-    font-weight: bold;
-    font-size: 12px;
-    transition: 500ms;
-
+   
 }
 
 .boton-guardar button {

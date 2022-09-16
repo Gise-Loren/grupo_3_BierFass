@@ -82,6 +82,7 @@ body {
     height: 22px;
     background-color: rgb(218, 165, 32);
     border-color: rgb(218, 165, 32);
+    font-weight: bold;
     border-radius: 25px;
     color: black;
     border-style: none;

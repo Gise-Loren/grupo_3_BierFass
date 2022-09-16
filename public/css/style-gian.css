@@ -16,11 +16,14 @@ body {
     background-size: cover;
 }
 
-/* encabezado */
-.logo {
+/* encabezado  */
+ .logo {
     display: flex;
     width: 100px;
     height: 100px;
+} 
+.logo img{
+    width: 100px;
 }
 
 header {
@@ -59,6 +62,7 @@ header {
     font-weight: bold;
     margin-right: -24px;
 }
+
 
 main {
     width: 90%;
@@ -109,8 +113,8 @@ main {
 }
 
 .articulo {
-    
-   
+
+
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     background-color: #D8D8D8;
     width: 100%;
@@ -119,23 +123,38 @@ main {
     padding: 40px;
     display: block;
     align-items: center;
-
 }
 
 .articulo input {
     width: 15%;
 }
-
+.compra button{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: .9rem;
+    width: 10rem;
+    height: 22px;
+    background-color: rgb(218, 165, 32);
+    border-color: rgb(218, 165, 32);
+    border-radius: 25px;
+    color: black;
+    border-style: none;
+    margin: auto;
+}
 .articulo-producto {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin:5px;
+    margin: 5px;
 }
 
 .compra {
     align-items: flex-end;
-    text-align: end;
+    text-align:end;
+   
 }
 
 .compra input {
