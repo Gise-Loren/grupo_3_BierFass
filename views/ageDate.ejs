@@ -3,33 +3,32 @@
 
 <head>
     <%- include('partials/head') %>
-    <link rel="stylesheet" href="../css/styles-lucas.css">
-    <style>
-        body {
+        <link rel="stylesheet" href="../css/styles-lucas.css">
+        <style>
+            body {
 
-            background-image: linear-gradient(rgba(2, 16, 53, 0.2), rgba(2, 16, 53, 0.65)), url("../img/primer-plano-cervezas-artesanales.jpg");
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-attachment: fixed;
-            background-size: cover;
+                background-image: linear-gradient(rgba(2, 16, 53, 0.2), rgba(2, 16, 53, 0.65)), url("../img/primer-plano-cervezas-artesanales.jpg");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                background-size: cover;
 
-        }
+            }
 
-        header {
+            header {
 
-            margin-top: 30px;
-        }
+                margin-top: 30px;
+            }
 
-        footer {
-            width: 100x;
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-    
-    </style>
+            footer {
+                width: 100x;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
 </head>
 
 <body>
@@ -37,8 +36,6 @@
 
 
     </header>
-
-
 
     <main>
         <div class="logo-ageDate">
@@ -50,16 +47,19 @@
         <div class="date-age">
             <H3>INGRESA TU FECHA DE NACIMIENTO</H3>
         </div>
-        <form action="/home">
-        <article class="date-age-input">
-            <div class="input-div"><input type="number" minlength="1" maxlength="2" name="dd" placeholder="DD" value="" required></div>
-            <div class="input-div"><input type="number" minlength="1" maxlength="2" name="mm" placeholder="MM" value="" required></div>
-            <div class="input-div"><input type="number" minlength="4" maxlength="4" name="aaaa" placeholder="AAAA" value="" required></div>
-        </article>
-        <div class="ageDate-button-ing">
-            <button class="ageDate-button">INGRESAR</button>
-        </div>
-    </form>
+        <form action="/home" method="post" enctype="multipart/form-data">
+            <article class="date-age-input">
+                <div class="input-div"><input id="day" type="number" minlength="1" maxlength="2" name="dd"
+                        placeholder="DD" value="" required></div>
+                <div class="input-div"><input id="month" type="number" minlength="1" maxlength="2" name="mm"
+                        placeholder="MM" value="" required></div>
+                <div class="input-div"><input id="year" type="number" minlength="4" maxlength="4" name="aaaa"
+                        placeholder="AAAA" value="" required></div>
+            </article>
+            <div class="ageDate-button-ing">
+                <input type="submit" value="INGRESAR">
+            </div>
+        </form>
         <div class="true-age">
             <p>Si sos menor de edad tenés que saber que el consumo
                 de alcohol no es bueno para tu salud sobre todo para tu cerebro que se encuentra
