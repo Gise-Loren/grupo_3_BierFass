@@ -21,7 +21,7 @@ const productsControllers = {
         res.render('productos', { industriales, artesanales })
     },
     createProducts: (req, res) => {
-        res.render('formUser');
+        res.render('addProducts');
     },
     prodcutsProcess: (req,res) => {
         let newProduct = {

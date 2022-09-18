@@ -12,6 +12,8 @@ router.get('/', mainController.index);
 
 router.get('/ageDate', mainController.ageDate);
 
+router.post('/ageDate', mainController.processAgeDate)
+
 router.get('/home', mainController.home);
 
 router.get('/cart', mainController.cart);
