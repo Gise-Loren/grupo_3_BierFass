@@ -11,7 +11,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
 
-} 
+}
 
 header {
     display: flex;
@@ -47,9 +47,11 @@ footer {
     padding: 3px;
     margin: 2px;
 }
+
 .box-centrado {
-    padding-top: 0px!important;
+    padding-top: 0px !important;
 }
+
 .busqueda input {
     background-color: rgba(2, 16, 53, 0.75);
     padding-top: 1.5px;
@@ -85,6 +87,7 @@ footer {
     border-style: none;
     margin: auto;
 }
+
 .button-edit {
     margin: 5px;
     display: flex;
@@ -99,9 +102,10 @@ footer {
     margin: auto;
     position: absolute;
 }
+
 .button-edit a {
-    text-decoration: none; 
-    color:black
+    text-decoration: none;
+    color: black
 }
 
 .barra {
@@ -248,7 +252,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-  
+
 }
 
 .caja {
@@ -360,7 +364,7 @@ div.dato {
         padding: 0;
         margin: 0%;
     }
- 
+
     .box-centrado {
         width: 50%;
         align-items: center;
