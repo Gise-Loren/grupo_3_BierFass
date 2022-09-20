@@ -36,7 +36,6 @@
 
 
     </header>
-
     <main>
         <div class="logo-ageDate">
             <img src="img/logo-bier-fass.png" alt="logo">
@@ -47,9 +46,9 @@
         <div class="date-age">
             <H3>INGRESA TU FECHA DE NACIMIENTO</H3>
         </div>
-        <form action="/ageDate" method="post" enctype="multipart/form-data">
+        <form action="/agedate" method="POST">
             <article class="date-age-input">
-                <div class="input-div"><input name="NO" type="number" minlength="1" maxlength="2" 
+                <div class="input-div"><input name="day" type="number" minlength="1" maxlength="2" 
                         placeholder="DD" value="" required></div>
                 <div class="input-div"><input name="month" type="number" minlength="1" maxlength="2" 
                         placeholder="MM" value="" required></div>
@@ -66,10 +65,7 @@
                 en proceso de desarrollo. Se honesto/a en tu respuesta.</p>
         </div>
     </main>
-    <script>
-       const element = document.getElementById.NO
-       console.log(element)
-    </script>
+  
 
     <footer>
         <article class="img-iconos">
