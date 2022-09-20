@@ -18,6 +18,8 @@ router.get('/home', mainController.home);
 
 router.get('/cart', mainController.cart);
 
+router.get('/redirectMinors', mainController.redirectMinors)
+
 
 /*  router.get('/login', mainController.login); 
 

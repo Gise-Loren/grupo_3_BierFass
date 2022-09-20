@@ -6,7 +6,6 @@ const controller = {
     index: (req, res) => res.render('redirect'),
     ageDate: (req, res) => {
         res.render('ageDate');
-       
     },
     processAgeDate:  (req, res) => {
         const day = req.body.day;
@@ -27,8 +26,11 @@ const controller = {
         if (date > 17){
             res.redirect('/home')
         } else {
-            res.redirect('/products')
+            res.redirect('/redirectMinors')
         }
+    },
+    redirectMinors: (req, res) => {
+        res.render('redirectMinors')
     },
     home: (req, res) => res.render('home'),
     cart: (req, res) => res.render('carrito'),
