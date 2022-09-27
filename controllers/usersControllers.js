@@ -45,6 +45,11 @@ const usersControllers = {
         } else {
             res.send('El usuario no existe!');
         }
+    },
+    profile: (req, res) => {
+        let id = req.params.id;
+        let usuario = listOFUsers.find(usuario => usuario.id == id);
+        res.render('profile', {usuario});
     }
 }
 

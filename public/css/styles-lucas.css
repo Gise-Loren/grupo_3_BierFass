@@ -419,6 +419,37 @@ body {
     display: none
 }
 
+/* styles profile */
+#main-profile {
+    
+    background-color: wheat;
+    align-items: center;
+    width: 90vw;
+    border-radius: 30px;
+    margin: auto;
+}
+.box-profile {
+    margin-left: 5vw;
+    height: 50vh;
+}
+.welcome {
+    margin-left: 3vw;
+    color:rgb(39, 48, 73);
+    margin-top: 1vw;
+}
+.container-button {
+    display: flex;
+}
+.container-img {
+    display: flex;
+}
+.container-img img {
+    width: 70px;
+    margin-top: 1vw;
+    background-color: blue;
+    border-radius: 50%;
+}
+
 @keyframes efectoFadeIn {
     from {
         opacity: 0;
