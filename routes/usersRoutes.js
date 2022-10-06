@@ -4,7 +4,7 @@ const router = express.Router();
 
 const usersControllers = require ("../controllers/usersControllers");
 
-const upload = require("../middlewares/multer")
+const upload = require("../middlewares/multerUser")
 
 router.get('/register', usersControllers.register);
 

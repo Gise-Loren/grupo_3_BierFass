@@ -4,13 +4,13 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
-        callback(null, './');
+        callback(null, './public/img/');
     },
     filename: (req, file, callback) => {
 
         callback(null, 
             
-             "public/img/users/img-users-" + Date.now() + path.extname(file.originalname));
+             "img-bier" + Date.now() + path.extname(file.originalname));
     }
 })
 

@@ -4,7 +4,7 @@ const router = express.Router();
 
 const productsControllers = require ("../controllers/productsControllers");
 
-const upload = require("../middlewares/multer") // <----- SACAMOS DE ROUTES MULTER Y LO AGREGAMOS EN MIDDLEWARES 
+const upload = require("../middlewares/multerProducts") // <----- SACAMOS DE ROUTES MULTER Y LO AGREGAMOS EN MIDDLEWARES 
 
 router.get("/", productsControllers.index); // <------ LISTADO DE PRODUCTOS.
 
