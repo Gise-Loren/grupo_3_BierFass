@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="../css/styles-lucas.css">
+    <link rel="stylesheet" href="../css/profile.css">
     <%- include('partials/head') %>
 </head>
 
@@ -21,25 +22,32 @@
 
             </div>
             <h2>Ya puedes ingresar a nuestra pagina web!🍻🍺</h2>
+            <br>
             <h3>Mis Datos</h3>
             <br>
             <label>Datos de tu cuenta</label>
-            <input type="text" name="datos personales">
             <br>
-            <label>Nombre: insertar</label>
-            <input type="text" name="nombre">
             <br>
-            <label>Apellido: insertar</label>
-            <input type="text" name="apellido">
-            <br>
-            <label>Email: insertar</label>
-            <input type="text" name="email">
-            <br>
-            <label>Password: *************</label>
-            <input type="text" name="Password">
+            <div class="form-profile">
+            <form action="/profile/:id?_method=PUT" method="post" enctype="multipart/form-data" id="actualizacionDeDatos"> <!--nota: actualizar el action cuando sea necesario--> 
+                <label>Nombre:</label>
+                <input type="text" name="nombre" value="nombre">
+                <br>
+                <label>Apellido:</label>
+                <input type="text" name="apellido" value="apellido">
+                <br>
+                <label>Email:</label>
+                <input type="text" name="email" value="email">
+                <br>
+                <label>Password: </label>
+                <input type="text" name="Password" value="********">
+            </form>
         </div>
+        </div>
+        <div class="botom-edit">
         <a href="#" style="text-decoration: none"> <button class="boton-comprar" style="text-decoration: none"> Editar
                 perfil </button></a>
+        </div>
     </main>
     <footer>
         <%- include('partials/footer')%>

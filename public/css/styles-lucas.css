@@ -73,7 +73,6 @@ body {
 }
 
 .boton-comprar {
-    margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,6 +86,7 @@ body {
     color: black;
     border-style: none;
     margin: auto;
+    padding: 10px;
 }
 
 .barra {
@@ -421,16 +421,29 @@ body {
 
 /* styles profile */
 #main-profile {
-    
     background-color: wheat;
     align-items: center;
-    width: 90vw;
+    width: 50%;
     border-radius: 30px;
     margin: auto;
+    padding: 10px;
+    text-align: center;
 }
+#main-profile input{
+    text-align: justify;
+    background : inherit;
+    border: none;
+    margin-left: 15px;
+    margin-top: 0px;
+    align-items:stretch;
+    
+    
+}
+
 .box-profile {
-    margin-left: 5vw;
-    height: 50vh;
+    margin-left: 0vw;
+    height: 30vh;
+    text-align: justify;
 }
 .welcome {
     margin-left: 3vw;
