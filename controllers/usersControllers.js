@@ -25,7 +25,7 @@ const usersControllers = {
         }
         listOFUsers.push(newUser);
         fs.writeFileSync(usersJson, JSON.stringify(listOFUsers, null, ' '));
-        res.redirect('/products');
+        res.redirect('profile');
     },
     login: (req, res) => {
         
@@ -37,7 +37,7 @@ const usersControllers = {
         if (selectedUser) {
             const isCorrect = (bcrypt.compareSync(userData.password, selectedUser.password))
             if (isCorrect) {
-                res.redirect ('/profile'); // crear view profile
+                return res.redirect ('profile'); // crear view profile
             } else {
                 res.send('La contraseña es incorrecta!');
             }

@@ -65,5 +65,27 @@
   "img": [
    "public/img/users/img-users-1662851724215.png"
   ]
+ },
+ {
+  "id": 8,
+  "name": "Gise",
+  "lastName": "Lorenzatti",
+  "email": "gi@gmail",
+  "password": "$2a$10$kOHimMlLI7TTJ2GMpXz9Vu1iyOjuq9DxE5bxgiEJMhgmx9YPg4TF2",
+  "category": "user",
+  "img": [
+   "img-users-1665545051544.png"
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Gise",
+  "lastName": "Lorenzatti",
+  "email": "gi@gmail",
+  "password": "$2a$10$vsJofM/Q28r6Ui0qgys5ROep6oTaC/C.NSA3XyjU3K/SuziZ7bh8u",
+  "category": "user",
+  "img": [
+   "img-users-1665547771992.jpg"
+  ]
  }
 ]
