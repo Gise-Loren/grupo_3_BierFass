@@ -11,44 +11,16 @@
     <header>
         <%- include('partials/header')%>
     </header>
-    <main id="main-profile">
-        <div class="box-profile">
-            <div class="container-img">
-                <img src="../img/avatars/icons-avatar.png" alt="">
-                <h1 class="welcome">Bienvenido NOMBRE DE USUARIO</h1>
-            </div>
-            <div class="container-button">
+<main>
 
-
-            </div>
-            <h2>Ya puedes ingresar a nuestra pagina web!🍻🍺</h2>
-            <br>
-            <h3>Mis Datos</h3>
-            <br>
-            <label>Datos de tu cuenta</label>
-            <br>
-            <br>
-            <div class="form-profile">
-            <form action="/profile/:id?_method=PUT" method="post" enctype="multipart/form-data" id="actualizacionDeDatos"> <!--nota: actualizar el action cuando sea necesario--> 
-                <label>Nombre:</label>
-                <input type="text" name="nombre" value="nombre">
-                <br>
-                <label>Apellido:</label>
-                <input type="text" name="apellido" value="apellido">
-                <br>
-                <label>Email:</label>
-                <input type="text" name="email" value="email">
-                <br>
-                <label>Password: </label>
-                <input type="text" name="Password" value="********">
-            </form>
-        </div>
-        </div>
-        <div class="botom-edit">
-        <a href="#" style="text-decoration: none"> <button class="boton-comprar" style="text-decoration: none"> Editar
-                perfil </button></a>
-        </div>
-    </main>
+	<div class="container">
+				<h2>Hi User</h2>
+				<img src="/img/avatars/icons-avatar.png">
+				<br>
+				<br>
+				<div class="alert alert-success">user@email.com</div>
+	</div>
+	
     <footer>
         <%- include('partials/footer')%>
     </footer>
