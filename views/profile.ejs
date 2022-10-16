@@ -14,7 +14,7 @@
     <main id="main-profile">
         <div class="box-profile">
             <div class="container-img">
-                <img src="../img/avatars/icons-avatar1.png" alt="">
+                <img src="../img/avatars/icons-avatar.png" alt="">
                 <h1 class="welcome">Bienvenido NOMBRE DE USUARIO</h1>
             </div>
             <div class="container-button">
@@ -29,7 +29,7 @@
             <br>
             <br>
             <div class="form-profile">
-            <form action="/profile" method="POST" enctype="multipart/form-data" id="actualizacionDeDatos"> <!--nota: actualizar el action cuando sea necesario--> 
+            <form action="/profile/:id?_method=PUT" method="post" enctype="multipart/form-data" id="actualizacionDeDatos"> <!--nota: actualizar el action cuando sea necesario--> 
                 <label>Nombre:</label>
                 <input type="text" name="nombre" value="nombre">
                 <br>
