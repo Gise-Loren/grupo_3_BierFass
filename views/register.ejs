@@ -36,39 +36,72 @@
                 </button>
                 </a>
             </form>
-        
-            <form action="/register" method="POST" enctype="multipart/form-data">
 
-                <input type="text" name="name" placeholder="Nombre" <%= locals.errors && errors.name ? 'is-invalid' : null %>
-                value= "<%= locals.oldData ? oldData.name : null %>"
-                >
-                <% if (locals.errors && errors.name) { %>
-                    <div class="text-danger">
-                        <%= errors.name.msg %> 
+            <form action="register" method="POST"  enctype="multipart/form-data">
+               
+                    <div class="form-campos">
+                        <input type="text" name="name" placeholder="Nombre" <%=locals.errors && errors.name
+                            ? 'is-invalid' : null %>>
+                        <% if(locals.errors && errors.name) { %>
+                            <div class="tex-danger">
+                                <%= errors.name.msg %>
+                            </div>
+                            <% } %>
                     </div>
-                <% } %>
 
-                <input type="text" name="lastName" placeholder="Apellido">
-                <input type="text" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Contraseña">
-                <div class="img-register">
-                    <label for="img">Foto de perfil:</label>
-                    <input type="file" name="img" required>
-                </div>
+                    <div class="form-campos">
+                        <input type="text" name="lastName" placeholder="Apellido" <%=locals.errors &&
+                            errors.lastName ? 'is-invalid' : null %>>
+                        <% if(locals.errors && errors.lastName) { %>
+                            <div class="tex-danger">
+                                <%= errors.lastName.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="form-campos">
+                        <input type="text" name="email" placeholder="Email" <%=locals.errors && errors.email
+                            ? 'is-invalid' : null %>>
+                        <% if(locals.errors && errors.email) { %>
+                            <div class="tex-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="form-campos">
+                        <input type="password" name="password" placeholder="Contraseña" <%=locals.errors &&
+                            errors.password ? 'is-invalid' : null %>>
+                        <% if(locals.errors && errors.password) { %>
+                            <div class="tex-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="img-register">
+                        <label for="img">Foto de perfil</label>
+                        <input type="file" name="img" value= <%=locals.errors && errors.img ? 'is-invalid' : null %>>
+                        <% if (locals.errors && errors.img) { %>
+                            <div class="tex-danger">
+                                <%= errors.img.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                <br>
+                <br>
                 <input type="checkbox" id="cbox1" value="first_checkbox">
-                <label for="cbox1" class="textoCheck"> Acepto los términos y condiciones de Bier Fass.</label>
+                <label for="cbox1" class="textoCheck"> Acepto los términos y condiciones
+                    de Bier Fass.</label>
                 <br>
                 <input type="checkbox" id="cbox2" value="second_checkbox">
-                <label for="cbox2" class="textoCheck"> Deseo recibir promociones.</label>
+                <label for="cbox2" class="textoCheck"> Deseo recibir
+                    promociones.</label>
                 <br>
                 <a href="#" class="textoCheck">Términos y condiciones</a>
                 <input type="submit" value="Registrarse">
             </form>
         </section>
-
-
-
-
     </main>
 
     <footer>
