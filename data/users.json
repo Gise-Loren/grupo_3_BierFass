@@ -1,91 +1,24 @@
 [
  {
   "id": 1,
-  "name": "Lucas",
-  "lastname": "Lucaas21",
-  "email": "lucaas@gmail.com",
-  "password": "1123456Lucas",
-  "category": "admin",
-  "img": "../public/img/users/ao24sdij.jpg"
+  "name": "Gisel",
+  "lastName": "Lorenzatti",
+  "email": "gi@gmail.com",
+  "password": "$2a$10$WDfQmwFTVTr/zdofBiufw.0ZY9EfZjsT.51rz6WbrVr7vi/x6kX/m",
+  "category": "user",
+  "img": [
+   "img-users-1665941180536.jpg"
+  ]
  },
  {
   "id": 2,
-  "name": "Giancarlos",
-  "lastname": "giancarlos",
-  "email": "gian@gmail.com",
-  "password": "123gian",
-  "category": "admin",
-  "img": "../public/img/users/a2osdij.jpg"
- },
- {
-  "id": 3,
-  "name": "Gisel",
-  "lastname": "Gisel31",
-  "email": "gise-2@gmail.com",
-  "password": "1145gise",
-  "category": "admin",
-  "img": "../public/img/users/aosd44ij.jpg"
- },
- {
-  "id": 4,
-  "name": "Francisco",
-  "lastname": "francisc0",
-  "email": "fran2@gmail.com",
-  "password": "115fram",
-  "category": "admin",
-  "img": "../public/img/users/aosdij.jpg"
- },
- {
-  "id": 5,
-  "name": "Javier",
-  "lastname": "Javi123",
-  "email": "Jav-ier@gmail.com",
-  "password": "1654Javi",
-  "category": "user",
-  "img": "../public/img/users/aoasfsdij.jpg"
- },
- {
-  "id": 6,
-  "name": "sdasd",
-  "lastName": "asdasda",
-  "email": "aaaaaaa",
-  "password": "aaaaaaa",
+  "name": "Lucas",
+  "lastName": "Alvarez",
+  "email": "lucas@hotmail.com.ar",
+  "password": "$2a$10$NlbP5IyjUMM/zcXIc/n5euPoOWq4xP9TiNooM4SPjWtaNJozGPEGe",
   "category": "user",
   "img": [
-   "../users/img-users-1662851371295.png"
-  ]
- },
- {
-  "id": 7,
-  "name": "lucas",
-  "lastName": "qw",
-  "email": "qwe",
-  "password": "qwee",
-  "category": "user",
-  "img": [
-   "public/img/users/img-users-1662851724215.png"
-  ]
- },
- {
-  "id": 8,
-  "name": "Gise",
-  "lastName": "Lorenzatti",
-  "email": "gi@gmail",
-  "password": "$2a$10$kOHimMlLI7TTJ2GMpXz9Vu1iyOjuq9DxE5bxgiEJMhgmx9YPg4TF2",
-  "category": "user",
-  "img": [
-   "img-users-1665545051544.png"
-  ]
- },
- {
-  "id": 9,
-  "name": "Gise",
-  "lastName": "Lorenzatti",
-  "email": "gi@gmail",
-  "password": "$2a$10$vsJofM/Q28r6Ui0qgys5ROep6oTaC/C.NSA3XyjU3K/SuziZ7bh8u",
-  "category": "user",
-  "img": [
-   "img-users-1665547771992.jpg"
+   "img-users-1665941480330.jpg"
   ]
  }
 ]

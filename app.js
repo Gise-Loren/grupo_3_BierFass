@@ -3,15 +3,14 @@ const express = require("express");
 const app = express();
 
 const mainRoutes = require ('./routes/mainRoutes');
-
 const productsRoutes = require ('./routes/productsRoutes');
-
 const usersRoutes = require ('./routes/usersRoutes');
+
 
 const dotenv = require('dotenv').config();
 
 const methodOverride = require("method-override");
-
+s
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
