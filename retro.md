@@ -1,25 +1,25 @@
-Retrospectiva - Sprint4:
+Retrospectiva - Sprint5:
 ------------------------------------
 
-¿Como nos fue en el cuarto sprint?
+¿Como nos fue en el quinto sprint?
 ------------------------------------
-Entregamos la etapa del proyecto dentro del plazo establecido. Pudimos presentar lo estipulado en el Sprint y adelantar algunos puntos de la próxima entrega.
+Pudimos presentar lo estipulado en el Sprint pero nos costo articular el trabajo a realizar.
 
 ¿Qué problemas tuvimos?
 -----------------------------------
-En esta etapa del proyecto fue necesario programar dailys para ordenar el trabajo ya realizado y definir como se trabajaría, ya que nos trabamos en el desarrollo de la funcionalidad del formulario.
+En esta etapa del proyecto fue necesario programar dailys para ordenar el trabajo ya realizado y definir como se trabajaría. Nos costo dar funcionalidad al logueo ya que particionamos el trabajo y luego al unificarlo se evidenciaron errores que no .
 
 ¿Que hicimos bien?
 -----------------------------------
-Creemos que fue acertada al determinación de trabajar de manera conjunta sobre los puntos que individualmente nos resultaron complicados. Pudimos ordenar código y repasar las diferentes partes del proyecto. Entre todos pudimos destrabar complicaciones que se presentaron respecto al código en la parte de formulario.
+Trabajamos de manera conjunta para solucionar los problemas de codificacion aunque fue complicado resolver los inconvenientes.
 
 ¿Qué queremos mejorar?
 -----------------------------------
-La optimización de tiempo es algo que estamos manteniendo. Los conceptos principales se manejaron en grupo y luego cada uno de nosotros genera modificaciones para mejorar la página.
+La optimización de tiempo y la comunicacion del grupo ya que trabajamos de manera individual y luego cuesta unificar el trabajo.
 
 ¿Qué vamos a hacer para conseguirlo?
 -----------------------------------
-Continuamos leyendo material y buscando nuevos conceptos que permitan ser mas creativos con el proyecto. Cuando mas herramientas aprendamos a utilizar para aplicar sobre el Frontend y el Backend, mejor quedara el trabajo final.
+Repasamos el material de la plataforma para refrezcar conociminetos, incluso buscamos informacion en paginas relacionadas con los lenguajes qu usamos.
 
 URL TRELLO:
 https://trello.com/b/wmP59eN2/bier-fass
