@@ -71,5 +71,16 @@
   "img": [
    "img-users-1665976168375.png"
   ]
+ },
+ {
+  "id": "cabd7fbb-7b34-4155-80c0-529f7fb4e9b9",
+  "name": "pedrito",
+  "lastName": "PICApica",
+  "email": "picaelpedrito@gmail.com",
+  "password": "$2a$10$lZL4Qg/NaIT/rsp6/MQLQOM5fjjZkptSTSyV7lM/B8OCR0gEgNpN6",
+  "category": "user",
+  "img": [
+   "img-users-1666046221336.png"
+  ]
  }
 ]

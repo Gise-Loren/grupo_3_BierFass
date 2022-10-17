@@ -442,7 +442,7 @@ body {
 
 .box-profile {
     margin-left: 0vw;
-    height: 30vh;
+    height: 50vh;
     text-align: justify;
 }
 .welcome {
@@ -458,10 +458,10 @@ body {
 }
 .container-img img {
     width: 100px;
-    background-color: blue;
+    height: 100px;
+    background-size: cover;
     border-radius: 50%;
 }
-
 @keyframes efectoFadeIn {
     from {
         opacity: 0;
