@@ -1,14 +1,15 @@
 const path = require('path');
-const { check } = require('express-validator');
+const { body } = require('express-validator');
 
-module.exports = [
-	check('name').notEmpty().withMessage('Tienes que escribir un nombre'),
-    check('lastName').notEmpty().withMessage('Tienes que escribir un apellido'),
-	check('email')
+const validations = {
+	validationRegister: [
+	body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('lastName').notEmpty().withMessage('Tienes que escribir un apellido'),
+	body('email')
 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
 		.isEmail().withMessage('Debes escribir un formato de correo válido'),
-	check('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-	check('img').custom((value, { req }) => {
+	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+	/* body('img').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif', 'jpeg'];
 		
@@ -22,5 +23,11 @@ module.exports = [
 		}
 
 		return true;
-	})
-]
+	}) */
+],
+	validationLogin: [
+		body('email').isEmail().withMessage('Completa con un email válido'),
+        body('password').isLength({ min: 8 }).withMessage('Tu contraseña es incorrecta'),
+	]}
+
+	module.exports = validations;

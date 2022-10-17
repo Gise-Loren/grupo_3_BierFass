@@ -12,6 +12,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        .text-danger{
+            color: rgb(201, 31, 31)!important;
+            background-color: rgba(26, 23, 23, 0.85);
+            border-radius: 20px;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,10 +49,10 @@
             <form action="register" method="POST"  enctype="multipart/form-data">
                
                     <div class="form-campos">
-                        <input type="text" name="name" placeholder="Nombre" <%=locals.errors && errors.name
-                            ? 'is-invalid' : null %>>
+                        <input type="text" name="name" placeholder="Nombre" class= "text <%=locals.errors && errors.name ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.name : null %>">
                         <% if(locals.errors && errors.name) { %>
-                            <div class="tex-danger">
+                            <div class="text-danger">
                                 <%= errors.name.msg %>
                             </div>
                             <% } %>
@@ -51,9 +60,9 @@
 
                     <div class="form-campos">
                         <input type="text" name="lastName" placeholder="Apellido" <%=locals.errors &&
-                            errors.lastName ? 'is-invalid' : null %>>
+                            errors.lastName ? 'is-invalid' : null %>  value="<%= locals.oldData ? oldData.lastName : null %>">
                         <% if(locals.errors && errors.lastName) { %>
-                            <div class="tex-danger">
+                            <div class="text-danger">
                                 <%= errors.lastName.msg %>
                             </div>
                             <% } %>
@@ -61,9 +70,9 @@
 
                     <div class="form-campos">
                         <input type="text" name="email" placeholder="Email" <%=locals.errors && errors.email
-                            ? 'is-invalid' : null %>>
+                            ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.email : null %>">
                         <% if(locals.errors && errors.email) { %>
-                            <div class="tex-danger">
+                            <div class="text-danger">
                                 <%= errors.email.msg %>
                             </div>
                             <% } %>
@@ -73,7 +82,7 @@
                         <input type="password" name="password" placeholder="Contraseña" <%=locals.errors &&
                             errors.password ? 'is-invalid' : null %>>
                         <% if(locals.errors && errors.password) { %>
-                            <div class="tex-danger">
+                            <div class="text-danger">
                                 <%= errors.password.msg %>
                             </div>
                             <% } %>
@@ -81,9 +90,9 @@
 
                     <div class="img-register">
                         <label for="img">Foto de perfil</label>
-                        <input type="file" name="img" value= <%=locals.errors && errors.img ? 'is-invalid' : null %>>
+                        <input type="file" name="img" value= <%=locals.errors && errors.img ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.img : null %>">
                         <% if (locals.errors && errors.img) { %>
-                            <div class="tex-danger">
+                            <div class="text-danger" style= "color: red;">
                                 <%= errors.img.msg %>
                             </div>
                             <% } %>

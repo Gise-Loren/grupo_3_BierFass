@@ -14,8 +14,8 @@
     <main id="main-profile">
         <div class="box-profile">
             <div class="container-img">
-                <img src="../img/avatars/icons-avatar.png" alt="">
-                <h1 class="welcome">Bienvenido NOMBRE DE USUARIO</h1>
+                <img src="../img/users/<%= user.img%>" alt="">
+                <h1 class="welcome">Bienvenido <%= user.name%> <%= user.lastName%></h1>
             </div>
             <div class="container-button">
 
@@ -29,25 +29,35 @@
             <br>
             <br>
             <div class="form-profile">
-            <form action="/profile/:id?_method=PUT" method="post" enctype="multipart/form-data" id="actualizacionDeDatos"> <!--nota: actualizar el action cuando sea necesario--> 
+            <form action="/profile/<%user.id%>?_method=PUT" method="post" id="actualizacionDeDatos"> <!--nota: actualizar el action cuando sea necesario--> 
                 <label>Nombre:</label>
-                <input type="text" name="nombre" value="nombre">
+                <input type="text" name="nombre" value="<%= user.name%>">
                 <br>
                 <label>Apellido:</label>
-                <input type="text" name="apellido" value="apellido">
+                <input type="text" name="apellido" value="<%= user.lastName%>">
                 <br>
                 <label>Email:</label>
-                <input type="text" name="email" value="email">
+                <input type="text" name="email" value="<%= user.email%>">
                 <br>
                 <label>Password: </label>
-                <input type="text" name="Password" value="********">
+                <input type="text" name="Password" value="Ingrese su nueva contraseña">
+            
+                <div class = "boton-logout">
+                    <button type="submit" class="boton-formulario" style="margin-right: 10px;" id="boton">Editar
+                        usuario</button></div>
             </form>
         </div>
         </div>
-        <div class="botom-edit">
-        <a href="#" style="text-decoration: none"> <button class="boton-comprar" style="text-decoration: none"> Editar
-                perfil </button></a>
+       
         </div>
+        <form id="formulario" action="/profile/<%=user.id%>?_method=DELETE" method="POST"
+            class="creacion-formulario">
+                <div class="botones">
+                    <button type="submit" class="boton-formulario" style="margin-right: 10px;" id="boton">Borrar
+                        usuario</button>
+                </div>
+        </form> 
+      
     </main>
     <footer>
         <%- include('partials/footer')%>
