@@ -69,7 +69,8 @@ const usersControllers = {
         let userToLogin = User.findByField('email', req.body.email);
         console.log(userToLogin)
         if(userToLogin){
-            let comparePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            let comparePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+           
             if (comparePassword == true) {
                 delete userToLogin.password;
                     req.session.userLogged = userToLogin;
@@ -80,7 +81,8 @@ const usersControllers = {
                 
                     let id = userToLogin.id
                return  res.redirect('/profile/'+ id);
-            }     
+            }  
+ 
         } 
         return res.render('login', {
             errors: {
