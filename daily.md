@@ -1,10 +1,10 @@
-Daily Sprint 5:
+Daily Sprint 6:
 
 -¿Qué se hizo?
-Se dividieron las actividades, como tambien se sacaron las dudas que habia con respecto a algunos puntos del sprint 5. 
+Se reviso en conjunto cada punto del Sprint, se determino que va a hacer cada uno de los integrante del grupo y comenzar con las actividades.  
 ------------------------------------
 -¿Hubo algún impedimento?
-Se aprovecharon las dailys para trabajar en conjunto y realizar algunas actividades. 
+Se aprovecharon las dailys para trabajar en conjunto y realizar consultas sobre tareas puntuales que individualmente no se lograron hacer.
 ------------------------------------
 -¿Qué se va a hacer?
-Se determino que es lo que faltaba terminar para la entrega del Sprint y la forma en que se iba a realizar. Ademas se vio las cosas que hay que hacer para el proximo Sprint y ver cuales se podian comenzar a realizar. 
+Se van a ir realizando las actividades mencionadas en el Sprint y a medida que vayan surgiendo dudas, se realizaran dailys para sacar las dudas que tenga cada integrante del grupo y asi avanzar con la realizacion en tiempo y forma de los distintos puntos del proyecto. 
