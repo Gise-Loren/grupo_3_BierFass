@@ -67,7 +67,7 @@ const usersControllers = {
             })
         };
         let userToLogin = User.findByField('email', req.body.email);
-        console.log(userToLogin)
+       
         if(userToLogin){
             let comparePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
            
@@ -96,7 +96,7 @@ const usersControllers = {
     profile: (req, res) => {
         let id = req.params.id;
         let user = listOFUsers.find(usuario => usuario.id == id);
-        res.render('profile', { user });
+        res.render('profile', {user});
     },
 
     logout: (req, res) => {

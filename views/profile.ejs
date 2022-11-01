@@ -19,13 +19,13 @@
 
 <body>
     <header>
-        <%- include('partials/header')%>
+        <%- include('partials/header') %>
     </header>
     <main id="main-profile">
         <div class="box-profile">
             <div class="container-img">
-                <img src="../img/users/<%= user.img%>" alt="">
-                <h1 class="welcome">Bienvenido <%= user.name%> <%= user.lastName%></h1>
+                <img src="../img/users/<%= user.img %>" alt="">
+                <h1 class="welcome">Bienvenido <%= user.name %> <%= user.lastName %></h1>
             </div>
             <div class="container-button">
 
@@ -39,15 +39,15 @@
             <br>
             <br>
             <div class="form-profile">
-            <form action="/profile/<%user.id%>?_method=PUT" method="post" id="actualizacionDeDatos"> <!--nota: actualizar el action cuando sea necesario--> 
+            <form action="/profile/<%user.id %> _method=PUT" method="post" id="actualizacionDeDatos"> <!--nota: actualizar el action cuando sea necesario--> 
                 <label>Nombre:</label>
-                <input type="text" name="nombre" value="<%= user.name%>">
+                <input type="text" name="nombre" value="<%= user.name %>">
                 <br>
                 <label>Apellido:</label>
-                <input type="text" name="apellido" value="<%= user.lastName%>">
+                <input type="text" name="apellido" value="<%= user.lastName %>">
                 <br>
                 <label>Email:</label>
-                <input type="text" name="email" value="<%= user.email%>">
+                <input type="text" name="email" value="<%= user.email %>">
                 <br>
                 <label>Password: </label>
                 <input type="text" name="Password" value="Ingrese su nueva contraseña">
@@ -60,7 +60,7 @@
         </div>
        
         </div>
-        <form id="formulario" action="/profile/<%=user.id%>?_method=DELETE" method="POST"
+        <form id="formulario" action="/profile/<%=user.id ?? '' %> _method=DELETE" method="POST"
             class="creacion-formulario">
                 <div class="botones">
                     <button type="submit" class="boton-formulario" style="margin-right: 10px;" id="boton">Borrar
@@ -70,7 +70,7 @@
       
     </main>
     <footer>
-        <%- include('partials/footer')%>
+        <%- include('partials/footer') %>
     </footer>
 </body>
 

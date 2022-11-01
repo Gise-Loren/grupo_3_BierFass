@@ -82,5 +82,16 @@
   "img": [
    "img-users-1666046221336.png"
   ]
+ },
+ {
+  "id": "52bffe13-5445-429c-a9ff-a07b1338794b",
+  "name": "carlos",
+  "lastName": "carlos",
+  "email": "carlos@carlos.carlos",
+  "password": "$2a$10$UzRnw3mA7uHZvVR3PoooVu4gV7WQjIKXGBfN4r5N/E2xpDFT0WQ4y",
+  "category": "user",
+  "img": [
+   "img-users-1666048010982.png"
+  ]
  }
 ]
