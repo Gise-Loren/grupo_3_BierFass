@@ -138,10 +138,11 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `category-products`
+-- Indices de la tabla `types`
 --
-ALTER TABLE `category-products`
+ALTER TABLE `types`
   ADD PRIMARY KEY (`id`);
+
 
 --
 -- Indices de la tabla `products`
@@ -167,9 +168,9 @@ ALTER TABLE `category`
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `category-products`
+-- AUTO_INCREMENT de la tabla `types`
 --
-ALTER TABLE `category-products`
+ALTER TABLE `types`
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
 
 --
