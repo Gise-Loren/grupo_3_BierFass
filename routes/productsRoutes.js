@@ -8,6 +8,8 @@ const upload = require("../middlewares/multerProducts") // <----- SACAMOS DE ROU
 
 router.get("/", productsControllers.index); // <------ LISTADO DE PRODUCTOS.
 
+router.get("/a", productsControllers.prueba) // <--------------------------- ruta de prueba  base de datos
+
 router.get('/create', productsControllers.createProducts); // <------ FORMULARIO DE CREACION DE PRODUCTOS.
 
 router.get('/:id', productsControllers.productsId); // <------ DETALLE DE UN PRODUCTO EN PARTICULAR.
@@ -19,5 +21,7 @@ router.get("/:id/edit", productsControllers.editProduct); // <------ FORMULARIO 
 router.put("/:id", upload.any() ,productsControllers.updateProducts); // <------ ACCION DE EDICION.
  
 router.delete("/:id", productsControllers.deleteProducts); // <------ ACCION DE BORRADO.
+
+
 
 module.exports = router;

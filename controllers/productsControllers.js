@@ -6,6 +6,18 @@ const productsJson = path.join(__dirname, '../data/products.json');
 
 const listOfProducts = JSON.parse(fs.readFileSync(productsJson, 'utf8'));
 
+const db = require('../src/database/models');
+
+const Categories = db.Category;
+const Users = db.User;
+const Types = db.Types;
+const Products = db.Products
+
+console.log(Categories)
+console.log(Users)
+console.log(Types)
+console.log(Products)
+
 const productsControllers = {
     index: (req, res) => {
         const industriales = [];
@@ -101,6 +113,13 @@ const productsControllers = {
         let producto = listOfProducts.find(producto => producto.id == id);
         res.render('descripcion', {producto});
     },
+    //-----------------------------------------------------------------------------------////////
+    prueba: (req,res) => {
+        Categories.findAll()
+            .then((categories)=>{
+                 res.send({ categories })
+            })
+    //-------------------------------------------------------------------------------------//////
 }
-
+}
 module.exports = productsControllers

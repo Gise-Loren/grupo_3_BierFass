@@ -6,12 +6,12 @@ module.exports = (sequelize, dataTypes) =>{
             primaryKey: true,
             autoIncrement: true
         },
-        type: { 
+        category: { 
             type: dataTypes.STRING(15)
         }
     };
     let config = {
-        tableName: 'Types',
+        tableName: 'category',
         timestamps: false
     };
 
