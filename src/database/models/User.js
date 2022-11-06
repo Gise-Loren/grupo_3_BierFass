@@ -29,7 +29,8 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'users',
-        timestamps: false
+        timestamps: false,
+        paranoid:true
     };
 
     const User = sequelize.define(alias, cols, config);

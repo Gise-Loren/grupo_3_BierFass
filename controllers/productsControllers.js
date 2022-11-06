@@ -1,15 +1,13 @@
 const fs = require("fs")
-
 const path = require('path');
 
 const productsJson = path.join(__dirname, '../data/products.json');
-
 const listOfProducts = JSON.parse(fs.readFileSync(productsJson, 'utf8'));
 
+const Product = require("../src/database/models/Product");
 const db = require('../src/database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-const User = require("../src/database/models/User");
 
 const Categories = db.Category;
 const Users = db.User;
@@ -40,6 +38,7 @@ const productsControllers = {
         res.render('addProducts');
     },
     prodcutsProcess: (req, res) => {
+
         let newProduct = {
             id: req.body.id,
             name: req.body.name,
@@ -125,14 +124,28 @@ const productsControllers = {
                   res.send({ products })
              }) */
     //-------------------------------------------------------------------------------------//////
-    mostrar: function (req, res) {
+    getIndex: (req, res) => {
+        res.redirect('/products')
+    },
+    /* muestra los productos */
+    getProducts: (req, res) => {
+        db.Products.findAll({
+            raw: true
+        })
+
+        .then(products => res.render('products', { products }));
+    },
+
+  /*   mostrar: (req, res) => {
         db.Product.findAll()
             .then(function (products) {
                 return res.render('productos')
             })
-    },
+    }, */
+/* agrega producto y lo redirecciona */
     crear: function (req, res) {
         db.Products.create({
+
             name: req.body.name,
             type: req.body.type,
             img: req.body.img,
@@ -176,9 +189,19 @@ const productsControllers = {
             where:{
                 id:req.prams.id
             }
-        })
-        res.redirect('/products')
+        })/* muestra el producto cambiado */
+        .then(products => res.redirect(`/products/${req.prams.id}/id`))
     },
+    /* elimina el producto y lo redirecciona */
+    deleteProduct: (req, res) => {
+        db.Products.destroy ({
+            where: {
+                id:req.params.id
+
+            }
+    })
+    .then(products => res.rendirect('/products'))
+    }
 
 };
 
