@@ -148,16 +148,37 @@ const productsControllers = {
             .then(newProduct => res.redirect(`/products/${newProduct.dataValues.id}/id`));
 
     },
-        getUserDetail: (req, res) => {
+    getProductDetail: (req, res) => {
         const productsId = req.params.id;
         db.Products.findByPK(productsId)
-        .then(products => res.render('addProducts', { products }));
+            .then(products => res.render('addProducts', { products }));
     },
     editProduct: (req, res) => {
         const id = req.params.id;
         db.Products.findByPK(id)
-        .then(products => res. render('editProducts', { products }));
-    }
+            .then(products => res.render('editProducts', { products }));
+    },
+    updateProduct: (req, res) => {
+        const product = {
+
+            name: req.body.name,
+            type: req.body.type,
+            img: req.body.img,
+            stock: req.body.stock,
+            price: req.body.price,
+            alcohol: req.body.alcohol,
+            description: req.body.description,
+            bitterness: req.body.bitterness,
+            idealTemperature: req.body.idealTemperature,
+            categoria: req.body.categoria,
+        }
+        db.Product.update(product, {
+            where:{
+                id:req.prams.id
+            }
+        })
+        res.redirect('/products')
+    },
 
 };
 
