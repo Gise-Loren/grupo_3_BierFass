@@ -2,9 +2,11 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'User';
     let cols = {
         id:{
-            type: dataTypes.TINYINT,
+
+            type: dataTypes.UUID,
+            defaultValue: dataTypes.UUIDV4,
             primaryKey: true,
-            autoIncrement: true
+            /* autoIncrement: true */
         },
         name: { 
             type: dataTypes.STRING(15)

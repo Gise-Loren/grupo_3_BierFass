@@ -1,4 +1,4 @@
-const fs = require ("fs")
+const fs = require("fs")
 
 const path = require('path');
 
@@ -7,16 +7,20 @@ const productsJson = path.join(__dirname, '../data/products.json');
 const listOfProducts = JSON.parse(fs.readFileSync(productsJson, 'utf8'));
 
 const db = require('../src/database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const User = require("../src/database/models/User");
 
 const Categories = db.Category;
 const Users = db.User;
 const Types = db.Types;
 const Products = db.Products
 
-console.log(Categories)
+
+/* console.log(Categories)
 console.log(Users)
 console.log(Types)
-console.log(Products)
+console.log(Products) */
 
 const productsControllers = {
     index: (req, res) => {
@@ -35,11 +39,11 @@ const productsControllers = {
     createProducts: (req, res) => {
         res.render('addProducts');
     },
-    prodcutsProcess: (req,res) => {
+    prodcutsProcess: (req, res) => {
         let newProduct = {
             id: req.body.id,
             name: req.body.name,
-            type: req.body.type,           
+            type: req.body.type,
             stock: req.body.stock,
             price: req.body.price,
             description: req.body.description,
@@ -47,29 +51,30 @@ const productsControllers = {
             bitterness: req.body.bitterness,
             idealTemperature: req.body.idealTemperature,
             categoria: req.body.categoria,
-        
-        } 
+
+        }
         if (req.files) {
-            newProduct.img = req.files.map(file=> file.filename)
+            newProduct.img = req.files.map(file => file.filename)
         }
         listOfProducts.push(newProduct);
         fs.writeFileSync(productsJson, JSON.stringify(listOfProducts, null, ' '));
         res.redirect('/products');
 
     },
-    editProduct: (req,res) =>{
-       let id = req.params.id;
-       let producto = listOfProducts.find(producto => producto.id == id);
 
-        res.render("editProducts", {producto});
-       
+    editProduct: (req, res) => {
+        let id = req.params.id;
+        let producto = listOfProducts.find(producto => producto.id == id);
+
+        res.render("editProducts", { producto });
+
     },
-    updateProducts: (req,res) => {
+    updateProducts: (req, res) => {
         let id = req.params.id;
         let newProduct = {
             id: req.body.id,
             name: req.body.name,
-            type: req.body.type,           
+            type: req.body.type,
             stock: req.body.stock,
             price: req.body.price,
             description: req.body.description,
@@ -79,7 +84,7 @@ const productsControllers = {
             categoria: req.body.categoria,
         }
         if (req.files) {
-            newProduct.img = req.files.map(file=> file.filename)
+            newProduct.img = req.files.map(file => file.filename)
         }
         newProduct.id = id;
 
@@ -111,15 +116,49 @@ const productsControllers = {
     productsId: (req, res) => {
         let id = req.params.id;
         let producto = listOfProducts.find(producto => producto.id == id);
-        res.render('descripcion', {producto});
+        res.render('descripcion', { producto });
     },
     //-----------------------------------------------------------------------------------////////
-    prueba: (req,res) => {
-        Categories.findAll()
-            .then((categories)=>{
-                 res.send({ categories })
-            })
+    /*  prueba: (req,res) => {
+         Procucts.findAll()
+             .then((products)=>{
+                  res.send({ products })
+             }) */
     //-------------------------------------------------------------------------------------//////
-}
-}
+    mostrar: function (req, res) {
+        db.Product.findAll()
+            .then(function (products) {
+                return res.render('productos')
+            })
+    },
+    crear: function (req, res) {
+        db.Products.create({
+            name: req.body.name,
+            type: req.body.type,
+            img: req.body.img,
+            stock: req.body.stock,
+            price: req.body.price,
+            alcohol: req.body.alcohol,
+            description: req.body.description,
+            bitterness: req.body.bitterness,
+            idealTemperature: req.body.idealTemperature,
+            categoria: req.body.categoria,
+        })
+        db.Products.create(product)
+            .then(newProduct => res.redirect(`/products/${newProduct.dataValues.id}/id`));
+
+    },
+        getUserDetail: (req, res) => {
+        const productsId = req.params.id;
+        db.Products.findByPK(productsId)
+        .then(products => res.render('addProducts', { products }));
+    },
+    editProduct: (req, res) => {
+        const id = req.params.id;
+        db.Products.findByPK(id)
+        .then(products => res. render('editProducts', { products }));
+    }
+
+};
+
 module.exports = productsControllers
