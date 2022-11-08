@@ -131,10 +131,13 @@ const productsControllers = {
     getProducts: (req, res) => {
         db.Products.findAll({
             raw: true
+           
         })
+        .then(products => res.render('/create', { products }));
 
-        .then(products => res.render('products', { products }));
     },
+   
+
 
   /*   mostrar: (req, res) => {
         db.Product.findAll()
@@ -143,7 +146,7 @@ const productsControllers = {
             })
     }, */
 /* agrega producto y lo redirecciona */
-    crear: function (req, res) {
+    crear: (req, res) => {
         db.Products.create({
 
             name: req.body.name,
