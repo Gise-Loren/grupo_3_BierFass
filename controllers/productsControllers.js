@@ -7,11 +7,8 @@ const productsJson = path.join(__dirname, '../data/products.json');
 const listOfProducts = JSON.parse(fs.readFileSync(productsJson, 'utf8'));
 
 const db = require('../src/database/models');
-
-/* const Categories = db.Category;
-const Users = db.User;
-const Types = db.Types;
-const Products = db.Products */
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 const productsControllers = {
     index: async (req, res) => {
@@ -21,12 +18,6 @@ const productsControllers = {
 
         .then(products => res.render('productos', { products }));
        
-    },
-    prueba: (req,res) => {
-    /* db.Products.findAll()
-    .then((categories)=>{
-         res.send({ categories })
-    }) */
     },
     createProducts: (req, res) => {
         let categories = db.Category.findAll()
@@ -106,7 +97,7 @@ const productsControllers = {
             alcohol: req.body.alcohol,
             bitterness: req.body.bitterness,
             idealTemperature: req.body.idealTemperature,
-            category_id: req.body.category_id, 
+            category_id: req.body.category_id,
             
         
         },
@@ -130,12 +121,11 @@ const productsControllers = {
         .catch(error => res.send(error)) 
     },
     productsId: (req, res) => {
-        db.Products.findByPk(req.params.id, {
-            raw: true
-        })
-
-        .then(promProducts => res.render('descripcion', { promProducts }));
+        let id = req.params.id;
+        let producto = listOfProducts.find(producto => producto.id == id);
+        res.render('descripcion', { producto });
     }
 
-}
+};
+
 module.exports = productsControllers
