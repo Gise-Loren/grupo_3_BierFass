@@ -169,7 +169,7 @@ const productsControllers = {
     editProduct: (req, res) => {
         const id = req.params.id;
         db.Products.findByPK(id)
-            .then(products => res.render('editProducts', { products }));
+            .then(producto => res.render('editProducts', { producto }));
     },
     updateProduct: (req, res) => {
         const product = {
