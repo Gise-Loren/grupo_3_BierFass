@@ -8,6 +8,8 @@ const Product = require("../src/database/models/Product");
 const db = require('../src/database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { name } = require("ejs");
+const { validationResult } = require("express-validator");
 
 const Categories = db.Category;
 const Users = db.User;
@@ -68,6 +70,7 @@ const productsControllers = {
         res.render("editProducts", { producto });
 
     },
+
     updateProducts: (req, res) => {
         let id = req.params.id;
         let newProduct = {
@@ -127,26 +130,25 @@ const productsControllers = {
     getIndex: (req, res) => {
         res.redirect('/products')
     },
+    
     /* muestra los productos */
     getProducts: (req, res) => {
         db.Products.findAll({
             raw: true
-           
-        })
+        }) 
+       
         .then(products => res.render('/create', { products }));
-
     },
-   
 
-
-  /*   mostrar: (req, res) => {
+    mostrar: (req, res) => {
         db.Product.findAll()
             .then(function (products) {
                 return res.render('productos')
             })
-    }, */
+    },
 /* agrega producto y lo redirecciona */
     crear: (req, res) => {
+
         db.Products.create({
 
             name: req.body.name,
@@ -205,7 +207,6 @@ const productsControllers = {
     })
     .then(products => res.rendirect('/products'))
     }
-
 };
 
 module.exports = productsControllers
