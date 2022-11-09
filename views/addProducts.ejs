@@ -30,11 +30,7 @@
         method="POST" 
         enctype="multipart/form-data" 
         id="formulario">
-            <div class="id">
-                <label for="_id">ID del producto:</label>
-            </div>
-            <input type="text" name="id" id="nombreProducto" placeholder="" required>
-            <br>
+        
             <div class="name">
                 <label for="_name">Nombre del producto:</label>
             </div>
@@ -43,12 +39,18 @@
             <div class="type">
                 <label for="_type">Tipo de cerveza:</label>
             </div>
-            <input type="text" name="type" id="nombreProducto" placeholder="" required>
+            <select name="type_id" id="" required>
+                <option value="" disabled selected >- Seleccione el género - </option>
+                <% types.forEach(types => { %>
+                <option value="<%= types.id %>"><%= types.type %></option>
+                <% }); %>
+            </select>
+           
             <br>
             <div class="producto-img">
                 <label for="img">Imagen del producto:</label>
             </div>
-            <input type="file" name="img" required>
+            <input type="file" name="img" >
             <br>
             <div class="stock">
                 <label for="_stock">Stock:</label>
@@ -77,7 +79,13 @@
             <div class="categories">
                 <label for="categoria">Categorías:</label>
                 <br>
-                <input type="text" name="categoria" id="nombreProducto" placeholder="" required>
+                <select name="category_id" id="" required>
+                    <option value="" disabled selected>- Seleccione la categoría - </option>
+                    <% categories.forEach(categories => { %>
+                    <option value="<%= categories.id %>"><%= categories.category%></option>
+                    <% }); %>
+                </select>
+               
             </div>
             <br>
             <div class="description">

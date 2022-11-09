@@ -24,8 +24,8 @@
     <main id="main-profile">
         <div class="box-profile">
             <div class="container-img">
-                <img src="../img/users/<%= user.img%>" alt="">
-                <h1 class="welcome">Bienvenido <%= user.name%> <%= user.lastName%></h1>
+                <img src="/img/users/<%= user.imagen%>" alt="">
+                <h1 class="welcome">Bienvenido <%= user.name%> <%= user.lastname%></h1>
             </div>
             <div class="container-button">
 
@@ -35,22 +35,21 @@
             <br>
             <h3>Mis Datos</h3>
             <br>
-            <label>Datos de tu cuenta</label>
             <br>
-            <br>
+            
             <div class="form-profile">
-            <form action="/profile/<%user.id%>?_method=PUT" method="post" id="actualizacionDeDatos"> <!--nota: actualizar el action cuando sea necesario--> 
+            <form action="/profile/<%user.id ?? ''%>?_method=PUT" method="post" id="actualizacionDeDatos">
                 <label>Nombre:</label>
-                <input type="text" name="nombre" value="<%= user.name%>">
+                <input type="text" name="name" value="<%= user.name%>">
                 <br>
                 <label>Apellido:</label>
-                <input type="text" name="apellido" value="<%= user.lastName%>">
+                <input type="text" name="lastname" value="<%= user.lastname%>">
                 <br>
                 <label>Email:</label>
                 <input type="text" name="email" value="<%= user.email%>">
                 <br>
                 <label>Password: </label>
-                <input type="text" name="Password" value="Ingrese su nueva contraseña">
+                <input type="password" name="password" value="12345678">
             
                 <div class = "boton-logout">
                     <button type="submit" class="boton-formulario" style="margin-right: 10px;" id="boton">Editar

@@ -30,14 +30,17 @@ module.exports = (sequelize, dataTypes) =>{
         idealTemperature:  { 
             type: dataTypes.STRING(100)
         },
+        stock:{
+            type: dataTypes.INTEGER,
+    
+        },
         category_id: {
             type: dataTypes.INTEGER
         }
     };
     let config = {
         tableName: 'products',
-        timestamps: false,
-        paranoid:true
+        timestamps: false
     };
 
     const Product = sequelize.define(alias, cols, config);

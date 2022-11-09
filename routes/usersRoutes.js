@@ -24,9 +24,9 @@ router.post('/login', validations.validationLogin, usersControllers.processLogin
 
 router.get('/profile/:id', usersControllers.profile);
 
-router.put('perfil/:id', usersControllers.editProcess);
+router.put('profile/:id', usersControllers.editProcess);
 
-router.delete('perfil/:id', usersControllers.deleteProcess);
+router.delete('profile/:id', usersControllers.deleteProcess);
 
 router.get('/logout', usersControllers.logout);
 

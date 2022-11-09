@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const usersJson = path.join(__dirname, '../data/users.json');
-
+console.log
 const listOFUsers = JSON.parse(fs.readFileSync(usersJson, 'utf8'));
 
 const bcryptjs = require('bcryptjs');
@@ -14,10 +14,19 @@ const User = require('../models/User');
 
 const {validationResult} = require('express-validator');
 
+const db = require("../src/database/models");
+
+const { Op } = require("sequelize");
+const { devNull } = require('os');
+const { log } = require('console');
+
+const sequelize = db.sequelize
+
+
 const usersControllers = {
     register: (req, res) => res.render('register'),
 
-    registerProcess: (req, res) => {
+    registerProcess: async (req, res) => {
         const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
@@ -27,38 +36,57 @@ const usersControllers = {
 			});
 		}
 
-		let userInDB = User.findByField('email', req.body.email);
-
-		if (userInDB) {
-			return res.render('register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		}
-            let newUser = {
+		let userInDB = await db.User.findOne({
+            where: {
+                email: { [Op.like]: req.body.email}
+            }
+        });
+        if(!resultValidation.errors.lenght && !userInDB){
+            let wordAdmin = 'bierfass';
+            let registeredEmail = req.body.email;
+            let isAdmin = registeredEmail.includes(wordAdmin) ? 'Admin' : 'User';
+            let img = req.files.map(file => file.filename);
+            let filename = '';
+            if (img.lenght === 1){
+                filename = img[0]
+            } else {
+                filename = 'img-user-default.png'
+            } 
+            db.User.create({
                 id: uuid(),
                 name: req.body.name,
-                lastName: req.body.lastName,
+                lastname: req.body.lastName,
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 10),
-                category: "user",
-            }
-            if (req.files) {
-                newUser.img = req.files.map(file => file.filename)
-            }
-            listOFUsers.push(newUser);
-            fs.writeFileSync(usersJson, JSON.stringify(listOFUsers, null, ' '));
-
-            return res.redirect('/login');
+                category: isAdmin,
+                imagen: filename
+                
+            }).then((user) =>{
+                req.session.userLogged = user;
+                res.redirect("/login");
+            });
+        } else {
+            if(userInDB){
+                return res.render('register', {
+                    errors: {
+                        email: {
+                            msg: 'Este email ya está registrado'
+                        }
+                    },
+                    oldData: req.body
+                });
+        } else {
+            return res.render("/register",{
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        }
+        }
     },
     login: (req, res) => {
         res.render('login');
     },
-    processLogin: (req, res) => {
+    processLogin: async (req, res) => {
         let resultValidation = validationResult(req);
         if(resultValidation.errors.length > 0){
             return res.render('login', {
@@ -66,8 +94,13 @@ const usersControllers = {
                 oldData: req.body
             })
         };
-        let userToLogin = User.findByField('email', req.body.email);
-        console.log(userToLogin)
+        let userToLogin = await db.User.findOne({
+            where: {
+                email: { [Op.like]: req.body.email}
+            }
+            
+        });
+
         if(userToLogin){
             let comparePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
            
@@ -76,7 +109,6 @@ const usersControllers = {
                     req.session.userLogged = userToLogin;
                     if(req.body.remember_user) {
                         res.cookie('email', req.body.email, { maxAge: (1000 * 60) * 60 })
-                        console.log(res.cookie)
                     }
                 
                     let id = userToLogin.id
@@ -94,9 +126,8 @@ const usersControllers = {
     }
     ,
     profile: (req, res) => {
-        let id = req.params.id;
-        let user = listOFUsers.find(usuario => usuario.id == id);
-        res.render('profile', { user });
+        console.log(req.session.userLogged)
+        return res.render('profile', { user: req.session.userLogged });
     },
 
     logout: (req, res) => {
@@ -105,41 +136,34 @@ const usersControllers = {
         return res.redirect('/');
     },
     editProcess: (req, res) => {
-        let id = req.params.id;
-        let userEdit = {
-            id,
+       let userId = req.params.id
+    
+        db.User.update({
             name: req.body.name,
-            lastName: req.body.lastName,           
+            lastname: req.body.lastname,
             email: req.body.email,
-            password: req.body.password,
-           
-        }
-        if (req.files) {
-            userEdit.img = req.files.map(file=> file.filename)
-        }
-        userEdit.id = id;
-
-        for (let index = 0; index < listOFUsers.length; index++) {
-            const userSelected = listOFUsers[index];
-            if (userSelected.id == id) {
-                listOFUsers[index] = newProduct;
+            password: bcryptjs.hashSync(req.body.password, 10),
+            category,
+            imagen,
+           }, {
+            where: {
+                id: userId
             }
-        }
-
-        fs.writeFileSync(usersJson, JSON.stringify(listOFUsers, null, 2));
-
-        res.redirect('/');
+           })
+           .then((user) => {
+                res.redirect('/');
+           })
+           .catch ((e) => {
+            res.send('ERROR!')
+           })
     },
     deleteProcess: (req, res) => {
-        let id = req.params.id;
-        for (let index = 0; index < listOFUsers.length; index++) {
-            const userSelected = listOFUsers[index];
-            if (userSelected.id == id) {
-                listOFUsers.splice(index, 1);
-            }
-        }
-        fs.writeFileSync(usersJson, JSON.stringify(listOFUsers, null, ' '));
-        res.redirect('/register');
+            let userID = req.session.userLogged.id;
+            db.User
+            .destroy({where: {id: userID}, force: true}) 
+            .then(()=>{
+                return res.redirect('/products')})
+            .catch(error => res.send(error)) 
     }
 
 }
