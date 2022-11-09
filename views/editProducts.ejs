@@ -265,7 +265,12 @@ textarea {
             <div class="type">
                 <label for="_type">Tipo de cerveza:</label>
             </div>
-            <input type="text" name="type" id="nombreProducto" value="<%= producto.type %>" required>
+            <select name="type_id" id="" required>
+                <option value="">- Seleccione el género - </option>
+                <% types.forEach(types => { %>
+                <option selected= "true" value="<%= types.id %>"><%= types.type %></option>
+                <% }); %>
+            </select>
             <br>
             <div class="producto-img">
                 <label for="img">Imagen del producto:</label>
@@ -299,7 +304,12 @@ textarea {
             <div class="categories">
                 <label for="categoria">Categorías:</label>
                 <br>
-                <input type="text" name="categoria" id="nombreProducto" value="<%= producto.categoria %>" required>
+                <select name="category_id" id="" required>
+                    <option value="">- Seleccione la categoría - </option>
+                    <% categories.forEach(categories => { %>
+                    <option selected= "true" value="<%= categories.id %>"><%= categories.category%></option>
+                    <% }); %>
+                </select>
             </div>
             <br>
             <div class="description">

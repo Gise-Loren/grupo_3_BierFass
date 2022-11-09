@@ -232,5 +232,20 @@
   "bitterness": "42",
   "idealTemperature": "3°-6°",
   "categoria": "industrial"
+ },
+ {
+  "id": "50230",
+  "name": "Quilmes Clasica",
+  "type": "roja",
+  "stock": "70",
+  "price": "300",
+  "description": "Escribe la descripción...",
+  "alcohol": "4°",
+  "bitterness": "3°-5°",
+  "idealTemperature": "5°",
+  "categoria": "industrial",
+  "img": [
+   "img-bier1667695494914.jpg"
+  ]
  }
 ]
