@@ -120,15 +120,10 @@ const productsControllers = {
         let producto = listOfProducts.find(producto => producto.id == id);
         res.render('descripcion', { producto });
     },
-    //-----------------------------------------------------------------------------------////////
-    /*  prueba: (req,res) => {
-         Procucts.findAll()
-             .then((products)=>{
-                  res.send({ products })
-             }) */
-    //-------------------------------------------------------------------------------------//////
+/* -----terminar--------- */
+  
     getIndex: (req, res) => {
-        res.redirect('/products')
+        res.redirect('/productos')
     },
     
     /* muestra los productos */
@@ -163,7 +158,7 @@ const productsControllers = {
             categoria: req.body.categoria,
         })
         db.Products.create(product)
-            .then(newProduct => res.redirect(`/products/${newProduct.dataValues.id}/id`));
+            .then(newProduct => res.redirect(`/productos/${newProduct.dataValues.id}/id`));
 
     },
     getProductDetail: (req, res) => {
@@ -195,7 +190,7 @@ const productsControllers = {
                 id:req.prams.id
             }
         })/* muestra el producto cambiado */
-        .then(products => res.redirect(`/products/${req.prams.id}/id`))
+        .then(products => res.redirect(`/productos/${req.prams.id}/id`))
     },
     /* elimina el producto y lo redirecciona */
     deleteProduct: (req, res) => {
@@ -205,7 +200,7 @@ const productsControllers = {
 
             }
     })
-    .then(products => res.rendirect('/products'))
+    .then(products => res.rendirect('/productos'))
     }
 };
 
