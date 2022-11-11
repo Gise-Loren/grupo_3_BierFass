@@ -8,21 +8,16 @@ const listOfProducts = JSON.parse(fs.readFileSync(productsJson, 'utf8'));
 
 const db = require('../src/database/models');
 
-
 const productsControllers = {
     index: async (req, res) => {
         db.Products.findAll({
             raw: true
         })
-
         .then(products => res.render('productos', { products }));
-       
-
     },
     createProducts: (req, res) => {
         let categories = db.Category.findAll()
         let  types = db.Types.findAll()
-    
         Promise
         .all([categories, types])
         .then(([categories, types]) => {
@@ -37,7 +32,6 @@ const productsControllers = {
         } else {
             filename = 'envase-bier.jpg'
         }
-        
         db.Products.create({
             id: Date.now(),
             name: req.body.name,
@@ -49,16 +43,11 @@ const productsControllers = {
             alcohol: req.body.alcohol,
             bitterness: req.body.bitterness,
             idealTemperature: req.body.idealTemperature,
-            category_id: req.body.category_id, 
-            
-        
+            category_id: req.body.category_id
         })
         .then(function (product) {
             res.redirect('/products');
         })
-        
-        
-
     },
     editProduct: async (req, res) => {
         let categories = await db.Category.findAll()
@@ -85,7 +74,6 @@ const productsControllers = {
         } else {
             filename = producto.imagen
         }
-        
         db.Products.update({
             id: productId,
             name: req.body.name,
@@ -98,8 +86,6 @@ const productsControllers = {
             bitterness: req.body.bitterness,
             idealTemperature: req.body.idealTemperature,
             category_id: req.body.category_id, 
-            
-        
         },
         {
             where: {id: productId}
@@ -107,9 +93,7 @@ const productsControllers = {
         .then(function (product) {
             res.redirect('/products');
         })
-
         res.redirect('/products');
-
     },
     deleteProducts: (req, res) => {
         let productId = req.params.id;
@@ -124,49 +108,7 @@ const productsControllers = {
         db.Products.findByPk(req.params.id, {
             raw: true
         })
-
-    },
-    getProductDetail: (req, res) => {
-        const productsId = req.params.id;
-        db.Products.findByPK(productsId)
-            .then(products => res.render('addProducts', { products }));
-    },
-    editProduct: (req, res) => {
-        const id = req.params.id;
-        db.Products.findByPK(id)
-            .then(products => res.render('editProducts', { products }));
-    },
-    updateProduct: (req, res) => {
-        const product = {
-
-            name: req.body.name,
-            type: req.body.type,
-            img: req.body.img,
-            stock: req.body.stock,
-            price: req.body.price,
-            alcohol: req.body.alcohol,
-            description: req.body.description,
-            bitterness: req.body.bitterness,
-            idealTemperature: req.body.idealTemperature,
-            categoria: req.body.categoria,
-        }
-        db.Product.update(product, {
-            where:{
-                id:req.prams.id
-            }
-        })/* muestra el producto cambiado */
-        .then(products => res.redirect(`/productos/${req.prams.id}/id`))
-    },
-    /* elimina el producto y lo redirecciona */
-    deleteProduct: (req, res) => {
-        db.Products.destroy ({
-            where: {
-                id:req.params.id
-
-            }
-    })
-    .then(products => res.rendirect('/productos'))
+        .then(promProducts => res.render('descripcion', { promProducts }));
     }
-
 }
 module.exports = productsControllers
