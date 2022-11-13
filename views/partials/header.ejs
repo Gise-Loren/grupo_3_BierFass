@@ -1,5 +1,11 @@
+<style>
+    header {
+            display: flex;
+            justify-content:space-between ;
+        }
+</style>
 <div class="logo">
-   <a href="/home"> <img src="img/logo-bier-fass.png" alt="logo"></a>
+   <a href="/home"> <img src="/img/logo-bier-fass.png" alt="logo"></a>
 </div>
 
 <article class="barra">
@@ -10,12 +16,23 @@
     <div class="btn">
         <a href="#" class="lupa fa fa-search icon"></a>
     </div>  
-    <div class="carrito">
-        <a href="/cart" class="carroto material-symbols-outlined">shopping_cart</a>
-    </div>
-    <div class="perfil">
-        <a href="/login" class="perfil material-symbols-outlined">account_circle</a>
-    </div>
+    
+    <% if (locals.isLogged) { %>
+        <div class="carrito">
+            <a href="/cart" class="carroto material-symbols-outlined">shopping_cart</a>
+        </div>
+        <div class = "carrito"><a href="/logout" class="material-symbols-outlined">
+            logout
+            </a></div>
+            <div class="container-img-header">
+                <a href="/profile/<%= locals.userLogged.id %>"><img src="/img/users/<%= locals.userLogged.imagen %>" alt=""></a>
+            </div>
+    
+    <% } else { %>
+        <div class="perfil">
+            <a href="/login" class="perfil material-symbols-outlined">account_circle</a>
+        </div>
+        <% } %>
     <div class="menu">
         <a href="#" class="menu material-symbols-outlined">menu</a>
     </div>

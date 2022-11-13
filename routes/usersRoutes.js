@@ -6,9 +6,6 @@ const usersControllers = require("../controllers/usersControllers");
 
 const upload = require("../middlewares/multerUser")
 
-const guestMiddleware = require('../middlewares/guestMiddleware');
-
-const authMiddleware = require('../middlewares/authMiddleware');
 
 const validations = require('../middlewares/validationsMiddleware');
 
@@ -24,11 +21,13 @@ router.post('/login', validations.validationLogin, usersControllers.processLogin
 
 router.get('/profile/:id', usersControllers.profile);
 
-router.put('profile/:id', usersControllers.editProcess);
+router.put('/:id', validations.validtaionEdit, usersControllers.editProcess);
 
-router.delete('profile/:id', usersControllers.deleteProcess);
+router.delete('/:id', usersControllers.deleteProcess);
 
 router.get('/logout', usersControllers.logout);
+
+router.get('/users/list', usersControllers.usersList);
 
 
 module.exports = router;

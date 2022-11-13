@@ -28,6 +28,10 @@ const validations = {
 	validationLogin: [
 		body('email').isEmail().withMessage('Completa con un email válido'),
         body('password').isLength({ min: 8 }).withMessage('Tu contraseña es incorrecta'),
-	]}
+	],
+	validtaionEdit: [
+		body('password').isLength({min: 8}).withMessage('La contraseña es incorrecta')
+	]
+}
 
 	module.exports = validations;

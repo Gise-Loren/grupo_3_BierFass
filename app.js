@@ -28,9 +28,7 @@ app.use(usersRoutes);
 
 app.use(mainRoutes);
 
-app.use("/products", productsRoutes);
-
-
+app.use(productsRoutes);
 
 app.use(express.json());
 

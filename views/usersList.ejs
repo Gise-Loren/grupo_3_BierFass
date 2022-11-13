@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="/css/styles-usersList.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles-lucas.css">
+    <%- include('partials/head') %>
+</head>
+
+<body>
+    <header id="header">
+
+        <%- include('partials/header')%>
+    </header>
+    <main>
+        <div class="localizacion">
+            <div class="localizacion-izq">
+                <a href="/home"> Página de inicio</a>
+                <a href="/products">> Variedades</a>
+                <a href="#">> Listado de usuarios </a>
+            </div>
+
+            <div class="localizacion-der"><a href="/products/list"> Listado de productos</a></div>
+            <div class="localizacion-der">
+
+                <a href="/products/create"> Crear producto</a>
+            </div>
+        </div>
+        </div>
+        <table class="table">
+            <thead class="thead-table">
+                <tr>
+                    <th>Categoría</th>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <% users.forEach(usuario=> { %>
+                <tbody class="tbody-table">
+                    <tr>
+
+                        <td>
+                            <%= usuario.category %>
+                        </td>
+                        <td><img src="/img/users/<%= usuario.imagen %>" alt=""></td>
+                        <td>
+                            <%= usuario.name %>
+                        </td>
+                        <td>
+                            <%= usuario.lastname %>
+                        </td>
+                        <td>
+                            <%= usuario.email %>
+                        </td>
+                        <td>
+                            <form action="/<%= usuario.id %>?_method=DELETE" method="post">
+                                <button
+                                    style="background: none; border: 0; text-decoration: none; color: rgb(221, 221, 221)"
+                                    class="material-symbols-outlined" style=>
+                                    delete
+                                    </span>
+                                </button>
+
+                            </form>
+                        </td>
+
+                    </tr>
+                </tbody>
+                <% }) %>
+        </table>
+        <br>
+        </div>
+
+    </main>
+    <%- include('partials/footer')%>
+</body>
+
+</html>

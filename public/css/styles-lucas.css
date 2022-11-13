@@ -447,7 +447,7 @@ body {
 }
 .welcome {
     margin-left: 3vw;
-    color:rgb(39, 48, 73);
+    margin-right: 3vw;
     margin-top: 1vw;
 }
 .container-button {
@@ -459,6 +459,13 @@ body {
 .container-img img {
     width: 100px;
     height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+}
+.container-img-header img {
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
     background-size: cover;
     border-radius: 50%;
 }

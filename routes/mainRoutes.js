@@ -21,6 +21,7 @@ router.get('/cart', mainController.cart);
 router.get('/redirectMinors', mainController.redirectMinors)
 
 
+
 /*  router.get('/login', mainController.login); 
 
 router.get('/register', mainController.register);

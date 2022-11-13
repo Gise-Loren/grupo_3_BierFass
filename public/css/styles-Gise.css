@@ -344,6 +344,47 @@ div.dato {
 
 }
 
+.container-img-header img {
+    padding-bottom: 2px;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    border-radius: 50%;
+  
+}
+.localizacion {
+    padding-top: 15px;
+   padding-bottom: 15px;
+
+}
+
+.localizacion-der , 
+.localizacion-izq  {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.localizacion a {
+    padding-top: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+.localizacion a:hover {
+    
+    border-radius: 30px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+.total-productos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
 /* ---------------query--------------- */
 
 @media(min-width:480px) {

@@ -8,21 +8,28 @@
 
 <body>
     <header id="header">
-        <div class="logo">
-            <a href="/home"> <img src="../img/logo-bier-fass.png" alt="logo"></a>
-         </div>
         <%- include('partials/header')%>
     </header>
 
     <main>
-            <div class="box-principal">
+        <div class="localizacion">
+            <div class="localizacion-izq">
+                <a href="/home"> Página de inicio</a>
+                <a href="/products">> Variedades</a>
+                <a href="#">> Detalles </a>
+            </div> 
+        </div>  
+        <div class="box-principal">
                
                 <div class="nom-variedad">
-                   <div class="button-edit">
+                    <% if (locals.isLogged && locals.userLogged.category == "Admin") { %>
+                    <div class="button-edit">
                         <a href="/products/<%= promProducts.id %>/edit" ><span class="material-symbols-outlined">
                             edit
                             </span></a>
                         </div>
+        <% } %>
+
                     <h1><%= promProducts.name %></h1>
                     
                     <br>

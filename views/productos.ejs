@@ -31,9 +31,14 @@
                 <a href="/home"> Página de inicio</a>
                 <a href="#">> Variedades</a>
             </div>
-            <div class="localizacion-der">
+            <% if (locals.isLogged && locals.userLogged.category == "Admin") { %>   
+                <div  class="_localizacion-der"><a href="/products/list"> Listado de productos</a></div>
+                    <div  class="_localizacion-der"><a href="/products/list"> Listado de usuarios</a></div>
+                <div class="localizacion-der">
+                    
                 <a href="/products/create"> Crear producto</a>
             </div>
+            <% } %>
         </div>
         <p class="title">CERVEZAS</p>
 
@@ -42,18 +47,10 @@
         <article class="variedades">
             <div class="_variedades">
                 <% products.forEach(producto=> { %>
-                    <% if (producto.category_id == 2 ) { %> 
+                  <% if (producto.category_id == 2 ) { %> 
                     <div class="producto">
-                        <div class="button-delete">
-                            <form action="/products/<%= producto.id %>?_method=DELETE" method="post">
-                                <button
-                                    style="text-decoration: none!important; background-color: rgb(0, 0, 0); color: white">
-                                    <span class="material-symbols-outlined" style=>
-                                        delete
-                                    </span>
-                                </button>
-                            </form>
-                        </div>
+                      
+                       
                         <div class="img-cerveza-bier">
                             <img src="/img/<%= producto.imagen%>" alt="img-cerveza">
                         </div>
@@ -62,7 +59,7 @@
                         </p>
                         <div class="agregar">
                             <a href="/products/<%= producto.id %>" style="text-decoration: none"> <button
-                                    class="boton-comprar" style="text-decoration: none"> AGREGAR </button></a>
+                                    class="boton-comprar" style="text-decoration: none"> VER DETALLE </button></a>
                         </div>
 
                     </div>
@@ -80,16 +77,19 @@
                 <% products.forEach(producto=> { %>
                     <% if (producto.category_id == 1 ) { %> 
                     <div class="producto">
-                        <div class="button-delete">
-                            <form action="/products/<%= producto.id %>?_method=DELETE" method="post">
-                                <button
-                                    style="text-decoration: none!important; background-color: rgb(0, 0, 0); color: white">
-                                    <span class="material-symbols-outlined" style=>
-                                        delete
-                                    </span>
-                                </button>
-                            </form>
-                        </div>
+                        <% if (locals.isLogged && locals.userLogged.category == "Admin") { %>
+                            <div class="button-delete">
+                                <form action="/products/<%= producto.id %>?_method=DELETE" method="post">
+                                    <button
+                                        style="text-decoration: none!important; background-color: rgb(0, 0, 0); color: white">
+                                        <span class="material-symbols-outlined" style=>
+                                            delete
+                                        </span>
+                                    </button>
+                                    
+                                </form>
+                            </div>
+                            <% } %>
                         <div class="img-cerveza-bier">
                             <img src="/img/<%= producto.imagen %>" alt="img-cerveza">
                         </div>
@@ -98,7 +98,7 @@
                         </p>
                         <div class="agregar">
                             <a href="/products/<%= producto.id %>" style="text-decoration: none"> <button
-                                    class="boton-comprar" style="text-decoration: none"> AGREGAR </button></a>
+                                    class="boton-comprar" style="text-decoration: none"> VER DETALLE </button></a>
                         </div>
                     </div>
                      <% } %>

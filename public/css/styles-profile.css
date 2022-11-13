@@ -1,15 +1,46 @@
-h1,
-h3 {
-    text-align: center;
+body {
+    font-family: Montserrat;
+    color: white;
+    overflow-x:hidden;
+    overflow-y: scroll;
+    background-image: linear-gradient(#1e0f5b6e, #1e0f5b6e), url("../img/botellas-carrito.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    margin: 0;
+    height: 100%; 
+    width: 100%;
+    border: 15px;
+    background-attachment: fixed;
+   
 }
 
+
+.container-img-profile {
+    display: flex;
+    align-items: center;
+}
+.container-img-profile img {
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+    border-radius: 50%;
+}
+#header-profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 h1 {
     font-weight: bolder;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 h3 {
+    text-align: center;
     font-weight: bold;
 }
 
@@ -24,69 +55,31 @@ section {
     justify-content: center;
     align-items: center;
     margin: 0 1rem;
-}
-
-.btn {
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    width: 100%;
-    font-family: Montserrat;
-    margin-bottom: 1rem;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-} 
-.link{
-    text-decoration: none;
-    color:white;
-}
-.btnGoogle {
-    background-color: #dd4b39;
 
 }
-.fa {
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-}
 
-.fa:hover {
-    opacity: 0.7;
-} 
-
-.fa-google {
-    background: #dd4b39;
-    color: white;
-}
-
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-.btnFacebook {
-    background-color: #3B5998;
-}
-
-input[type=text],
-input[type=password]{
-    width: 100%;
+.input-text {
+    width: 40vw;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    
 } 
 
-input[type=submit] {
+.btn-profile, .btn-profile-1 {
+    width: 18vw;
+    background-color: #898989;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-edit {
     width: 100%;
     background-color: #EFBF2D;
     color: white;
@@ -95,6 +88,12 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+.btn-chicos {
+    display: flex
+}
+.btn-profile-1 {
+    margin-right: 4vw;
 }
 
 input[type=submit]:hover {
@@ -131,15 +130,5 @@ input[type=submit]:hover {
 }
 .img-register label {
  font-size: 14px;
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    body {
-        height: 100vh;
-    } 
-    .btn, 
-    form {
-        width: 30rem;        
-    } 
 }
 
