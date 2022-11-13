@@ -192,7 +192,17 @@ const usersControllers = {
             raw: true
         })
             .then(users => res.render('usersList', { users }));
-    }
+    },
+    deleteUserList: (req, res) => {
+        let userId = req.params.id;
+
+        db.User
+            .destroy({ where: { id: userId }, force: true })
+            .then(() => {
+                return res.redirect('/users/list')
+            })
+            .catch(error => res.send(error))
+        }
 
 }
 

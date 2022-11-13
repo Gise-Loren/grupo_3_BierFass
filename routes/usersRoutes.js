@@ -29,5 +29,8 @@ router.get('/logout', usersControllers.logout);
 
 router.get('/users/list', usersControllers.usersList);
 
+router.delete('/users/:id/list', usersControllers.deleteUserList);
+
+
 
 module.exports = router;
