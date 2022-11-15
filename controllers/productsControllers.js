@@ -94,10 +94,9 @@ const productsControllers = {
             {
                 where: { id: productId }
             })
-            .then(function (product) {
-                res.redirect('/products');
+            .then(function () {
+                res.redirect('/products/'+ productId);
             })
-        res.redirect('/products');
     },
     deleteProducts: (req, res) => {
         let productId = req.params.id;

@@ -7,23 +7,25 @@ const productsControllers = require ("../controllers/productsControllers");
 
 const upload = require("../middlewares/multerProducts") // <----- SACAMOS DE ROUTES MULTER Y LO AGREGAMOS EN MIDDLEWARES 
 
-router.get("/products", productsControllers.index); // <------ LISTADO DE PRODUCTOS.
+router.get("/", productsControllers.index); // <------ LISTADO DE PRODUCTOS.
 
-router.get('/products/list', productsControllers.list)
+router.get('/list', productsControllers.list)
 
-router.delete('/products/:id/list', productsControllers.deleteProductsList)
+router.get("/:id/edit", productsControllers.editProduct); // <------ FORMULARIO DE EDICION DE PRODUCTOS.
 
-router.get('/products/create', productsControllers.createProducts); // <------ FORMULARIO DE CREACION DE PRODUCTOS.
+router.delete('/:id/list', productsControllers.deleteProductsList)
 
-router.get('/products/:id', productsControllers.productsId); // <------ DETALLE DE UN PRODUCTO EN PARTICULAR.
+router.get('/create', productsControllers.createProducts); // <------ FORMULARIO DE CREACION DE PRODUCTOS.
 
-router.post('/products/', upload.any(), productsControllers.prodcutsProcess); // <------ ACCION DE CREACION DE PRODUCTOS.
+router.get('/:id', productsControllers.productsId); // <------ DETALLE DE UN PRODUCTO EN PARTICULAR.
 
-router.get("/products/:id/edit", productsControllers.editProduct); // <------ FORMULARIO DE EDICION DE PRODUCTOS.
+router.post('/', upload.any(), productsControllers.prodcutsProcess); // <------ ACCION DE CREACION DE PRODUCTOS.
 
-router.put("/products/:id", upload.any() ,productsControllers.updateProducts); // <------ ACCION DE EDICION DE PRODUCTOS.
+
+
+router.put("/:id", upload.any() ,productsControllers.updateProducts); // <------ ACCION DE EDICION DE PRODUCTOS.
  
-router.delete("/products/:id", productsControllers.deleteProducts); // <------ ACCION DE BORRADO.
+router.delete("/:id", productsControllers.deleteProducts); // <------ ACCION DE BORRADO.
 
 
 

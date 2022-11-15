@@ -19,17 +19,13 @@
 
     <main>
 
-        <h1>Edición de producto ID: <%= producto.id ?? ''%></h1>
+        <h1>Edición de producto ID: <%= producto.id %></h1>
         <form 
-        action="/products/<%= producto.id ?? ''%>?_method=PUT" 
+        action="/products/<%= producto.id %>?_method=PUT" 
         method="POST"
         enctype="multipart/form-data"
         id="formulario">
-            <!-- <div class="id">
-                <label for="_id">ID del producto:</label>
-            </div>
-            <input type="text" name="id" id="nombreProducto" value="<%= producto.id %>" required>
-            <br> -->
+           
             <div class="name">
                 <label for="_name">Nombre del producto:</label>
             </div>

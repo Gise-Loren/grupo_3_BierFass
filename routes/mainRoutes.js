@@ -20,15 +20,4 @@ router.get('/cart', mainController.cart);
 
 router.get('/redirectMinors', mainController.redirectMinors)
 
-
-
-/*  router.get('/login', mainController.login); 
-
-router.get('/register', mainController.register);
-
-router.post('/register', uploadUsers.any(), mainController.registerProcess);
-
-router.get('/description', mainController.description); 
-  */
-
 module.exports = router;

@@ -49,8 +49,6 @@
                 <% products.forEach(producto=> { %>
                   <% if (producto.category_id == 2 ) { %> 
                     <div class="producto">
-                      
-                       
                         <div class="img-cerveza-bier">
                             <img src="/img/<%= producto.imagen%>" alt="img-cerveza">
                         </div>
@@ -77,19 +75,6 @@
                 <% products.forEach(producto=> { %>
                     <% if (producto.category_id == 1 ) { %> 
                     <div class="producto">
-                        <% if (locals.isLogged && locals.userLogged.category == "Admin") { %>
-                            <div class="button-delete">
-                                <form action="/products/<%= producto.id %>?_method=DELETE" method="post">
-                                    <button
-                                        style="text-decoration: none!important; background-color: rgb(0, 0, 0); color: white">
-                                        <span class="material-symbols-outlined" style=>
-                                            delete
-                                        </span>
-                                    </button>
-                                    
-                                </form>
-                            </div>
-                            <% } %>
                         <div class="img-cerveza-bier">
                             <img src="/img/<%= producto.imagen %>" alt="img-cerveza">
                         </div>
