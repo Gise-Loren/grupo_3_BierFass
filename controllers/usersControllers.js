@@ -111,7 +111,6 @@ const usersControllers = {
             }
 
         } else {
-            console.log(errors)
             return res.render('login', {
                 errors: {
                     email: {

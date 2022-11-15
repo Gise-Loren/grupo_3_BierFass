@@ -111,7 +111,7 @@ CREATE TABLE `users` (
   `id` varchar(35) NOT NULL,
   `name` varchar(15) NOT NULL,
   `lastname` varchar(15) NOT NULL,
-  `email` varchar(25) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `password` text NOT NULL,
   `category` varchar(15) NOT NULL,
   `imagen` text NOT NULL
@@ -122,11 +122,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `password`, `category`, `imagen`) VALUES
-('09887a60-9962-4e8a-a', 'Lucas', 'Alvarez', 'lucaas2120@bierfass.com.a', '$2a$10$7fr8ID0yW0JCyVGDes3MBO2J6t6xE3ezUVLUpbRHMZhv/h8DgImb6', 'Admin', 'img-users-1667681668263.png'),
+('09887a60-9962-4e8a-a', 'Lucas', 'Alvarez', 'lucaas2120@bierfass.com.ar', '$2a$10$7fr8ID0yW0JCyVGDes3MBO2J6t6xE3ezUVLUpbRHMZhv/h8DgImb6', 'Admin', 'img-users-1665941480330.jpg'),
 ('0d6e2101-e3b8-497a-aa8f-64a22864fff', 'Juan', 'Perez', 'juanperez1.0@bierfass.com', '$2a$10$tASl4XptfA2mRgkvp8HHVuROU4y1L.VbyOhbgqJaJ2y5OUC5JrFaC', 'Admin', 'img-user-default.png'),
 ('1d307f6a-80d5-45e2-8ae1-dc454768e4c', 'Carlos', 'Acosta', 'carlos@acosta.com', '$2a$10$bcxXJV51wFTLeKSPRirHc.O2MV.yQZIzWSBqngy6Nfg450P4KuB8a', 'User', 'img-user-default.png'),
-('a892c86d-19e8-40a3-9', 'Francisco', 'Cagnino', 'francagnino@bierfass.com.', '$2a$10$agmiq56Hl30XfQBYcP/giuwYq8t1i1LN42fBfLzH1U08RIHy/JEuK', 'Admin', 'img-users-1667681519688.png'),
-('b45e9cc9-c7d1-4491-8c0b-e5b6b816450', 'Giancarlo', 'Guitre', 'gianguitre@bierfass.com.a', '$2a$10$GZ8m75mPA/VgfZDsEqNKGOWafV8M01YcahHN0xksuZtUtsrZPxn4S', 'Admin', ''),
+('a892c86d-19e8-40a3-9', 'Francisco', 'Cagnino', 'francagnino@bierfass.com.ar', '$2a$10$agmiq56Hl30XfQBYcP/giuwYq8t1i1LN42fBfLzH1U08RIHy/JEuK', 'Admin', 'img-users-1665941480330.jpg'),
+('a892c86d-19e8-40b3-9', 'Gisel', 'Lorenzatti', 'giselorenzatti@bierfass.com.ar', '$2a$10$agmiq56Hl30XfQBYcP/giuwYq8t1i1LN42fBfLzH1U08RIHy/JEuK', 'Admin', 'img-users-1665941480330.jpg'),
+('b45e9cc9-c7d1-4491-8c0b-e5b6b816450', 'Giancarlo', 'Guitre', 'gianguitre@bierfass.com.ar', '$2a$10$GZ8m75mPA/VgfZDsEqNKGOWafV8M01YcahHN0xksuZtUtsrZPxn4S', 'Admin', 'img-users-1665941480330.jpg'),
 ('bafd5576-a7a2-48e2-9f8b-b5e051ddc76', 'Lucas ', 'Alvarez', 'lucaas2120@gmail.com', '$2a$10$/lFMX7eMKrttb7ANGsILe.5bzdomAp3mEi7dD054O0Jki6Jw.mzpK', 'User', 'img-user-default.png'),
 ('c4c0f027-9fd0-4002-a5b6-eea70182637', 'Lucas G', 'Alvarez', 'lucas1994@bierfass.com.ar', '$2a$10$SkMdbXru8kZLmoo4mlagIuJNEcR8E7xsyCkginnHb1Uu5Y6DXiUDO', 'Admin', 'img-user-default.png');
 
