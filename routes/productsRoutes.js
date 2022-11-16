@@ -1,5 +1,6 @@
 const express = require ("express");
 const { prodcutsProcess } = require("../controllers/productsControllers");
+const validationsMiddleware = require ("../middlewares/validationsMiddleware");
 
 const router = express.Router();
 
@@ -19,11 +20,11 @@ router.get('/create', productsControllers.createProducts); // <------ FORMULARIO
 
 router.get('/:id', productsControllers.productsId); // <------ DETALLE DE UN PRODUCTO EN PARTICULAR.
 
-router.post('/', upload.any(), productsControllers.prodcutsProcess); // <------ ACCION DE CREACION DE PRODUCTOS.
+router.post('/', upload.any(), validationsMiddleware.validationProduct, productsControllers.prodcutsProcess); // <------ ACCION DE CREACION DE PRODUCTOS.
 
 
 
-router.put("/:id", upload.any() ,productsControllers.updateProducts); // <------ ACCION DE EDICION DE PRODUCTOS.
+router.put("/:id", upload.any(), validationsMiddleware.validationProduct, productsControllers.updateProducts); // <------ ACCION DE EDICION DE PRODUCTOS.
  
 router.delete("/:id", productsControllers.deleteProducts); // <------ ACCION DE BORRADO.
 
