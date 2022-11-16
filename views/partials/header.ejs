@@ -1,8 +1,62 @@
 <style>
+    * {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo img {
+    width: 100px;
+
+
+}
+
+.barra div a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(2, 16, 53, 0.75);
+    font-size: 14px;
+    padding: 3px;
+    margin: 2px;
+}
+
+.busqueda input {
+    background-color: rgba(2, 16, 53, 0.75);
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-right: -24px;
+    color: white
+}
+
+.btn a {
+    background-color: #ffffff00 !important;
+}
+
     header {
             display: flex;
             justify-content:space-between ;
         }
+        .btn a {
+    color: #ffffff00 !important;
+}
+.container-img-header img {
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    border-radius: 50%;
+}
 </style>
 <div class="logo">
    <a href="/home"> <img src="/img/logo-bier-fass.png" alt="logo"></a>
