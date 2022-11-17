@@ -39,10 +39,11 @@ const usersControllers = {
             let wordAdmin = 'bierfass';
             let registeredEmail = req.body.email;
             let isAdmin = registeredEmail.includes(wordAdmin) ? 'Admin' : 'User';
-            let img = req.files.map(file => file.filename);
+            let img = req.file
+            console.log(req.file)
             let filename = '';
-            if (img.lenght === 1) {
-                filename = img[0]
+            if (img) {
+                filename = img.filename
             } else {
                 filename = 'img-user-default.png'
             }

@@ -89,11 +89,11 @@
                     </div>
 
                     <div class="img-register">
-                        <label for="img">Foto de perfil</label>
-                        <input type="file" name="img" value= <%=locals.errors && errors.img ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.img : null %>">
-                        <% if (locals.errors && errors.img) { %>
+                        <label for="imagen">Foto de perfil</label>
+                        <input type="file" name="imagen" value= <%=locals.errors && errors.imagen ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.imagens : null %>">
+                        <% if (locals.errors && errors.imagen) { %>
                             <div class="text-danger" style= "color: red;">
-                                <%= errors.img.msg %>
+                                <%= errors.imagen.msg %>
                             </div>
                             <% } %>
                     </div>
