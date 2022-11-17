@@ -37,7 +37,11 @@
             <select name="type_id" id="" required>
                 <option value="">- Seleccione el género - </option>
                 <% types.forEach(types => { %>
-                <option selected= "true" value="<%= types.id %>"><%= types.type %></option>
+                <% if (types.id == producto.type_id) { %>
+                    <option selected= "selected" value="<%= types.id %>"><%= types.type %></option>
+                <% } else {%> 
+                    <option value="<%= types.id %>"><%= types.type %></option>
+                    <% }; %>
                 <% }); %>
             </select>
             <br>
@@ -74,10 +78,14 @@
                 <label for="categoria">Categorías:</label>
                 <br>
                 <select name="category_id" id="" required>
-                    <option value="">- Seleccione la categoría - </option>
+                    <option value="">- Seleccione la categoría - </option>        
                     <% categories.forEach(categories => { %>
-                    <option selected= "true" value="<%= categories.id %>"><%= categories.category%></option>
-                    <% }); %>
+                        <% if (categories.id == producto.category_id) { %>
+                            <option selected= "selected" value="<%= categories.id %>"><%= categories.category%></option>
+                        <% } else {%> 
+                            <option value="<%= categories.id %>"><%= categories.category%></option>
+                            <% }; %>
+                        <% }); %>
                 </select>
             </div>
             <br>

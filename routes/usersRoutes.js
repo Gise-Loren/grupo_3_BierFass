@@ -13,7 +13,7 @@ const { throws } = require('assert');
 
 router.get('/register', usersControllers.register);
 
-router.post('/register', upload.any(), validations.validationRegister, usersControllers.registerProcess);
+router.post('/register', upload.single('imagen'), validations.validationRegister, usersControllers.registerProcess);
 
 router.get('/login', usersControllers.login);
 

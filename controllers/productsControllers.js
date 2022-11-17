@@ -53,8 +53,8 @@ const productsControllers = {
             })
     },
     editProduct: async (req, res) => {
-        let categories = await db.Category.findAll()
-        let types = await db.Types.findAll()
+        let categories = await db.Category.findAll({raw: true}) 
+        let types = await db.Types.findAll({raw: true})
         let producto = await db.Products.findByPk(req.params.id, {
             raw: true
         })
