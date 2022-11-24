@@ -1,6 +1,7 @@
 const path = require('path');
 const { body } = require('express-validator');
 
+
 const validations = {
 	validationRegister: [
 	body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
@@ -38,50 +39,63 @@ const validations = {
 		body("name")
         .notEmpty().withMessage("Tienes que escribir un nombre").bail()
         .isLength({ min: 5 }).withMessage("El nombre debe contener al menos 3 caracteres"),
+
 		body('type_Id')
 		.notEmpty().withMessage("Tiene que elegir una opcion").bail(),
+	
 		body("stock")
-		.custom((value, { req }) => {
+		.notEmpty().withMessage("Tienes que ingresar el stock").bail(),
+		/* .custom((value, { req }) => {
 
             if (value === undefined) {
               throw new Error("Tienes que ingresar el stock");
             }
             return true;
-        }),
+        }), */
 		body("price")
-		.custom((value, { req }) => {
+		.notEmpty().withMessage("Tienes que ingresar el precio").bail(),
+		/* .custom((value, { req }) => {
 
             if (value === undefined) {
               throw new Error("Tienes que ingresar el precio");
             }
-            return true;
-        }),
+            return true; */
+       /*  }), */
+
 		body("description")
-        .isLength({min: 20}).withMessage("La descripción debe contener al menos 20 caracteres"),
+		.notEmpty().withMessage("Tienes que ingresar datos").bail()
+		.isLength({min: 20}).withMessage("La descripción debe contener al menos 20 caracteres"),
+
 		body("alcohol")
-		.custom((value, { req }) => {
+		.notEmpty().withMessage("Tienes que ingresar el % de alcohol").bail(),
+		/* .custom((value, { req }) => {
 
             if (value === undefined) {
               throw new Error("Tienes que ingresar el % de alcohol");
             }
             return true;
-        }),
+        }), */
+
 		body("bitterness")
-		.custom((value, { req }) => {
+		.notEmpty().withMessage("Tienes que ingresar el amargor").bail(),
+		/* .custom((value, { req }) => {
 
             if (value === undefined) {
               throw new Error("Tienes que ingresar el amargor");
             }
             return true;
-        }),
+        }), */
+
 		body("idealTemperature")
-		.custom((value, { req }) => {
+		.notEmpty().withMessage("Tienes que ingresar la temperatura ideal").bail(),
+		/* .custom((value, { req }) => {
 
             if (value === undefined) {
               throw new Error("Tienes que ingresar la temperatura ideal");
             }
             return true;
-        }),
+        }), */
+		
 		body("category_id")
 		.notEmpty().withMessage("Tiene que elegir una opcion").bail(),
 
