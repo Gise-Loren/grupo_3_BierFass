@@ -1,0 +1,86 @@
+[
+ {
+  "id": 1,
+  "name": "Gisel",
+  "lastName": "Lorenzatti",
+  "email": "gi@gmail.com",
+  "password": "$2a$10$WDfQmwFTVTr/zdofBiufw.0ZY9EfZjsT.51rz6WbrVr7vi/x6kX/m",
+  "category": "user",
+  "img": [
+   "img-users-1665941180536.jpg"
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Lucas",
+  "lastName": "Alvarez",
+  "email": "lucas@hotmail.com.ar",
+  "password": "$2a$10$NlbP5IyjUMM/zcXIc/n5euPoOWq4xP9TiNooM4SPjWtaNJozGPEGe",
+  "category": "user",
+  "img": [
+   "img-users-1665941480330.jpg"
+  ]
+ },
+ {
+  "id": "a4b2fde9-fdc0-4990-9e6f-85961dca60a6",
+  "name": "Lucas",
+  "lastName": "Alvarez",
+  "email": "lucaas_2120@hotmail.com",
+  "password": "$2a$10$UdfLu.f67gwjRqTkmSVysewEBbPU1WuG9m3HXSp0jtMOknWB59JTO",
+  "category": "user",
+  "img": [
+   "img-users-1665961443067.png"
+  ]
+ },
+ {
+  "id": "50beb586-e900-4da8-aede-0346eea44d48",
+  "name": "",
+  "lastName": "",
+  "email": "",
+  "password": "$2a$10$u9vH74nvaZLOLvkZZoHMGuCLArvJfrDa8/EX04n/lwUJH4.2Z3KmO",
+  "category": "user",
+  "img": []
+ },
+ {
+  "id": "ed981b43-2860-4261-840a-ca68e80f80ad",
+  "name": "lucas",
+  "lastName": "alvarez",
+  "email": "lucaas@gmail.com",
+  "password": "$2a$10$EnCYav7tz5VmBwYAJI.Xb.TIhkC78crhkkZa7usU1epQnrmhaZvoG",
+  "category": "user",
+  "img": [
+   "img-users-1665974831821.png"
+  ]
+ },
+ {
+  "id": "782b8091-6565-494d-8916-4dc1a485c256",
+  "name": "",
+  "lastName": "",
+  "email": "s",
+  "password": "$2a$10$LgeCgOe0FNDo3EHAwgk8o.f7dVG4s4AvZKY9j.WvZe2eltAIhbJzS",
+  "category": "user",
+  "img": []
+ },
+ {
+  "id": "7f4c8be5-c3e9-468f-8d2d-b5d54f8e5218",
+  "name": "LUCAS",
+  "lastName": "ALVARE",
+  "email": "abcd@gmail.com",
+  "password": "$2a$10$3jFGD543YIZXBJ1/zz3TX.MB6jOy49/OHSWQRC5fPLKjp7nwAUdXy",
+  "category": "user",
+  "img": [
+   "img-users-1665976168375.png"
+  ]
+ },
+ {
+  "id": "cabd7fbb-7b34-4155-80c0-529f7fb4e9b9",
+  "name": "pedrito",
+  "lastName": "PICApica",
+  "email": "picaelpedrito@gmail.com",
+  "password": "$2a$10$lZL4Qg/NaIT/rsp6/MQLQOM5fjjZkptSTSyV7lM/B8OCR0gEgNpN6",
+  "category": "user",
+  "img": [
+   "img-users-1666046221336.png" 
+  ]
+ }
+]

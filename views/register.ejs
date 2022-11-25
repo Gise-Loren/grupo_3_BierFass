@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bier Fass</title>
+    <link rel="stylesheet" href="css/styles-fran2.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="https://kit.fontawesome.com/704063b457.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        .text-danger{
+            color: rgb(201, 31, 31)!important;
+            background-color: rgba(26, 23, 23, 0.85);
+            border-radius: 20px;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Nuevo Usuario</h1>
+    </header>
+
+    <main>
+        <section>
+            <form class="redes">
+                <button class="btn btnFacebook">
+                    Registrarse con Facebook
+                    <i class='fa fa-facebook'></i>
+                </button>
+                </a>
+            </form>
+
+            <form class="redes">
+                <button class="btn btnGoogle">
+                    Registrarse con Google
+                    <i class='fa fa-google'></i>
+                </button>
+                </a>
+            </form>
+
+            <form action="register" method="POST"  enctype="multipart/form-data">
+               
+                    <div class="form-campos">
+                        <input type="text" name="name" placeholder="Nombre" class= "text <%=locals.errors && errors.name ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.name : null %>">
+                        <% if(locals.errors && errors.name) { %>
+                            <div class="text-danger">
+                                <%= errors.name.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="form-campos">
+                        <input type="text" name="lastName" placeholder="Apellido" <%=locals.errors &&
+                            errors.lastName ? 'is-invalid' : null %>  value="<%= locals.oldData ? oldData.lastName : null %>">
+                        <% if(locals.errors && errors.lastName) { %>
+                            <div class="text-danger">
+                                <%= errors.lastName.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="form-campos">
+                        <input type="text" name="email" placeholder="Email" <%=locals.errors && errors.email
+                            ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if(locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="form-campos">
+                        <input type="password" name="password" placeholder="Contraseña" <%=locals.errors &&
+                            errors.password ? 'is-invalid' : null %>>
+                        <% if(locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="img-register">
+                        <label for="imagen">Foto de perfil</label>
+                        <input type="file" name="imagen" value= <%=locals.errors && errors.imagen ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.imagens : null %>">
+                        <% if (locals.errors && errors.imagen) { %>
+                            <div class="text-danger" style= "color: red;">
+                                <%= errors.imagen.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                <br>
+                <br>
+                <input type="checkbox" id="cbox1" value="first_checkbox">
+                <label for="cbox1" class="textoCheck"> Acepto los términos y condiciones
+                    de Bier Fass.</label>
+                <br>
+                <input type="checkbox" id="cbox2" value="second_checkbox">
+                <label for="cbox2" class="textoCheck"> Deseo recibir
+                    promociones.</label>
+                <br>
+                <a href="#" class="textoCheck">Términos y condiciones</a>
+                <input type="submit" value="Registrarse">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

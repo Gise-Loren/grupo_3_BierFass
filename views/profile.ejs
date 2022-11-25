@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/css/styles-lucas.css">
+
+    <link rel="stylesheet" href="/css/styles-profile.css">
+
+    <%- include('partials/head') %>
+    <style>
+          .text-danger{
+            color: rgb(201, 31, 31)!important;
+            background-color: rgba(26, 23, 23, 0.85);
+            border-radius: 20px;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header-profile">
+        <%- include('partials/header')%>
+    </header>
+
+    <main>
+
+        <section class="sectionClass">
+
+            <div class="container-img-profile">
+
+                <h1 class="welcome">Bienvenido <%= locals.userLogged.name%>
+                        <%= locals.userLogged.lastname%>
+                </h1>
+                <img src="/img/users/<%= locals.userLogged.imagen%>" alt="">
+            </div>
+            <h3>Datos de mi cuenta</h3>
+            <form action="/<%= locals.userLogged.id ??''%>?_method=PUT" method="POST">
+                <div>Nombre</div>
+                <div class="form-campos">
+                    <input class="input-text" type="text" name="name" value="<%= locals.userLogged.name%>">
+
+                </div>
+                <div>Apellido</div>
+                <div class="form-campos">
+                    <input class="input-text" type="text" name="lastname" value="<%= locals.userLogged.lastname%>">
+                </div>
+                <div>Email</div>
+                <div class="form-campos">
+                    <input class="input-text" type="text" name="email" value="<%= locals.userLogged.email%>">
+                </div>
+                <div>Ingresa tu contraseña para confirmar los cambios</div>
+                <div class="form-campos">
+                    <input class="input-text" type="password" name="password" placeholder="Contraseña" <%=locals.errors &&
+                    errors.password ? 'is-invalid' : null %>>
+                <% if(locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %>
+                    </div>
+                    <% } %>
+                </div>
+
+                <!--   <div class="img-">
+                        <div>Imagen</div>
+                        <input class="input-text" id="input" type="file" name="imagen" value= "<%= locals.userLogged.imagen %>">
+                        
+                    </div> -->
+                <br>
+                <div >
+                <button class="btn-edit" type="submit" class="boton-formulario" style="margin-right: 10px;" id="boton-edit">Editar
+                    usuario</button>
+                </div>
+            </form>
+            <div class="btn-chicos" >
+                <button  class="btn-profile-1" role="link" onclick="window.location='/logout'">Cerrar sesión</button>
+
+            <form action="/<%= locals.userLogged.id %>?_method=DELETE" method="POST">
+                <button class="btn-profile">Eliminar cuenta</button>
+            </form>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <%- include('partials/footer')%>
+    </footer>
+
+</body>
+
+</html>

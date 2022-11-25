@@ -1,0 +1,16 @@
+     body {
+            background-color: black;
+        }
+        .iframe-container{
+        position: relative;
+        width: 100vw;
+        padding-bottom: 56.25%; 
+        height: 0;
+      }
+      .iframe-container iframe{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+      }

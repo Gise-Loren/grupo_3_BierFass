@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/styles-Gise.css">
+    <%- include('partials/head') %>
+</html>
+
+<body>
+    <header id="header">
+        <%- include('partials/header')%>
+    </header>
+
+    <main>
+        <div class="localizacion">
+            <div class="localizacion-izq">
+                <a href="/home"> Página de inicio</a>
+                <a href="/products">> Variedades</a>
+                <a href="#">> Detalles </a>
+            </div> 
+        </div>  
+        <div class="box-principal">
+               
+                <div class="nom-variedad">
+                    <% if (locals.isLogged && locals.userLogged.category == "Admin") { %>
+                    <div class="button-edit">
+                        <a href="/products/<%= promProducts.id %>/edit" ><span class="material-symbols-outlined">
+                            edit
+                            </span></a>
+                        </div>
+        <% } %>
+
+                    <h1><%= promProducts.name %></h1>
+                    
+                    <br>
+                    <div class="box">
+
+                        <div class="img">
+                            <img src="../img/<%= promProducts.imagen %>" alt="cerveza">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="box-centrado">
+                    <div class="box-descripcion">
+                        <div class="descripcion">
+                            <p><%= promProducts.description %>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <div class="dato">
+                            <div class="graduacion">
+                                <p class="p1"><%= promProducts.alcohol %> </p>
+                                <p class="p2">Graduacion Alcoholica</p>
+                            </div>
+                            <div class="amargor">
+                                <p class="p1"><%= promProducts.bitterness %></p>
+                                <p class="p2"> Amargor</p>
+                            </div>
+                            <div class="temperatura">
+                                <p class="p1"><%= promProducts.idealTemperature%> </p>
+                                <p class="p2">temperatura ideal</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="box-centrado">
+                        <div class="box-form">
+                            <form id="menu" class="form">
+                                <div class="opciones-compra">
+                                    <label for="compra">Elija los productos:</label>
+                                </div>
+                                <select name="lista">
+                                    <option value="1">Unidad $<%= promProducts.price %></option>
+                                    <option value="6">Pack de 6 unidades  $<%= promProducts.price * 6 * 0.95  %> | 5% OFF! |</option>
+                                    <option value="12">Pack de 12 unidades $<%= promProducts.price * 12 * 0.90  %> | 10% OFF! |</option>
+                                    <option value="24">Pack de 24 unidades $<%= promProducts.price * 24 * 0.85  %> | 15%  0FF! |</option>
+                                 
+                                </select>
+                                <div class="enviar">
+                                    <div class="send">
+                                        <button type="submit"
+                                            style="text-decoration: none; background-color:none;">Enviar
+                                            al
+                                            carrito <a  class="carroto material-symbols-outlined" style="font-size: 1.3vw">shopping_cart</a></button>
+                                </div>
+                                </div>
+                                <br>
+                            </form>
+                        </div>
+                    </div>
+                </div>            
+        </div>
+    </main>
+<footer>
+    <%- include('partials/footer')%>
+</footer>
+    
+</body>
+
+</html>
