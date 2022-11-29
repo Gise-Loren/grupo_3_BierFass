@@ -17,7 +17,7 @@ router.get("/:id/edit", productsControllers.editProduct); // <------ FORMULARIO 
 router.delete('/:id/list', productsControllers.deleteProductsList)
 
 router.get('/create', productsControllers.createProducts); // <------ FORMULARIO DE CREACION DE PRODUCTOS.
-router.post('/create', validationsMiddleware.validationProduct, productsControllers.createProducts);
+router.post('/create', validationsMiddleware.validationProduct, productsControllers.createProducts); //<---------FORMULARIO VALIDACIONES CREACION DE PRODUCTOS
 
 
 router.get('/:id', productsControllers.productsId); // <------ DETALLE DE UN PRODUCTO EN PARTICULAR.

@@ -45,11 +45,15 @@
                 <i class='fa fa-google'></i>
             </button>
             </a>
+            <div class="errores">
+                <ul> 
+                </ul>
+                </div>
             </form>
 
-        <form action="/login" method="POST" >
+        <form action="/login"  method="POST" class="formulario" >
             <div class="form-campos">
-                <input type="text" name="email" placeholder="Email" <%=locals.errors && errors.email
+                <input type="text" name="email" id="email" placeholder="Email" <%=locals.errors && errors.email
                     ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.email : null %>">
                 <% if(locals.errors && errors.email) { %>
                     <div class="text-danger">
@@ -57,13 +61,14 @@
                     </div>
                     <% } %>
             </div>
-            
+
             <div class="form-campos">
-                <input type="password" name="password" placeholder="Contraseña" <%=locals.errors &&
+                <input type="password" name="password" id="password" placeholder="Contraseña" <%=locals.errors &&
                     errors.password ? 'is-invalid' : null %>>
                 <% if(locals.errors && errors.password) { %>
                     <div class="text-danger">
-                        <%= errors.password.msg %>
+                     <%= errors.password.msg %>
+                       
                     </div>
                     <% } %>
             </div>
@@ -85,6 +90,7 @@
     </section>
 
     </main>
+    <script src="/js/login.js"></script>
     <footer>
 
     </footer>

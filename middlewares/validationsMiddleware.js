@@ -1,7 +1,7 @@
 const path = require('path');
 const { body } = require('express-validator');
 
-
+//validaciones back-end - registro usuarios
 const validations = {
 	validationRegister: [
 	body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
@@ -28,6 +28,8 @@ const validations = {
 		return true;
 	}) 
 ],
+
+// validaciones backend - login de usuarios
 	validationLogin: [
 		body('email').isEmail().withMessage('Completa con un email válido'),
 		body('password').isLength({ min: 8 }).withMessage('Tu contraseña es incorrecta'),
@@ -38,29 +40,16 @@ const validations = {
 	validationProduct: [
 		body("name")
         .notEmpty().withMessage("Tienes que escribir un nombre").bail()
-        .isLength({ min: 5 }).withMessage("El nombre debe contener al menos 3 caracteres"),
+        .isLength({ min: 2 }).withMessage("El nombre debe contener al menos 2 caracteres"),
 
 		body('type_Id')
 		.notEmpty().withMessage("Tiene que elegir una opcion").bail(),
 	
 		body("stock")
 		.notEmpty().withMessage("Tienes que ingresar el stock").bail(),
-		/* .custom((value, { req }) => {
-
-            if (value === undefined) {
-              throw new Error("Tienes que ingresar el stock");
-            }
-            return true;
-        }), */
+		
 		body("price")
 		.notEmpty().withMessage("Tienes que ingresar el precio").bail(),
-		/* .custom((value, { req }) => {
-
-            if (value === undefined) {
-              throw new Error("Tienes que ingresar el precio");
-            }
-            return true; */
-       /*  }), */
 
 		body("description")
 		.notEmpty().withMessage("Tienes que ingresar datos").bail()
@@ -68,37 +57,15 @@ const validations = {
 
 		body("alcohol")
 		.notEmpty().withMessage("Tienes que ingresar el % de alcohol").bail(),
-		/* .custom((value, { req }) => {
-
-            if (value === undefined) {
-              throw new Error("Tienes que ingresar el % de alcohol");
-            }
-            return true;
-        }), */
-
+	
 		body("bitterness")
 		.notEmpty().withMessage("Tienes que ingresar el amargor").bail(),
-		/* .custom((value, { req }) => {
-
-            if (value === undefined) {
-              throw new Error("Tienes que ingresar el amargor");
-            }
-            return true;
-        }), */
 
 		body("idealTemperature")
 		.notEmpty().withMessage("Tienes que ingresar la temperatura ideal").bail(),
-		/* .custom((value, { req }) => {
 
-            if (value === undefined) {
-              throw new Error("Tienes que ingresar la temperatura ideal");
-            }
-            return true;
-        }), */
-		
 		body("category_id")
 		.notEmpty().withMessage("Tiene que elegir una opcion").bail(),
-
 
 	]
 }

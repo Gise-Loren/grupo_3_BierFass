@@ -1,4 +1,4 @@
-Daily Sprint 6:
+Daily Sprint 6
 
 -¿Qué se hizo?
 Se reviso en conjunto cada punto del Sprint, se determino que va a hacer cada uno de los integrante del grupo y comenzar con las actividades.  

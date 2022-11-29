@@ -12,6 +12,7 @@ const validations = require('../middlewares/validationsMiddleware');
 const { throws } = require('assert');
 
 router.get('/register', usersControllers.register);
+router.post('register', usersControllers.register);
 
 router.post('/register', upload.single('imagen'), validations.validationRegister, usersControllers.registerProcess);
 
