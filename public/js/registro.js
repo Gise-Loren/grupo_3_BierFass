@@ -8,11 +8,11 @@ window.addEventListener("load", () => {
 
         let nombre = document.querySelector("#name");
         if (nombre.value == "") {
-            errores.push("Olvidaste completar tu nombre");
+            errores.push("Tienes que escribir un nombre");
             nombre.classList.add("is-invalid");
 
         } else if (nombre.value.length < 2) {
-            errores.push("El nombre debe tener al menos 2 caracteres");
+            errores.push("El nombre debe contener al menos 2 caracteres");
             nombre.classList.add("is-valid");
 
         } else {
@@ -22,31 +22,31 @@ window.addEventListener("load", () => {
 
         let apellido = document.querySelector("#lastName");
         if (apellido.value == "") {
-            errores.push("Olvidaste completar apellido");
+            errores.push("Tienes que escribir el apellido");
             apellido.classList.add("is-invalid");
 
-        } else if (nombre.value.length < 2) {
-            errores.push("El nombre debe tener al menos 2 caracteres");
+        } else if (apellido.value.length < 2) {
+            errores.push("El apellido debe contener al menos 2 caracteres");
             apellido.classList.add("is-valid");
 
         } else {
             apellido.classList.add("is-valid");
             apellido.classList.remove("is-invalid");
         }
-
         let email = document.querySelector("#email");
         if (email.value == "") {
             errores.push("Debes ingresar tu email");
             email.classList.add("is-valid");
 
         } else {
+
             email.classList.add("is-valid");
-            e.classList.remove("is-invalid");
+            email.classList.remove("is-invalid");
         }
 
         let password = document.querySelector("#password");
         if (password.value.length < 8) {
-            errores.push("Debes inresar una contraseña");
+            errores.push("Tienes que escribir una contraseña");
             password.classList.add("is-valid");
 
         } else if (password.value == "") {
@@ -57,15 +57,14 @@ window.addEventListener("load", () => {
             password.classList.add("is-valid");
             password.classList.remove("is-invalid");
         }
-        let avatar = document.querySelector("#imagen");
-        console.log(avatar);
-        if (avatar.value == "") {
-            errores.push("Olvidaste subir una imagen, que debe estar en formato .jpg, .jpeg, .gif, .png");
-            avatar.classList.add("is-invalid");
+        let img = document.querySelector("#imagen");
+        if (img.value == "") {
+            errores.push("Debes subir una imagen, con formato '.jpg', '.png', '.jpeg','.gif'");
+            img.classList.add("is-invalid");
 
         } else {
-            avatar.classList.add("is-valid");
-            avatar.classList.remove("is-invalid")
+            img.classList.add("is-valid");
+            img.classList.remove("is-invalid")
         }
 
         if (errores.length > 0) {
@@ -77,7 +76,7 @@ window.addEventListener("load", () => {
             }
 
         } else {
-            alert('Tu cuenta se ha creado correctamente!');
+            alert('Tu cuenta se ha creado exitosamente!');
 
             formulario.submit();
         }

@@ -23,7 +23,7 @@ window.addEventListener("load", () => {
             password.classList.add("is-valid");
 
         } else if (password.value == "") {
-            errores.push("El campo no puede estar vacio");
+            errores.push("Tienes que escribir una contraseña");
             password.classList.add("is-valid");
         }
         else {
