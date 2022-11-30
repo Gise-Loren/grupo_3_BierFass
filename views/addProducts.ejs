@@ -74,8 +74,18 @@
                     <div class="producto-img">
                         <label for="img">Imagen del producto:</label>
                     </div>
-                    <input type="file" name="img">
-                    <br>
+                   <input type="file" name="img" id= "img" value=<%=locals.errors && errors.img ? 'is-invalid' :
+                    null %>
+                value="<%= locals.oldData ? oldData.img : null %>">
+                    <% if (locals.errors && errors.img) { %>
+                        <div>
+                        <spam class="text-danger" style="color: red;">
+                            <%= errors.img.msg %>
+                        </spam>
+                    </div>
+                        <% } %>
+                    
+                        <br>
 
                     <div class="stock">
                         <label for="_stock">Stock:</label>
@@ -167,6 +177,14 @@
                                                             <br>
                                                             <textarea name="description" rows="10"
                                                                 cols="40">Escribe la descripción...</textarea>
+                                                                <% if (locals.errors && errors.description){ %>
+                                                                    <div>
+                                                                        <span class="text-danger">
+                                                                            <%= errors.description.msg %>
+                                                                        </span>
+            
+                                                                    </div>
+                                                                    <% } %>
                                                             <br>
 
                                                             <br>

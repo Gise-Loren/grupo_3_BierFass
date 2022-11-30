@@ -1,9 +1,8 @@
 const path = require('path');
 const { body } = require('express-validator');
 
-//validaciones back-end - registro usuarios
 const validations = {
-	validationRegister: [
+	validationRegister: [ // <-------- Validaciones de Registro.
 	body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
     body('lastName').notEmpty().withMessage('Tienes que escribir un apellido'),
 	body('email')
@@ -29,21 +28,21 @@ const validations = {
 	}) 
 ],
 
-// validaciones backend - login de usuarios
-	validationLogin: [
+
+	validationLogin: [ // <-------- Validaciones de Login.
 		body('email').isEmail().withMessage('Completa con un email válido'),
 		body('password').isLength({ min: 8 }).withMessage('Tu contraseña es incorrecta'),
 	],
-	validtaionEdit: [
+	validtaionEdit: [ // <-------- Validacion de edicion de usuario.
 		body('password').isLength({ min: 8 }).withMessage('La contraseña es incorrecta')
 	], 
-	validationProduct: [
+	validationProduct: [ // <-------- Validaciones de productos.
 		body("name")
         .notEmpty().withMessage("Tienes que escribir un nombre").bail()
         .isLength({ min: 2 }).withMessage("El nombre debe contener al menos 2 caracteres"),
 
 		/* body('type_Id')
-		.notEmpty().withMessage("Tiene que elegir una opcion").bail(),
+		.notEmpty().withMessage("Tiene que elegir una opcion").bail(), 
 	 */
 		body("stock")
 		.notEmpty().withMessage("Tienes que ingresar el stock").bail(),
@@ -66,6 +65,32 @@ const validations = {
 
 		/* body("category_id")
 		.notEmpty().withMessage("Tiene que elegir una opcion").bail(), */
+		body('img').custom((value, { req }) => {
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.jpeg','.gif'];
+		
+		if (!file) {
+	
+			return true;
+		} else {
+			
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+			}
+		}
+
+		return true;
+	 }),
+	 body('description')
+	 .custom((value, {req}) => {
+		
+		if(value == "Escribe la descripción..."){
+			throw new Error('Debes modificar la descripción')
+		} 
+			
+	 })
+	 .isLength({min: 20}).withMessage('La descripción debe tener al menos 20 caracteres')
 
 	]
 }

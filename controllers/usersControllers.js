@@ -40,7 +40,6 @@ const usersControllers = {
             let registeredEmail = req.body.email;
             let isAdmin = registeredEmail.includes(wordAdmin) ? 'Admin' : 'User';
             let img = req.file
-            console.log(req.file)
             let filename = '';
             if (img) {
                 filename = img.filename

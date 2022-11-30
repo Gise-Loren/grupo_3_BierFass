@@ -39,14 +39,13 @@ const productsControllers = {
                 .then(([categories, types]) => {
                     return res.render('addProducts', { categories, types, errors:resultadoValidaciones.mapped() })
                 })
-            console.log(resultadoValidaciones.errors)
         }
         
         if(resultadoValidaciones.errors.length == 0){
-            let img = req.files.map(file => file.filename)
+            let img = req.file
             let filename = '';
-            if (img.lenght === 1) {
-                filename = img[0]
+            if (img) {
+                filename = img.filename
             } else {
                 filename = 'envase-bier.jpg'
             }
