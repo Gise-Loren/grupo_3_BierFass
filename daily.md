@@ -1,10 +1,10 @@
-Daily Sprint 6
+Daily Sprint 7
 
 -¿Qué se hizo?
-Se reviso en conjunto cada punto del Sprint, se determino que va a hacer cada uno de los integrante del grupo y comenzar con las actividades.  
+Como primer medida se reviso la forma de trabajo y la forma en que ibamos a ir realizando cada actividad. Luego se determino realizar dailys diarias para ir resolviendo el sprint en conjunto. 
 ------------------------------------
 -¿Hubo algún impedimento?
-Se aprovecharon las dailys para trabajar en conjunto y realizar consultas sobre tareas puntuales que individualmente no se lograron hacer.
+Debido a la forma de trabajo adoptada se fueron solucionando todos los inconvenientes, algunas veces no se coincidia con los horarios de cada participante pero se busco que a la hora de reunirse estemos la mayoria de los participantes. 
 ------------------------------------
 -¿Qué se va a hacer?
-Se van a ir realizando las actividades mencionadas en el Sprint y a medida que vayan surgiendo dudas, se realizaran dailys para sacar las dudas que tenga cada integrante del grupo y asi avanzar con la realizacion en tiempo y forma de los distintos puntos del proyecto. 
+Se van a realizar reuniones diariamente para poder llevar a cabo el sprint de una manera mas ordenada y que todos podamos ver y participar en la elaboración del sprint 7.
