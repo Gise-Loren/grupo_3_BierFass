@@ -42,9 +42,9 @@ const validations = {
         .notEmpty().withMessage("Tienes que escribir un nombre").bail()
         .isLength({ min: 2 }).withMessage("El nombre debe contener al menos 2 caracteres"),
 
-		body('type_Id')
+		/* body('type_Id')
 		.notEmpty().withMessage("Tiene que elegir una opcion").bail(),
-	
+	 */
 		body("stock")
 		.notEmpty().withMessage("Tienes que ingresar el stock").bail(),
 		
@@ -64,8 +64,8 @@ const validations = {
 		body("idealTemperature")
 		.notEmpty().withMessage("Tienes que ingresar la temperatura ideal").bail(),
 
-		body("category_id")
-		.notEmpty().withMessage("Tiene que elegir una opcion").bail(),
+		/* body("category_id")
+		.notEmpty().withMessage("Tiene que elegir una opcion").bail(), */
 
 	]
 }

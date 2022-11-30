@@ -39,8 +39,10 @@ const productsControllers = {
                 .then(([categories, types]) => {
                     return res.render('addProducts', { categories, types, errors:resultadoValidaciones.mapped() })
                 })
-            
-        } else{
+            console.log(resultadoValidaciones.errors)
+        }
+        
+        if(resultadoValidaciones.errors.length == 0){
             let img = req.files.map(file => file.filename)
             let filename = '';
             if (img.lenght === 1) {

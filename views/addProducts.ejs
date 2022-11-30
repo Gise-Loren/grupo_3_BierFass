@@ -18,11 +18,16 @@
     <title>Formulario productos</title>
     <style>
         .text-danger {
-            color: rgb(201, 31, 31) !important;
-            background-color: rgba(35, 33, 33, 0.258);
+            color: rgb(215, 53, 53) !important;
+            background-color: rgba(71, 71, 71, 0.628);
             border-radius: 20px;
             padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 3px;
+            padding-bottom: 3pxa;
             font-weight: bold;
+            text-align: center;
+            
         }
     </style>
 </head>
@@ -42,8 +47,9 @@
             <input type="text" name="name" id="nombreProducto" placeholder="">
             <% if (locals.errors && errors.name){ %>
                 <div>
+                    
                     <span class="text-danger">
-                        <%= errors.name.msg %>
+                     <%= errors.name.msg %>
                     </span>
 
                 </div>
@@ -63,6 +69,7 @@
                             
                     </select>
                     <br>
+                    <br>
 
                     <div class="producto-img">
                         <label for="img">Imagen del producto:</label>
@@ -73,7 +80,7 @@
                     <div class="stock">
                         <label for="_stock">Stock:</label>
                     </div>
-                    <br>
+                    
                     <input type="text" name="stock">
                     <% if (locals.errors && errors.stock){ %>
                         <div>
@@ -136,6 +143,7 @@
 
                                                         </div>
                                                         <% } %>
+                                                        <br>
                                                             <div class="categories">
                                                                 <label for="categoria">Categorías:</label>
                                                                 <br>
