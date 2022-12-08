@@ -7,7 +7,7 @@
 
 body {
 
-    background-image: linear-gradient(#efbe2d74, #efbe2d74), url("../img/botellas-carrito.jpg");
+    background-image: linear-gradient(#efbe2d74, #efbe2d74), url("/img/botellas-carrito.jpg");
     font-family: 'montserrat', sans-serif;
     width: 100%;
     border: 15px;

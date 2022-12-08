@@ -3,8 +3,7 @@ const fs = require("fs")
 
 const path = require('path');
 
-const db = require('../src/database/models');
-
+const db = require('../database/models');
 
 const productsControllers = {
     index: async (req, res) => {
@@ -37,7 +36,7 @@ const productsControllers = {
             Promise
                 .all([categories, types])
                 .then(([categories, types]) => {
-                    return res.render('addProducts', { categories, types, errors:resultadoValidaciones.mapped() })
+                    return res.rendegr('addProducts', { categories, types, errors:resultadoValidaciones.mapped() })
                 })
         }
         

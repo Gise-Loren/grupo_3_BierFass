@@ -1,15 +1,22 @@
 const { request } = require("http");
 
-const User = require('../models/User')
+const db = require('../database/models')
 
 function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.email;
-    let userFromCookie = User.findByField('email', emailInCookie);
+    let user = req.cookies
+    /* if(emailInCookie !=undefined){
+        return res.redirect('/')
+    }
+    let  user = db.User.findOne({
+        where: { email: emailInCookie },
+        raw: true
+    }); */
 
-    if (userFromCookie) {
-        req.session.userLogged = userFromCookie
+    if (user) {
+        req.session.userLogged = user
     }
 
     if (req.session.userLogged) {

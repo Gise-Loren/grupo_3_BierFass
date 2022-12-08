@@ -8,7 +8,7 @@ const { uuid } = require('uuidv4');
 
 const { validationResult } = require('express-validator');
 
-const db = require("../src/database/models");
+const db = require("../database/models");
 
 const { Op } = require("sequelize");
 

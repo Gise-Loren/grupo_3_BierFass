@@ -2,7 +2,7 @@
     "name": "grupo_3_bierfass",
     "version": "1.0.0",
     "description": "Integrantes del proyecto:\r -------------------------",
-    "main": "app.js",
+    "main": "src/app.js",
     "dependencies": {
         "bcryptjs": "^2.4.3",
         "cookie-parser": "^1.4.6",
