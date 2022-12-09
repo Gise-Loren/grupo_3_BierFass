@@ -13,6 +13,7 @@ const usersApiControllers = {
                 element.dataValues.datail = `/api/users/${element.dataValues.id}`,
                 delete element.dataValues.password,
                 delete element.dataValues.imagen
+                delete element.dataValues.category
             });
 
             return res.json({
@@ -37,7 +38,8 @@ const usersApiControllers = {
             let user = await db.User.findByPk(req.params.id);
             user.dataValues.img = `/img/users/${user.dataValues.imagen}`
             delete user.dataValues.password,
-            delete user.dataValues.imagen
+            delete user.dataValues.imagen,
+            delete user.dataValues.category
 
 
             return res.json({ 
