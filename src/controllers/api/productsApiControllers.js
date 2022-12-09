@@ -3,12 +3,12 @@ const db = require('../../database/models');
 const productsApiControllers = {
     list: async (req, res) => {
         try {
-            let products = await db.Products.findAll({include: ['category', 'type']})   
-            let categories = await db.Category.findAll({include:['products']})
-            let types = await db.Types.findAll({include:['products']})
+            let products = await db.Products.findAll({ include: ['category', 'type'] })
+            let categories = await db.Category.findAll({ include: ['products'] })
+            let types = await db.Types.findAll({ include: ['products'] })
             products.forEach(element => {
-                element.dataValues.img = `/api/products/${element.dataValues.id}`,
-                delete element.dataValues.category_id;
+                element.dataValues.datail = `/api/products/${element.dataValues.id}`,
+                    delete element.dataValues.category_id;
                 delete element.dataValues.type_id;
                 delete element.dataValues.imagen;
                 delete element.dataValues.alcohol;
@@ -17,7 +17,7 @@ const productsApiControllers = {
                 delete element.dataValues.idealTemperature;
             });
             let countByProducts = products.length
-            
+
             let countByCategory = {
                 Industrial: categories[0].products.length,
                 Artesanal: categories[1].products.length
@@ -35,13 +35,13 @@ const productsApiControllers = {
                 Wiesse: types[9].products.length,
 
             }
-            return res.json ({
+            return res.json({
                 code: 200,
                 msg: "success",
                 countByProducts,
                 countByCategory,
                 countByType,
-                data: products             
+                data: products
             });
         } catch (error) {
             res.json({
@@ -50,13 +50,32 @@ const productsApiControllers = {
             });
         }
     },
-    productId: async (req, res) =>{
-        db.Products.findByPk(req.params.id, {
-            raw: true
-        })
-            .then(productId => res.json({ productId }));
-    } 
+    productId: async (req, res) => {
+        try {
+            let product = await db.Products.findByPk(req.params.id, {
+                include: ['category', 'type']
+            })
+            product.dataValues.img = `/img/${product.dataValues.imagen}`
+            delete product.dataValues.type_id,
+            delete product.dataValues.imagen,
+            delete product.dataValues.category_id
+
+
+            return res.json({ 
+                code: 200,
+                msg: "success",
+                data: product
+             })
+        }
+        catch (error) {
+            res.json({
+                code: 500,
+                msg: error
+            });
+        }
+    },
+
 }
-   
+
 
 module.exports = productsApiControllers;
