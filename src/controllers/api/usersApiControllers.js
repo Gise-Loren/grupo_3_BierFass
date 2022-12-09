@@ -41,7 +41,6 @@ const usersApiControllers = {
             delete user.dataValues.imagen,
             delete user.dataValues.category
 
-
             return res.json({ 
                 code: 200,
                 msg: "success",
