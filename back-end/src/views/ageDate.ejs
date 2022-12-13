@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head') %>
+        <link rel="stylesheet" href="/css/styles-lucas.css">
+        <style>
+            body {
+
+                background-image: linear-gradient(rgba(2, 16, 53, 0.2), rgba(2, 16, 53, 0.65)), url("/img/primer-plano-cervezas-artesanales.jpg");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-attachment: fixed;
+                background-size: cover;
+
+            }
+
+            header {
+
+                margin-top: 30px;
+            }
+
+            footer {
+                width: 100x;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
+</head>
+
+<body>
+    <header>
+
+
+    </header>
+    <main>
+        <div class="logo-ageDate">
+            <img src="img/logo-bier-fass.png" alt="logo">
+        </div>
+        <div class="sos-mayor">
+            <h1>¿SOS MAYOR DE 18 AÑOS?</h1>
+        </div>
+        <div class="date-age">
+            <H3>INGRESA TU FECHA DE NACIMIENTO</H3>
+        </div>
+        <form action="/agedate" method="POST">
+            <article class="date-age-input">
+                <div class="input-div"><input name="day" type="number" minlength="1" maxlength="2" 
+                        placeholder="DD" value="" required></div>
+                <div class="input-div"><input name="month" type="number" minlength="1" maxlength="2" 
+                        placeholder="MM" value="" required></div>
+                <div class="input-div"><input name="year" type="number" minlength="4" maxlength="4" 
+                        placeholder="AAAA" value="" required></div>
+            </article>
+            <div class="ageDate-button-ing">
+                <input type="submit" value="INGRESAR">
+            </div>
+        </form>
+        <div class="true-age">
+            <p>Si sos menor de edad tenés que saber que el consumo
+                de alcohol no es bueno para tu salud sobre todo para tu cerebro que se encuentra
+                en proceso de desarrollo. Se honesto/a en tu respuesta.</p>
+        </div>
+    </main>
+  
+
+    <footer>
+        <article class="img-iconos">
+            <div class="logo-pie">
+                <img src="img/logo-bier-fass.png" alt="logo">
+            </div>
+            <div class="iconos">
+                <a href="http://www.facebook.com" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
+                <a href="http://www.instagram.com" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
+                <a href="http://www.twitter.com" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
+            </div>
+        </article>
+        <article class="pie-pagina">
+            <div class="pie">
+                <a href="#" class="privacidad">POLÍTICA DE PRIVACIDAD |</a>
+            </div>
+
+            <div class="pie">
+                <a href="#" class="terminos">TERMINOS DE USO |</a>
+            </div>
+
+            <div class="pie">
+                <a href="#" class="cerveceria">CERVECERÍA Y MALTERÍA BIER FASS </a>
+            </div>
+
+        </article>
+    </footer>
+</body>
+
+</html>

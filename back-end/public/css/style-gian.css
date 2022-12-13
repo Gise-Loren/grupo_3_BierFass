@@ -1,0 +1,263 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background-image: linear-gradient(#efbe2d74, #efbe2d74), url("/img/botellas-carrito.jpg");
+    font-family: 'montserrat', sans-serif;
+    width: 100%;
+    border: 15px;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* encabezado  */
+ .logo {
+    display: flex;
+    width: 100px;
+    height: 100px;
+} 
+.logo img{
+    width: 100px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.btn a {
+    background-color: #FFFFFF00 !important;
+}
+
+.barra {
+    display: flex;
+
+}
+
+.barra div a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(2, 16, 53, 0.75);
+    font-size: 14px;
+    padding: 3px;
+    margin: 2px;
+}
+
+.busqueda input {
+    background-color: rgba(2, 16, 53, 0.75);
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-right: -24px;
+}
+
+
+main {
+    width: 90%;
+    margin: 5%;
+    border: 15px;
+
+
+}
+
+.carrito-compra {
+    width: 100%;
+
+
+}
+
+.titulo-carrito {
+    display: flex;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto {
+    display: flex;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.p-c-t {
+    display: flex;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.descripcion-producto {
+    display: flex;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+}
+
+.articulo {
+
+
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: #D8D8D8;
+    width: 100%;
+    height: 100px;
+    border-radius: 15px;
+    padding: 40px;
+    display: block;
+    align-items: center;
+}
+
+.articulo input {
+    width: 15%;
+}
+.compra button{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: .9rem;
+    width: 10rem;
+    height: 22px;
+    background-color: rgb(218, 165, 32);
+    border-color: rgb(218, 165, 32);
+    border-radius: 25px;
+    color: black;
+    border-style: none;
+    margin: auto;
+}
+.articulo-producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.compra {
+    align-items: flex-end;
+    text-align:end;
+   
+}
+
+.compra input {
+    width: 15%;
+}
+
+.fin-compra {
+    border-radius: 20px;
+}
+
+/* pie pagina */
+.logo-pie {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.logo-pie img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.75;
+}
+
+.pie-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 10px;
+}
+
+.pie a {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-right: 5px;
+
+}
+
+.pie {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    text-align: center;
+}
+
+
+.logo-mayoria img {
+    width: 50px;
+    height: 50px;
+
+}
+
+.logo-mayoria {
+    display: flex;
+    text-align: center;
+    margin-top: 30%;
+    position: absolute;
+}
+
+.iconos a {
+    padding-left: 5px;
+}
+
+.iconos a img {
+    width: 15px;
+    height: 15px;
+}
+
+.img-iconos {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.iconos {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+@media (min-width: 480px) {
+    .descripcion-producto {
+        display: flex;
+        font-size: 15px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+
+    }
+}
+
+@media (max-width: 769px) {
+    .descripcion-producto {
+        display: flex;
+        font-size: 15px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+
+    }
+}

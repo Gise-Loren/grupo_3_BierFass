@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/styles-lucas.css">
+    <link rel="stylesheet" href="/css/styles-Form.css">
+    
+<style>
+
+
+</style>
+</head>
+
+<body>
+    <header id="header">
+        <%- include('partials/header')%>
+    </header>
+
+    <main>
+
+        <h1>Edición de producto ID: <%= producto.id %></h1>
+        <form 
+        action="/products/<%= producto.id %>?_method=PUT" 
+        method="POST"
+        enctype="multipart/form-data"
+        id="formulario">
+           
+            <div class="name">
+                <label for="_name">Nombre del producto:</label>
+            </div>
+            <input type="text" name="name" id="nombreProducto" value="<%= producto.name %>" required>
+            <br>
+            <div class="type">
+                <label for="_type">Tipo de cerveza:</label>
+            </div>
+            <select name="type_id" id="" required>
+                <option value="">- Seleccione el género - </option>
+                <% types.forEach(types => { %>
+                <% if (types.id == producto.type_id) { %>
+                    <option selected= "selected" value="<%= types.id %>"><%= types.type %></option>
+                <% } else {%> 
+                    <option value="<%= types.id %>"><%= types.type %></option>
+                    <% }; %>
+                <% }); %>
+            </select>
+            <br>
+            <div class="producto-img">
+                <label for="img">Imagen del producto:</label>
+            </div>
+            <input type="file" name="img" >
+            <br>
+            <div class="stock">
+                <label for="_stock">Stock:</label>
+            </div>
+            <input type="text" name="stock" id="nombreProducto" value="<%= producto.stock %>" required>
+            <br>
+            <div class="price">
+                <label for="_price">Precio:</label>
+            </div>
+            <input type="text" name="price" id="nombreProducto"value="<%= producto.price %>" required>
+            <br>
+            <div class="alcohol">
+                <label for="_alcohol">Graduación alcohólica:</label>
+            </div>
+            <input type="text" name="alcohol" id="nombreProducto" value="<%= producto.alcohol %>" required>
+            <br>
+            <div class="bitterness">
+                <label for="_bitterness">Amargor:</label>
+            </div>
+            <input type="text" name="bitterness" id="nombreProducto" value="<%= producto.bitterness %>" required>
+            <br>
+            <div class="idealTemperature">
+                <label for="_idealTemperature">Temperatura ideal:</label>
+            </div>
+            <input type="text" name="idealTemperature" id="nombreProducto" value="<%= producto.idealTemperature %>" required>
+            <div class="categories">
+                <label for="categoria">Categorías:</label>
+                <br>
+                <select name="category_id" id="" required>
+                    <option value="">- Seleccione la categoría - </option>        
+                    <% categories.forEach(categories => { %>
+                        <% if (categories.id == producto.category_id) { %>
+                            <option selected= "selected" value="<%= categories.id %>"><%= categories.category%></option>
+                        <% } else {%> 
+                            <option value="<%= categories.id %>"><%= categories.category%></option>
+                            <% }; %>
+                        <% }); %>
+                        
+                </select>
+            </div>
+            <br>
+            <div class="description">
+                <label for="_description">Descripción:</label>
+            </div>
+            <br>
+            <textarea name="description" rows="10" cols="40" ><%= producto.description %></textarea>
+            <br>
+            
+                <br>
+                <div class="boton-guardar">
+                    <input type="submit" value="Enviar">
+                </div>
+            </div>
+
+
+            </article>
+            <script>
+                const formulario = document.getElementById('formulario');
+                formulario.addEventListener('submit', (e) => {
+                    if (formulario.nombreUsuario.value.length > 2) {
+                        alert('No se ha ingresado un nombre valido');
+                        e.preventDefault();
+                    } else {
+                        alert('El producto se agrego correctamente');
+                    }
+                });
+            </script>
+
+        </form>
+
+
+    </main>
+</body>
+
+</html>
