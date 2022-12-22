@@ -36,7 +36,7 @@ const usersApiControllers = {
     userId: async (req, res) => {
         try {
             let user = await db.User.findByPk(req.params.id);
-            user.dataValues.img = `/img/users/${user.dataValues.imagen}`
+            user.dataValues.img = `http://localhost:5000/img/users/${user.dataValues.imagen}`
             delete user.dataValues.password,
             delete user.dataValues.imagen,
             delete user.dataValues.category

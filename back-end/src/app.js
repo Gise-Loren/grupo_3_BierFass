@@ -11,13 +11,20 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const methodOverride = require("method-override");
 const cookies = require('cookie-parser');
 const path = require('path');
+const cors = require('cors')
+
+app.use(cors())
+
 app.use(cookies());
+
 app.use(methodOverride('_method'));
+
 app.use(session({
     secret: "shhh, it's a secret",
     resave: false,
     saveUninitialized: false,
 }))
+
 app.use(userLoggedMiddleware);
 
 app.use(express.urlencoded({ extended: false }));

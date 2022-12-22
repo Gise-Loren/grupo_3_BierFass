@@ -33,8 +33,6 @@ const controller = {
         res.render('redirectMinors')
     },
     home: (req, res) => res.render('home'),
-    cart: (req, res) => res.render('carrito'),
-    description: (req, res) => res.render('descripcion'),
-    formUser: (req, res) => res.render('formUser'),
+    cart: (req, res) => res.render('carrito')
 }
 module.exports = controller;
