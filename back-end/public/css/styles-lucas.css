@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    animation: efectoFadeIn 5s;
+}
+
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo img {
+    width: 100px;
+
+
+}
+
+.barra div a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(2, 16, 53, 0.75);
+    font-size: 14px;
+    padding: 3px;
+    margin: 2px;
+}
+
+.busqueda input {
+    background-color: rgba(2, 16, 53, 0.75);
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-right: -24px;
+    color: white
+}
+
+.btn a {
+    background-color: #ffffff00 !important;
+}
+
+.frase {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #ffffff;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.eslogan {
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+}
+
+.comprar {
+    display: flex;
+    align-items: flex-start;
+}
+
+.boton-comprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .7rem;
+    width: 6rem;
+    height: 22px;
+    background-color: rgb(218, 165, 32);
+    border-color: rgb(218, 165, 32);
+    font-weight: bold;
+    border-radius: 25px;
+    color: black;
+    border-style: none;
+    margin: auto;
+    padding: 10px;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    height: 100hv;
+    margin-right: 3px
+}
+
+.barra-izq {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.busqueda {
+    padding: 10px;
+    margin-right: -10px;
+}
+
+.busqueda input {
+    width: 100px;
+}
+
+.logo-pie {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.logo-pie img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.75;
+}
+
+.pie-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 10px;
+}
+
+.pie a {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-right: 5px;
+
+}
+
+.pie {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    text-align: center;
+}
+
+.iconos a {
+    padding-left: 5px;
+}
+
+.iconos a img {
+    width: 20px;
+    height: 20px;
+}
+
+.img-iconos {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.iconos {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+/* styles age date */
+.sos-mayor {
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.sos-mayor h1 {
+    border-radius: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.date-age {
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.logo-ageDate img {
+    width: 80px;
+    height: 80px;
+
+}
+
+.logo-ageDate {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+
+}
+
+.true-age {
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-weight: 600;
+
+
+}
+
+.date-age-input {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.date-age-input div input {
+    background-color: rgba(2, 16, 53, 0.75);
+    border-color: rgba(2, 16, 53, 0.65);
+    border-width: 2px;
+    border-radius: 10px;
+    width: 4rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    height: 2.2rem;
+    padding: 2px 0 0;
+    color: #fff
+}
+
+.input-div {
+    margin: 5px
+}
+
+.ageDate-button-ing {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.ageDate-button-ing input {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13.8rem;
+    height: 2.2rem;
+    background-color: rgba(2, 16, 53, 1);
+    border-radius: 25px;
+    border: 2px solid rgba(2, 16, 53, 1);
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    align-content: center;
+}
+
+/* styles productos */
+#body-products {
+    background-color: #626066;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+#header-products {
+    background-color: rgb(1, 11, 39);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.img-cerveza img {
+    width: 130px;
+}
+
+.img-cerveza-bier img {
+    width: 115px;
+    margin-bottom: 15px;
+}
+
+._variedades {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 30px rgba(100, 100, 100, 0);
+    margin: 10px;
+    border: 15px;
+    width: 100%;
+    background-color: #36343c4a;
+}
+
+.producto {
+    text-align: center;
+    height: 170px;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin: 25px;
+    width: 75%;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+
+.title {
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    color: #ffffff;
+    padding: 20px;
+}
+
+
+
+.cervezas {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    color: #000000;
+    margin: 15px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: rgb(218, 165, 32);
+}
+
+.nombre-producto {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+    border-top: 1px solid #f4eded;
+    padding-bottom: 5px;
+
+}
+
+.marca-cerveza {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.localizacion {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.localizacion-der , 
+.localizacion-izq  {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.localizacion a {
+    padding-top: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+.localizacion a:hover {
+    
+    border-radius: 30px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+.total-productos {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.ver-todos {
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-bottom: 2px solid rgb(100, 100, 100);
+    padding: 5px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.button-delete {
+    position: absolute;
+}
+
+#T1,
+#T2 {
+    display: none
+}
+
+/* styles profile */
+#main-profile {
+    background-color: wheat;
+    align-items: center;
+    width: 50%;
+    border-radius: 30px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+#main-profile input{
+    text-align: justify;
+    background : inherit;
+    border: none;
+    margin-left: 15px;
+    margin-top: 0px;
+    align-items:stretch;
+    
+    
+}
+
+.box-profile {
+    margin-left: 0vw;
+    height: 50vh;
+    text-align: justify;
+}
+.welcome {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 1vw;
+}
+.container-button {
+    display: flex;
+}
+.container-img {
+    display: flex;
+}
+.container-img img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+}
+.container-img-header img {
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    border-radius: 50%;
+}
+@keyframes efectoFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 480px) {
+
+    body {
+        background-position: right center;
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+
+    #T1 {
+        display: block
+    }
+
+    .producto {
+        width: 40%;
+    }
+
+    /* styles age date */
+    .true-age {
+        margin-left: 25%;
+        margin-right: 25%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+}
+
+@media (min-width: 769px) {
+    /* styles home */
+
+
+    /* styles age date */
+    .true-age {
+        margin-left: 30%;
+        margin-right: 30%;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    .total-productos {
+        display: none;
+    }
+
+    ._variedades {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #T2 {
+        display: block
+    }
+
+    .producto {
+        width: 20%;
+    }
+}

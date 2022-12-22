@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bier Fass</title>
+    <link rel="stylesheet" href="css/styles-lucas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c689bf8ba.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+
+
+</style>
+
+<body id="body-products">
+    <header id="header-products">
+        <%- include('partials/header')%>
+    </header>
+    <main>
+        <div class="localizacion">
+            <div class="localizacion-izq">
+                <a href="/home"> Página de inicio</a>
+                <a href="#">> Variedades</a>
+            </div>
+            <% if (locals.isLogged && locals.userLogged.category == "Admin") { %>   
+                <div  class="_localizacion-der"><a href="/products/list"> Listado de productos</a></div>
+                    <div  class="_localizacion-der"><a href="/users/list"> Listado de usuarios</a></div>
+                <div class="localizacion-der">
+                    
+                <a href="/products/create"> Crear producto</a>
+            </div>
+            <% } %>
+        </div>
+        <p class="title">CERVEZAS</p>
+
+        <p class="cervezas">CERVEZA ARTESANAL</p>
+
+        <article class="variedades">
+            <div class="_variedades">
+                <% products.forEach(producto=> { %>
+                  <% if (producto.category_id == 2 ) { %> 
+                    <div class="producto">
+                        <div class="img-cerveza-bier">
+                            <img src="/img/<%= producto.imagen%>" alt="img-cerveza">
+                        </div>
+                        <p class="nombre-producto">
+                            <%= producto.name %> $<%= producto.price %>
+                        </p>
+                        <div class="agregar">
+                            <a href="/products/<%= producto.id %>" style="text-decoration: none"> <button
+                                    class="boton-comprar" style="text-decoration: none"> VER DETALLE </button></a>
+                        </div>
+
+                    </div>
+                    <% } %>
+                    <% }) %>
+
+            </div>
+
+        </article>
+
+        <p class="cervezas ">CERVEZAS INDUSTRIALES</p>
+
+        <article class="variedades">
+            <div class="_variedades">
+                <% products.forEach(producto=> { %>
+                    <% if (producto.category_id == 1 ) { %> 
+                    <div class="producto">
+                        <div class="img-cerveza-bier">
+                            <img src="/img/<%= producto.imagen %>" alt="img-cerveza">
+                        </div>
+                        <p class="nombre-producto">
+                            <%= producto.name %> $<%= producto.price %>
+                        </p>
+                        <div class="agregar">
+                            <a href="/products/<%= producto.id %>" style="text-decoration: none"> <button
+                                    class="boton-comprar" style="text-decoration: none"> VER DETALLE </button></a>
+                        </div>
+                    </div>
+                     <% } %>
+                    <% }) %>
+            </div>
+
+        </article>
+    </main>
+
+    <%- include('partials/footer')%>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+/* propiedades aplicadas de maner general */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+}
+
+body {
+    background-color: rgba(45, 44, 44, 0.24);
+    align-items: center;
+    justify-items: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.barra div a {
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(2, 16, 53, 0.75);
+    font-size: 14px;
+    padding: 3px;
+    margin: 2px;
+}
+
+.busqueda input {
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-right: -24px;
+    color: white
+}
+
+.btn a {
+    background-color: #ffffff00 !important;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    height: 100hv;
+    margin-right: 3px
+}
+
+.busqueda {
+    padding: 10px;
+    margin-right: -10px;
+}
+
+.busqueda input {
+    width: 100px;
+}
+
+#header {
+    background-color: rgb(1, 11, 39);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo img {
+    width: 100px;
+}
+
+h1 {
+
+    text-align: center;
+    margin: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    background-color: rgba(243, 242, 242, 0.724);
+    box-shadow: 0px 0px 30px rgba(224, 224, 226, 0.705);
+    background-color: #36343c4a;
+}
+
+input {
+    width: 70vw;
+    margin-bottom: 10px;
+    margin-top: 6px;
+}
+
+#categoria {
+    width: 4vw;
+    margin-left: -4px;
+}
+
+#formulario {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgba(243, 242, 242, 0.95);
+    box-shadow: 0px 0px 30px rgba(39, 35, 48, 0.388);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-sizing: border-box;
+
+}
+
+input .precio {
+    margin-left: 20px;
+
+}
+
+.categorias {
+    width: 50%;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(113, 113, 113)0;
+}
+
+label {
+    width: 50%;
+    padding-left: 2px;
+    height: 33px;
+    border-radius: 5px;
+    font-size: medium;
+    font-family: 'montserrat', sans-serif;
+    font-weight: bold;
+
+}
+
+.agregar {
+    padding: 3px 3px;
+    border-radius: 4px;
+    width: 30%;
+    height: 30px;
+}
+
+.modificar {
+    margin-top: 5px;
+    padding: 3px 3px;
+    border-radius: 4px;
+    width: 30%;
+    height: 30px;
+
+}
+
+.boton-publicar button {
+    margin: 5px;
+
+}
+
+.boton-guardar button {
+
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .7rem;
+    width: 6rem;
+    height: 22px;
+    background-color: rgb(218, 165, 32);
+    border-color: rgb(218, 165, 32);
+    border-radius: 25px;
+    color: black;
+    border-style: none;
+    margin: auto;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 500ms;
+
+}
+
+.categoria {
+    width: 30%;
+}
+
+.box-categoria {
+    display: flex;
+}
+
+textarea {
+    width: 85%;
+    margin-bottom: 5px;
+    /* margin-left: 40px; */
+}
+
+/* -----------------query------------------- */
+@media(min-width:480px) {
+    .main-header-footer {
+        justify-content: space-around;
+        display: block;
+        display: none;
+    }
+
+    .formulario {
+        width: 70%;
+        display: block;
+        flex-direction: column;
+    }
+}
+
+/* -----------------query------------------- */
+@media(min-width:768px) {
+    #formulario {
+        width: 90%;
+        margin: 45px;
+        padding: 20px;
+        border-radius: 6px;
+        display: block;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="/css/styles-productsList.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles-lucas.css" >
+    <%- include('partials/head') %>
+</head>
+
+<body>
+    <header id="header">
+
+        <%- include('partials/header')%>
+    </header>
+    <main>
+        <div class="localizacion">
+            <div class="localizacion-izq">
+                <a href="/home"> Página de inicio</a>
+                <a href="/products">> Variedades</a>
+                <a href="#">> Listado de productos </a>
+            </div>
+           
+            <div  class="localizacion-der"><a href="/users/list"> Listado de usuarios</a></div>
+        <div class="localizacion-der">
+            
+        <a href="/products/create"> Crear producto</a> </div>
+    </div>
+        </div>    
+        <table class="table">
+            <thead class="thead-table">
+                <tr>
+                    <th>Id</th>
+                    <th>Imagen</th>
+                    <th>Articulo</th>
+                    <th>Categoria</th>
+                    <th>Ver detalles</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <% products.forEach(producto=> { %>
+                <tbody class="tbody-table">
+                    <tr>
+
+                        <td>
+                            <%= producto.id %>
+                        </td>
+                        <td><img src="/img/<%= producto.imagen %>" alt=""></td>
+                        <td>
+                            <%= producto.name %>
+                        </td>
+                        <% if (producto.category_id===1){%>
+                            <td> Industiral </td>
+                            <% } else { %>
+                                <td> Artesanal </td>
+                                <% } %>
+                                    <td><a href="/products/<%= producto.id %>"
+                                            style="text-decoration: none; color: rgb(221, 221, 221)">
+                                            <span
+                                                class="material-symbols-outlined">
+                                                visibility
+                                            </span></a></td>
+                                    <td><a href="/products/<%= producto.id %>/edit"
+                                            style="text-decoration: none; color: rgb(221, 221, 221)">
+                                            <span
+                                                class="material-symbols-outlined">
+                                                edit
+                                            </span></a></td>
+                                    <td>
+                                        <form 
+                                         action="/products/<%= producto.id %>/list?_method=DELETE" method="post">
+                                            <button style="background: none; border: 0; text-decoration: none; color: rgb(221, 221, 221)"
+                                                class="material-symbols-outlined" style=>
+                                                delete
+                                                </span>
+                                            </button>
+
+                                        </form>
+                                    </td>
+
+                    </tr>
+                </tbody>
+                <% }) %>
+        </table>
+        <br>
+        </div>
+
+    </main>
+    <%- include('partials/footer')%>
+</body>
+
+</html>
